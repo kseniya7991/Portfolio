@@ -1,0 +1,10 @@
+
+@import "./vendor/scss/variables";
+@import './vendor/scss/mixin';
+
+.App {
+  background-color: $primary-color;
+  font-family: $font-stack;
+  font-weight: map-get($font-weights, $key: regular);
+  @include flexCenter;
+}

@@ -1,0 +1,18 @@
+
+@import "../../vendor/scss/variables";
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap');
+
+
+
+.Header {
+  padding: 20px;
+  width: 100%;
+}
+
+.Header__name {
+  font-family: 'Mina', Arial, sans-serif;
+  font-size: map-get($font-weights, $key: bold);
+  color: $text-color;
+}
