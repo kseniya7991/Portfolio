@@ -1,7 +1,7 @@
 
 @import "../../vendor/scss/variables";
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap');
 @import '../../vendor/scss/mixin';
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600&display=swap');
 
 
 .Header {
@@ -14,7 +14,7 @@
 }
 
 .Header__name {
-  font-family: 'Titillium Web', Arial, sans-serif;
+  font-family: 'Saira Condensed', Arial, sans-serif;
   font-weight: map-get($font-weights, bold);
   color: $text-color;
   margin: 0;

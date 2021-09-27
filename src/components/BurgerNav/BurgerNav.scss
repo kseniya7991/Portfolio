@@ -1,0 +1,48 @@
+@import "../../vendor/scss/variables";
+@import '../../vendor/scss/mixin';
+
+
+
+@mixin appear($width, $time, $delayTime, $action) {
+  @keyframes appearing {
+    from {width: 0}
+    to {width: $width}
+  }
+
+  animation: appearing $time $delayTime forwards;
+}
+
+.BurgerNav {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: $font-stack;
+  font-weight: map-get($font-weights, light );
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: $text-color;
+
+  &:hover {
+    flex-direction: row;
+  }
+}
+
+.BurgerNav__stick {
+  margin: 2px 0px;
+  cursor: pointer;
+  width: 0;
+  height: 4px;
+  background-color: $text-color;
+  @include appear(35px, .3s, 0s, $action: false);
+
+  &:nth-of-type(2) {
+     @include appear(50px, .3s, .2s, $action: false)
+  }
+
+  &:nth-of-type(3) {
+    @include appear(20px, .3s, 6s, $action: false);
+  }
+}
