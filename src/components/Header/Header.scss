@@ -1,18 +1,21 @@
 
 @import "../../vendor/scss/variables";
-@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap');
+@import '../../vendor/scss/mixin';
 
 
 .Header {
-  padding: 20px;
+  padding: 10px 20px 10px 20px;
   width: 100%;
+  @include flexCenter;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .Header__name {
-  font-family: 'Mina', Arial, sans-serif;
-  font-size: map-get($font-weights, $key: bold);
+  font-family: 'Titillium Web', Arial, sans-serif;
+  font-weight: map-get($font-weights, bold);
   color: $text-color;
+  margin: 0;
 }
