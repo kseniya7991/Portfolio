@@ -6,12 +6,14 @@ import Popup from './components/Popup/Popup';
 
 function App() {
   return (
+    <>
     <div className="App">
      <Header></Header>
      <Main></Main>
      <Footer></Footer>
-     <Popup></Popup>
     </div>
+     <Popup></Popup>
+     </>
   );
 }
 

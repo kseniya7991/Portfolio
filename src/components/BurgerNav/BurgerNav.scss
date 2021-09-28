@@ -98,4 +98,16 @@
   top: 70px;
   right: 0px;
   left: 0px;
+  cursor: pointer;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.BurgerNav__item {
+  color: $text-color;
+  margin: 4px 0;
+  padding: 3px 10px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(23,23,23,0) 15%, rgba(56,56,56,0.5998774509803921) 32%, rgba(83,83,83,1) 52%, rgba(56,56,56,0.5970763305322129) 72%, rgba(14,14,14,0) 85%, rgba(0,0,0,0) 100%);
 }
