@@ -8,7 +8,7 @@ function Header() {
 
   const handleWindowResize = () => {
     if (window.innerWidth > 768) {
-      setIsMobile(false);
+     setIsMobile(false);
     } else {
       setIsMobile(true);
     }

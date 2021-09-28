@@ -11,6 +11,8 @@
   flex-direction: row;
   justify-content: space-between;
   box-sizing: border-box;
+  position: relative;
+  z-index: 0;
 }
 
 .Header__name {

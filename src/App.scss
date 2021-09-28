@@ -8,4 +8,5 @@
   font-weight: map-get($font-weights, $key: regular);
   @include flexCenter;
   flex-direction: column;
+  min-width: 320px;
 }

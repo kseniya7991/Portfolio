@@ -1,7 +1,11 @@
 @import "../../vendor/scss/variables";
 @import '../../vendor/scss/mixin';
 
-
+@mixin listStyle {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 @mixin keyframes($name) {
   @keyframes #{$name} {
@@ -21,10 +25,8 @@
   font-family: $font-stack;
   font-weight: map-get($font-weights, light );
   font-size: 17px;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   color: $text-color;
+  @include listStyle;
 
   &:hover {
     @include keyframes(rotating) {
@@ -84,4 +86,16 @@
     }
     @include animate(appearing3, .3s, .6s);
   }
+}
+
+
+.BurgerNav__menu {
+  @include listStyle;
+  @include flexCenter;
+  flex-direction: column;
+  position: absolute;
+  z-index: 3;
+  top: 70px;
+  right: 0px;
+  left: 0px;
 }
