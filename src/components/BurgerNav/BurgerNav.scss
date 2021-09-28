@@ -3,13 +3,14 @@
 
 
 
-@mixin appear($width, $time, $delayTime, $action) {
-  @keyframes appearing {
-    from {width: 0}
-    to {width: $width}
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content
   }
+};
 
-  animation: appearing $time $delayTime forwards;
+@mixin animate($name, $time, $delayTime) {
+  animation: $name $time $delayTime forwards;
 }
 
 .BurgerNav {
@@ -26,7 +27,33 @@
   color: $text-color;
 
   &:hover {
-    flex-direction: row;
+    @include keyframes(rotating) {
+      from { transform: rotate(0);}
+      to {transform: rotate(90deg);}
+    }
+    @include animate(rotating,.8s,0s);
+
+    .BurgerNav__stick:nth-of-type(1) {
+      @include keyframes(moving) {
+        from {width: 35px}
+        to {width: 20px;}
+      }
+      @include animate(moving,.3s,0s)
+    }
+    .BurgerNav__stick:nth-of-type(2) {
+      @include keyframes(moving2) {
+        from {width: 30px}
+        to {width: 30px;}
+      }
+      @include animate(moving2,.3s,0s)
+    }
+    .BurgerNav__stick:nth-of-type(3) {
+      @include keyframes(moving3) {
+        from {width: 20px}
+        to {width: 35px;}
+      }
+      @include animate(moving3,.3s,0s)
+    }
   }
 }
 
@@ -36,13 +63,25 @@
   width: 0;
   height: 4px;
   background-color: $text-color;
-  @include appear(35px, .3s, 0s, $action: false);
+  @include keyframes(appearing) {
+    from {width: 0;}
+    to {width: 35px;}
+  }
+  @include animate(appearing, .3s, 0s);
 
   &:nth-of-type(2) {
-     @include appear(50px, .3s, .2s, $action: false)
+    @include keyframes(appearing2) {
+      from {width: 0;}
+      to {width: 30px;}
+    }
+    @include animate(appearing2, .3s, .2s);
   }
 
   &:nth-of-type(3) {
-    @include appear(20px, .3s, 6s, $action: false);
+    @include keyframes(appearing3) {
+      from {width: 0;}
+      to {width: 20px;}
+    }
+    @include animate(appearing3, .3s, .6s);
   }
 }
