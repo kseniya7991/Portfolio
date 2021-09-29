@@ -30,7 +30,7 @@ function Header() {
       <h1 className="Header__name">Portfolio</h1>
       <Navigation isMobile={isMobile}></Navigation>
       <BurgerMenu isMobile={isMobile}></BurgerMenu>
-      <BurgerNavigation></BurgerNavigation>
+     {/*  <BurgerNavigation></BurgerNavigation> */}
     </header>
   );
 }
