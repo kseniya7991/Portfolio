@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Header.scss';
 import Navigation from '../Navigation/Navigation';
-import BurgerNav from '../BurgerNav/BurgerNav';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
+import BurgerNavigation from '../BurgerNavigation/BurgerNavigation';
 
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
@@ -28,7 +29,8 @@ function Header() {
     <header className="Header">
       <h1 className="Header__name">Portfolio</h1>
       <Navigation isMobile={isMobile}></Navigation>
-      <BurgerNav isMobile={isMobile}></BurgerNav>
+      <BurgerMenu isMobile={isMobile}></BurgerMenu>
+      <BurgerNavigation></BurgerNavigation>
     </header>
   );
 }
