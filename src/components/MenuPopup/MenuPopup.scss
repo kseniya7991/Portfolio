@@ -1,0 +1,9 @@
+@import '../../vendor/scss/mixin';
+
+.MenuPopup {
+@include popup;
+}
+
+.MenuPopup_opened {
+@include popupOpened;
+}

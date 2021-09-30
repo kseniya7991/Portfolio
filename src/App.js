@@ -3,19 +3,23 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
-import Popup from './components/Popup/Popup';
+import MenuPopup from './components/MenuPopup/MenuPopup';
 
 function App() {
-  const [isPopupOpened, setIsPopupOpened] = useState(false);
+  const [isMenuPopupOpened, setIsMenuPopupOpened] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
-  const handlePopup = () => {
-    setIsPopupOpened(!isPopupOpened);
+  const handleMenuPopup = () => {
+    setIsMenuPopupOpened(!isMenuPopupOpened);
+    setIsMobileMenuOpened(!isMobileMenuOpened);
   };
 
   const handleWindowResize = () => {
     if (window.innerWidth > 768) {
       setIsMobile(false);
+      setIsMobileMenuOpened(false);
+      setIsMenuPopupOpened(false);
     } else {
       setIsMobile(true);
     }
@@ -33,10 +37,14 @@ function App() {
   return (
     <>
       <div className="App">
-        <Header handlePopup={handlePopup} isMobile={isMobile} />
+        <Header
+          handleMenuPopup={handleMenuPopup}
+          isMobile={isMobile}
+          isOpened={isMobileMenuOpened}
+        />
         <Main />
         <Footer />
-        <Popup isOpened={isPopupOpened} />
+        <MenuPopup isOpened={isMenuPopupOpened} />
       </div>
     </>
   );
