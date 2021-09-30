@@ -1,6 +1,10 @@
-import "./BurgerNavigation.scss";
+import React from 'react';
+import './BurgerNavigation.scss';
 
-function BurgerNavigation() {
+function BurgerNavigation({ isOpened, isMobile }) {
+  if (!isOpened || !isMobile) {
+    return null;
+  }
   return (
     <ul className="BurgerNavigation__list">
       <li className="BurgerNavigation__item">About</li>

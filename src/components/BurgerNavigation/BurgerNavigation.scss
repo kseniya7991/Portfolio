@@ -11,9 +11,23 @@
   right: 0px;
   left: 0px;
   cursor: pointer;
-  max-width: 80%;
+  max-width: 50%;
   margin: 0 auto;
+  padding: 15px 0;
 
+animation: shadow 1s forwards;
+}
+
+@keyframes shadow {
+  from {
+    box-shadow: -2px 0px 0px 0px rgba(255,255,255,1),
+                 2px 0px 0px 0px rgba(255,255,255,1);
+  }
+  to {
+    box-shadow: -80px -80px 0px -78px rgba(240, 240, 240, 0.815),
+                 80px 80px 0px -78px rgba(240, 240, 240, 0.815);
+  }
+  
 }
 
 .BurgerNavigation__item {

@@ -1,9 +1,9 @@
 import './Popup.scss';
+import React from 'react';
 
-function Popup() {
+function Popup({ isOpened }) {
   return (
-    <div className="Popup">
-    </div>
+    <div className={`Popup ${isOpened ? 'Popup_opened' : ''}`} />
   );
 }
 

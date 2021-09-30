@@ -1,17 +1,21 @@
 import './BurgerMenu.scss';
+import React from 'react';
 
-function BurgerMenu({isMobile}) {
-  if(isMobile === false) {
+function BurgerMenu({ isMobile, handleMenu, isOpened }) {
+  const handleMenuClick = () => {
+    handleMenu();
+  };
+
+  if (isMobile === false) {
     return null;
-  } else {
-    return (
-      <ul className="BurgerMenu">
-        <li className="BurgerMenu__stick"></li>
-        <li className="BurgerMenu__stick"></li>
-        <li className="BurgerMenu__stick"></li>
-      </ul>
-    );
   }
+  return (
+    <ul className={`BurgerMenu ${isOpened ? 'BurgerMenu_active' : ''}`} onClick={handleMenuClick} onKeyDown={handleMenuClick}>
+      <li className="BurgerMenu__stick" />
+      <li className="BurgerMenu__stick" />
+      <li className="BurgerMenu__stick" />
+    </ul>
+  );
 }
 
 export default BurgerMenu;

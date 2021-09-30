@@ -17,13 +17,13 @@
   align-items: flex-end;
   flex-direction: column;
   box-sizing: border-box;
-  font-family: $font-stack;
-  font-weight: map-get($font-weights, light );
-  font-size: 17px;
-  color: $text-color;
   @include listStyle;
 
-  &:active {
+  cursor: pointer;
+}
+
+.BurgerMenu_active {
+  z-index: 4;
     .BurgerMenu__stick:nth-of-type(1) {
       width: 35px;
       height: 2px;
@@ -46,7 +46,6 @@
       }
       @include animate(rotating3,.8s,0s);
     }
-  }
 }
 
 .BurgerMenu__stick {
