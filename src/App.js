@@ -16,7 +16,7 @@ function App() {
   };
 
   const handleWindowResize = () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 640) {
       setIsMobile(false);
       setIsMobileMenuOpened(false);
       setIsMenuPopupOpened(false);

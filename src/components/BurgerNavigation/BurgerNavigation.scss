@@ -1,5 +1,5 @@
-@import '../../vendor/scss/mixin';
-@import '../../vendor/scss/variables';
+@import "../../vendor/scss/mixin";
+@import "../../vendor/scss/variables";
 
 .BurgerNavigation__list {
   @include listStyle;
@@ -15,25 +15,29 @@
   margin: 0 auto;
   padding: 15px 0;
 
-animation: shadow 1s forwards;
+  animation: shadow 1s forwards;
 }
 
 @keyframes shadow {
   from {
-    box-shadow: -2px 0px 0px 0px rgba(255,255,255,1),
-                 2px 0px 0px 0px rgba(255,255,255,1);
+    box-shadow: -2px 0px 0px 0px rgba(255, 255, 255, 1),
+      2px 0px 0px 0px rgba(255, 255, 255, 1);
   }
   to {
     box-shadow: -80px -80px 0px -78px rgba(240, 240, 240, 0.815),
-                 80px 80px 0px -78px rgba(240, 240, 240, 0.815);
+      80px 80px 0px -78px rgba(240, 240, 240, 0.815);
   }
-  
 }
 
 .BurgerNavigation__item {
   color: $text-color;
   margin: 4px 0;
   padding: 3px 10px;
-  width: 100%;
   text-align: center;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    @include activeItem;
+    animation: activeItem 0.3s forwards;
+  }
 }

@@ -13,10 +13,19 @@
 }
 
 .Navigation__item {
-  padding: 0px 15px 0px 15px;
+  margin: 0px 15px 0px 15px;
   cursor: pointer;
+  border-bottom: 1px solid transparent;
 
   &:last-child {
-    padding-right: 0;
+    margin-right: 0;
   }
+
+  &:hover {
+    @include activeItem;
+    animation: activeItem .3s forwards;
+  }
+
 }
+
+

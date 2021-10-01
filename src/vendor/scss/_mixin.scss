@@ -1,16 +1,18 @@
+//Выравнивание флекса по центру
 @mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+//При использовании списков ul/ol
 @mixin listStyle {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-
+//Попап
 @mixin popup {
     position: fixed;
     top: 0;
@@ -26,8 +28,21 @@
     transition: .3s;
 }
 
+//Открытие попапа
 @mixin popupOpened {
   visibility: visible;
   opacity: 0.8;
   transition: .5s;
 }
+
+//Анимация для выделения стандартных текстовых элементов
+@mixin activeItem() {
+  @keyframes #{activeItem} {
+    from {
+      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0);
+    }
+    to {
+      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 1);
+    }
+  }
+};
