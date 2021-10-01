@@ -1,10 +1,12 @@
 import React from 'react';
-import Swiper from '../Slider/Slider';
+import About from '../About/About';
+
+import './Main.scss';
 
 function Main() {
   return (
     <div className="Main">
-      <Swiper />
+      <About />
     </div>
   );
 }
