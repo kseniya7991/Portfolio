@@ -2,13 +2,20 @@
 @import '../../vendor/scss/mixin';
 
 .About {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 0;
+}
+
+.About__block {
   font-family: $font-stack;
   color: $text-color;
-  padding: 30px 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: justify;
+  max-width: 100%;
 }
 
 .About__heading {
@@ -18,7 +25,6 @@
 }
 
 .About__paragraph {
-  max-width: 70%;
   margin: 0;
   padding: 10px 0;
   font-weight: map-get($font-weights , light );
@@ -28,23 +34,38 @@
   }
 }
 
-.line-wrapper {
-  margin: 10px 0 30px 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.About__details {
   width: 100%;
+  height: 100%;
+  @include flexCenter;
+  flex-direction: column;
+  margin-right: 30px;
+  position: relative;
 }
 
-.line {
-  height: 2px;
-  width: 70%;
-  background: linear-gradient(90deg, rgba(0,153,215,0) 0%, rgba(0,153,215,0.6755077030812324) 46%, rgba(0,153,215,1) 93%);
-}
-
-.circle {
-  width: 8px;
-  height: 8px;
+.About__photo {
+  background-image: url('../../images/profile-photo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  background-color: rgba(0,153,215,1);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 0px 7px #383838;
 }
+
+.Photo__circle {
+  width:200px;
+  height: 200px;
+  background-color: white;
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.Photo__circle_hidden {
+  visibility: hidden;
+}
+
