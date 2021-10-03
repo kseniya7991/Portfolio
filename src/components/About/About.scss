@@ -59,13 +59,10 @@
 .Photo__circle {
   width:200px;
   height: 200px;
-  background-color: white;
+  background-color: rgba(0, 153, 215, 0.7);
   position: absolute;
   z-index: 0;
   border-radius: 50%;
-}
-
-.Photo__circle_hidden {
-  visibility: hidden;
+  box-shadow: 0px 0px 3px 3px rgba(38, 191, 252, 0.7);
 }
 
