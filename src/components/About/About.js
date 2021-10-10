@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
 
 import './About.scss';
 
 function About() {
-  const circle = document.querySelector('.Photo__circle');
-  const circlePhoto = document.querySelector('.Photo__circle');
-  const photoProfile = document.querySelector('.About__photo');
-  /*   const photoProfileX = photoProfile.getBoundingClientRect().x;
-  const photoProfileY = photoProfile.getBoundingClientRect().y;
-  const photoWidth = 200; */
-  console.log(photoProfile, circle, circlePhoto);
-  /*
+  const photoBlock = useRef();
+  const [photo, setPhoto] = useState(photoBlock.current);
+  const [photoX, setPhotoX] = useState();
+  const [photoY, setPhotoY] = useState();
+
+  const photoWidth = 200;
+
   function getCoordinate(axis, indent, mouseCoordinate) {
     const factor = (indent * 2) / photoWidth;
-    const difference = (mouseCoordinate - axis === 'X' ?
-    photoProfileX : photoProfileY) * (-1) * factor + indent;
+    let difference = 0;
+    if (axis === 'X') {
+      difference = (mouseCoordinate - photoX) * (-1) * factor + indent;
+    } else {
+      difference = (mouseCoordinate - photoY) * (-1) * factor + indent;
+    }
+
     let coordinate = 0;
-    console.log(axis === 'X' ? photoProfileX : photoProfileY);
 
     if (difference > indent) {
       coordinate = indent;
@@ -26,52 +29,47 @@ function About() {
     } else {
       coordinate = indent;
     }
+    console.log(difference, coordinate);
     return coordinate;
   }
 
   function countTranslate(mouseX, mouseY) {
     const coordinateX = getCoordinate('X', 8, mouseX);
     const coordinateY = getCoordinate('Y', 10, mouseY);
-         const differenceX = (mouseX - photoProfileX) * (-1) * 0.08 + 8;
-    const differenceY = (mouseY - photoProfileY) * (-1) * 0.1 + 10;
-
-    let coordinateX = 0;
-    let coordinateY = 0;
-
-    if (differenceX > 8) {
-      coordinateX = 8;
-    } else if (differenceX < -8) {
-      coordinateX = -8;
-    } else {
-      coordinateX = differenceX;
-    }
-
-    if (differenceY > 10) {
-      coordinateY = 10;
-    } else if (differenceY < -10) {
-      coordinateY = -10;
-    } else {
-      coordinateY = differenceY;
-    }
 
     return `translate(${coordinateX}px, ${coordinateY}px)`;
   }
 
   function mouseMove(event) {
-    const mouseX = event.pageX;
-    const mouseY = event.pageY;
-    console.log(countTranslate(mouseX, mouseY));
+    const mouseX = event.screenX;
+    const mouseY = event.screenY;
 
-    circle.style.transform = countTranslate(mouseX, mouseY);
+    document.querySelector('.Photo__circle').style.transform = countTranslate(mouseX, mouseY);
   }
 
-  document.addEventListener('mousemove', mouseMove); */
+  console.log(photoWidth);
+  useEffect(() => {
+    if (photo) {
+      setPhotoX(photo.getBoundingClientRect().x);
+      setPhotoY(photo.getBoundingClientRect().y);
+    }
+  }, [photo]);
+
+  useEffect(() => {
+    setPhoto(photoBlock.current);
+    window.addEventListener('mousemove', mouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', mouseMove);
+    };
+  }, [photoX, photoY]);
+
   return (
     <>
       <StyledLine />
       <div className="About">
         <div className="About__details">
-          <div className="About__photo" />
+          <div className="About__photo" ref={photoBlock} />
           <div className="Photo__circle" />
         </div>
         <div className="About__block">
