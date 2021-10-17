@@ -41,6 +41,8 @@
   flex-direction: column;
   margin-right: 30px;
   position: relative;
+  padding: 5px;
+  border-radius: 50%;
 }
 
 .About__photo {
@@ -54,15 +56,17 @@
   position: relative;
   z-index: 1;
   box-shadow: 0px 0px 0px 7px #383838;
+  margin: 0 auto;
 }
 
 .Photo__circle {
   width:200px;
   height: 200px;
-  background-color: rgba(0, 153, 215, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   position: absolute;
   z-index: 0;
   border-radius: 50%;
-  box-shadow: 0px 0px 3px 3px rgba(38, 191, 252, 0.7);
+  /* box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.7); */
+  transition: .5s;
 }
 

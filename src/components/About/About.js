@@ -27,15 +27,15 @@ function About() {
     } else if (difference < -indent) {
       coordinate = -indent;
     } else {
-      coordinate = indent;
+      coordinate = difference;
     }
-    console.log(difference, coordinate);
+
     return coordinate;
   }
 
   function countTranslate(mouseX, mouseY) {
-    const coordinateX = getCoordinate('X', 8, mouseX);
-    const coordinateY = getCoordinate('Y', 10, mouseY);
+    const coordinateX = getCoordinate('X', 9, mouseX);
+    const coordinateY = getCoordinate('Y', 9, mouseY);
 
     return `translate(${coordinateX}px, ${coordinateY}px)`;
   }
@@ -47,7 +47,6 @@ function About() {
     document.querySelector('.Photo__circle').style.transform = countTranslate(mouseX, mouseY);
   }
 
-  console.log(photoWidth);
   useEffect(() => {
     if (photo) {
       setPhotoX(photo.getBoundingClientRect().x);
