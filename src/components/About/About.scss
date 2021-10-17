@@ -70,3 +70,53 @@
   transition: .5s;
 }
 
+.About__wrap {
+  position: relative;
+  @include flexCenter;
+  flex-direction: column;
+}
+
+//Detais block
+.Deatils__title {
+  @include pStyle;
+  margin-top: 20px;
+
+  font-family: $font-stack;
+  font-size: 25px;
+  font-weight: map-get($font-weights, regular );
+  text-align: center;
+  color: #0099d7;
+}
+
+.Details__list {
+  @include listStyle;
+  text-align: left;
+  width: 90%;
+}
+
+.Details__item {
+  color: $text-color; 
+  font-weight: map-get($font-weights, light );
+
+  &:nth-of-type(2) {
+    padding-left: 10px;
+    box-sizing: border-box;
+    &::before {
+      position: absolute;
+      content: url('../../images/location-mark.png');
+      width: 24px;
+      height: 24px;
+      left: 16px;
+    }
+  }
+}
+
+.Details__name {
+  font-weight: map-get($font-weights, semi-bold );
+  margin-right: 10px;
+
+  
+}
+
+
+

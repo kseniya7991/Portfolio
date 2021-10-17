@@ -34,7 +34,7 @@ function About() {
   }
 
   function countTranslate(mouseX, mouseY) {
-    const coordinateX = getCoordinate('X', 9, mouseX);
+    const coordinateX = getCoordinate('X', 7, mouseX);
     const coordinateY = getCoordinate('Y', 9, mouseY);
 
     return `translate(${coordinateX}px, ${coordinateY}px)`;
@@ -68,8 +68,29 @@ function About() {
       <StyledLine />
       <div className="About">
         <div className="About__details">
-          <div className="About__photo" ref={photoBlock} />
-          <div className="Photo__circle" />
+          <div className="About__wrap">
+            <div className="About__photo" ref={photoBlock} />
+            <div className="Photo__circle" />
+          </div>
+          <p className="Deatils__title">Details</p>
+          <ul className="Details__list">
+            <li className="Details__item">
+              <li className="Details__item">
+                <span className="Details__name">Name:</span>
+                Stoichykova Kseniya
+              </li>
+              <span className="Details__name">Age:</span>
+              24
+            </li>
+            <li className="Details__item">
+              <span className="Details__name">Place:</span>
+              Stryków
+            </li>
+            <li className="Details__item">
+              <span className="Details__name">English Level:</span>
+              B1
+            </li>
+          </ul>
         </div>
         <div className="About__block">
           <h2 className="About__heading">Hi, I&apos;m Ksenia</h2>

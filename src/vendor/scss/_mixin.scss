@@ -12,6 +12,12 @@
   padding: 0;
 }
 
+//При использовании параграфов <p>
+@mixin pStyle {
+  margin: 0;
+  padding: 0;
+}
+
 //Попап
 @mixin popup {
     position: fixed;
