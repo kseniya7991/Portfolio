@@ -72,28 +72,30 @@ function About() {
             <div className="About__photo" ref={photoBlock} />
             <div className="Photo__circle" />
           </div>
-          <p className="Deatils__title">Details</p>
-          <ul className="Details__list">
-            <li className="Details__item">
+          <div className="Details__wrap">
+            <p className="Deatils__title">Details</p>
+            <ul className="Details__list">
               <li className="Details__item">
-                <span className="Details__name">Name:</span>
-                Stoichykova Kseniya
+                <li className="Details__item">
+                  <span className="Details__name">Name:</span>
+                  Stoichykova Kseniya
+                </li>
+                <span className="Details__name">Age:</span>
+                24
               </li>
-              <span className="Details__name">Age:</span>
-              24
-            </li>
-            <li className="Details__item">
-              <span className="Details__name">Place:</span>
-              Stryków
-            </li>
-            <li className="Details__item">
-              <span className="Details__name">English Level:</span>
-              B1
-            </li>
-          </ul>
+              <li className="Details__item">
+                <span className="Details__name">Place:</span>
+                Stryków
+              </li>
+              <li className="Details__item">
+                <span className="Details__name">English Level:</span>
+                B1
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="About__block">
-          <h2 className="About__heading">Hi, I&apos;m Ksenia</h2>
+          <h2 className="About__heading">Hi, I&apos;m Kseniya</h2>
           <p className="About__paragraph">
             I am a junior front-end developer with 1 year
             training hands-on experience. I am a graduate of the Yandex.Praktikum

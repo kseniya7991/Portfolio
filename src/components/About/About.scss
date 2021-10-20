@@ -4,8 +4,13 @@
 .About {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   padding: 30px 0;
+  flex-direction: row;
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .About__block {
@@ -15,6 +20,7 @@
   flex-direction: column;
   align-items: flex-end;
   text-align: justify;
+  justify-content: space-between;
   max-width: 100%;
 }
 
@@ -22,6 +28,10 @@
   font-weight: map-get($font-weights , medium );
   margin: 0;
   font-size: 35px;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .About__paragraph {
@@ -36,13 +46,20 @@
 
 .About__details {
   width: 100%;
-  height: 100%;
   @include flexCenter;
   flex-direction: column;
-  margin-right: 30px;
+  margin-right: 50px;
   position: relative;
   padding: 5px;
   border-radius: 50%;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .About__photo {
@@ -50,33 +67,46 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   position: relative;
   z-index: 1;
   box-shadow: 0px 0px 0px 7px #383838;
   margin: 0 auto;
+
+  @include tablet{
+    width: 35vw;
+    height: 35vw;
+  }
 }
 
 .Photo__circle {
-  width:200px;
-  height: 200px;
+  width:170px;
+  height: 170px;
   background-color: rgba(255, 255, 255, 0.7);
   position: absolute;
   z-index: 0;
   border-radius: 50%;
-  /* box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.7); */
   transition: .5s;
+
+  @include tablet{
+    width: 35vw;
+    height: 35vw;
+  }
 }
 
 .About__wrap {
   position: relative;
   @include flexCenter;
   flex-direction: column;
+
+  @include tablet {
+    margin-right: 15px;
+  }
 }
 
-//Detais block
+//Details block
 .Deatils__title {
   @include pStyle;
   margin-top: 20px;
@@ -85,13 +115,21 @@
   font-size: 25px;
   font-weight: map-get($font-weights, regular );
   text-align: center;
-  color: #0099d7;
+  color: $text-color;
+
+  @include tablet {
+    margin-top: 0;
+  }
 }
 
 .Details__list {
   @include listStyle;
   text-align: left;
-  width: 90%;
+  width: max-content;
+
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .Details__item {
@@ -99,14 +137,15 @@
   font-weight: map-get($font-weights, light );
 
   &:nth-of-type(2) {
-    padding-left: 10px;
+    padding-left: 13px;
     box-sizing: border-box;
+    position: relative;
     &::before {
       position: absolute;
-      content: url('../../images/location-mark.png');
+      content: url('../../images/place-localizer.png');
       width: 24px;
       height: 24px;
-      left: 16px;
+      left: -3px;
     }
   }
 }

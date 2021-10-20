@@ -1,3 +1,5 @@
+@import './_variables.scss';
+
 //Выравнивание флекса по центру
 @mixin flexCenter {
   display: flex;
@@ -53,3 +55,10 @@
   }
 };
 
+
+//Для адаптивной вёрстки
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
