@@ -11,6 +11,8 @@
   @include tablet {
     flex-direction: column;
   }
+
+
 }
 
 .About__block {
@@ -42,7 +44,23 @@
   &:nth-of-type(2n) {
     padding: 3px 0;
   }
-}
+
+  @include tablet {
+    font-size: 16px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
+
+  .About__paragraph_high {
+    color: #56b8df;
+    font-size: 18px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  }
 
 .About__details {
   width: 100%;
@@ -55,8 +73,8 @@
 
   @include tablet {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: space-around;
+    align-items: center;
     margin-right: 0;
     margin-bottom: 20px;
   }
@@ -75,10 +93,6 @@
   box-shadow: 0px 0px 0px 7px #383838;
   margin: 0 auto;
 
-  @include tablet{
-    width: 35vw;
-    height: 35vw;
-  }
 }
 
 .Photo__circle {
@@ -90,10 +104,7 @@
   border-radius: 50%;
   transition: .5s;
 
-  @include tablet{
-    width: 35vw;
-    height: 35vw;
-  }
+
 }
 
 .About__wrap {
@@ -120,6 +131,10 @@
   @include tablet {
     margin-top: 0;
   }
+
+  @include mobile {
+    font-size: 22px;
+  }
 }
 
 .Details__list {
@@ -130,6 +145,7 @@
   @include tablet {
     width: 100%;
   }
+
 }
 
 .Details__item {
@@ -148,6 +164,11 @@
       left: -3px;
     }
   }
+
+  @include tablet {
+    font-size: 15px;
+  }
+
 }
 
 .Details__name {

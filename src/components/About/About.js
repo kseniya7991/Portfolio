@@ -99,7 +99,9 @@ function About() {
           <p className="About__paragraph">
             I am a junior front-end developer with 1 year
             training hands-on experience. I am a graduate of the Yandex.Praktikum
-            platform as a front-end developer. And a graduate of the Belarusian
+            platform as a
+            <span className="About__paragraph_high"> front-end developer</span>
+            . And a graduate of the Belarusian
             State Academy of Communications as a marketer.
           </p>
           <p className="About__paragraph">
@@ -111,7 +113,9 @@ function About() {
           </p>
           <p className="About__paragraph">
             <em>
-              Also I&apos;m a runner from
+              Also I&apos;m a
+              <span className="About__paragraph_high"> runner </span>
+              from
               &lt;header&gt; to &lt;footer&gt;.
             </em>
           </p>

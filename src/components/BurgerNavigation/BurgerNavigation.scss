@@ -7,13 +7,18 @@
   flex-direction: column;
   position: absolute;
   z-index: 3;
-  top: 70px;
-  right: 0px;
-  left: 0px;
   cursor: pointer;
   max-width: 50%;
-  margin: 0 auto;
-  padding: 15px 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 15px;
+  max-height: fit-content;
+
+  background-color: rgba($color: #424242, $alpha: 1.0);
+  background-clip: content-box;
 
   animation: shadow 1s forwards;
 }
