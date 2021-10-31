@@ -1,0 +1,36 @@
+.img {
+  background-image: url('../../images/profile-photo.jpg');
+}
+.splide__arrow{
+  width: 30px;
+  height: 30px;
+/*   width: 0px; */
+  background-size: contain;
+}
+
+.splide__arrow svg {
+  width: 0px;
+}
+
+.splide__arrow--next {
+  background-image: url('../../images/next-arrow.png');
+}
+
+.splide__arrow--prev {
+  background-image: url('../../images/prev-arrow.png');
+}
+
+.splide__pagination__page.is-active {
+  background: #0099d7;
+}
+
+.splide__pagination__page {
+  width: 8px;
+  height: 8px;
+}
+
+
+
+.splide__pagination {
+  bottom: -20px;
+}
