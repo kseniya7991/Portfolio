@@ -95,7 +95,7 @@ function About() {
           </div>
         </div>
         <div className="About__block">
-          <h2 className="About__heading">Hi, I&apos;m Kseniya</h2>
+          <h2 className="About__heading">&nbsp;</h2>
           <p className="About__paragraph">
             I am a junior front-end developer with 1 year
             training hands-on experience. I am a graduate of the Yandex.Praktikum

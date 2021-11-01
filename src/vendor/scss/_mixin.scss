@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+//Заголовки
+@mixin heading {
+  font-weight: map-get($font-weights , medium );
+  margin: 0;
+  font-size: 35px;
+  color: $text-color;
+}
+
 //При использовании списков ul/ol
 @mixin listStyle {
   list-style-type: none;
@@ -54,6 +62,22 @@
     }
   }
 };
+
+//Анимация набора текста
+@mixin typingText () {
+  @keyframes #{typingText} {
+    from {width: 0}
+    to {width: 100%}
+  }
+}
+
+//Эффект мерцающего курсора
+@mixin blinkCursor () {
+  @keyframes #{blinkCursor} {
+    from, to { border-color: transparent;}
+    50% {border-color: white;}
+  }
+}
 
 
 //Для адаптивной вёрстки

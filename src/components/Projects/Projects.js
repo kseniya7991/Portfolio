@@ -5,10 +5,13 @@ import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 import './Projects.scss';
 import photo from '../../images/profile-photo.jpg';
+import StyledLine from '../Permanent components/StyledLine/StyledLine';
 
 function Projects() {
   return (
     <>
+      <StyledLine />
+      <h2 className="Projects__heading">Projects</h2>
       <Splide
         options={{
           rewind: true,
@@ -19,6 +22,7 @@ function Projects() {
           cover: false,
           speed: 400,
           keyboard: true,
+          heightRatio: 1,
         }}
       >
         <div className="splide__arrows">
@@ -27,31 +31,37 @@ function Projects() {
         </div>
 
         <SplideSlide>
-          <img src={photo} alt="Image1" className="imgtest" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src={photo} alt="Image2" />
-          <div>
-            Description 02
+          <div className="splide__slide__container">
+            <img src={photo} alt="Image2" className="splide__img" />
           </div>
+          <p className="splide__description">Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</p>
         </SplideSlide>
         <SplideSlide>
-          <img src={photo} alt="Image2" />
+          <div className="splide__slide__container">
+            <img src={photo} alt="Image2" className="splide__img" />
+          </div>
+          <p className="splide__description">Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</p>
         </SplideSlide>
         <SplideSlide>
-          <img src={photo} alt="Image2" />
+          <div className="splide__slide__container">
+            <img src={photo} alt="Image2" className="splide__img" />
+          </div>
+          <p className="splide__description">Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</p>
         </SplideSlide>
         <SplideSlide>
-          <img src={photo} alt="Image2" />
+          <div className="splide__slide__container">
+            <img src={photo} alt="Image2" className="splide__img" />
+          </div>
+          <p className="splide__description">Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</p>
+        </SplideSlide>
+        <SplideSlide>
+          <div className="splide__slide__container">
+            <img src={photo} alt="Image2" className="splide__img" />
+          </div>
+          <p className="splide__description">Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</p>
         </SplideSlide>
       </Splide>
     </>
-  /*     <ul className="Projects__slider">
-      <li className="Projects__item">sefesf</li>
-      <li className="Projects__item">sefesf</li>
-      <li className="Projects__item">sefesf</li>
-      <li className="Projects__item">sefesf</li>
-    </ul> */
   );
 }
 

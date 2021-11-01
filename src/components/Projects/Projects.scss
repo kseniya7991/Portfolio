@@ -1,6 +1,15 @@
-.img {
-  background-image: url('../../images/profile-photo.jpg');
+@import '../../vendor/scss/variables';
+@import '../../vendor/scss/mixin';
+
+
+.Projects__heading {
+  @include heading;
+  text-align: right;
 }
+
+/* .img {
+  background-image: url('../../images/profile-photo.jpg');
+} */
 .splide__arrow{
   width: 30px;
   height: 30px;
@@ -33,4 +42,22 @@
 
 .splide__pagination {
   bottom: -20px;
+}
+
+.splide__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.splide__slide__container {
+  height: 90%;
+}
+
+.splide__description{
+  color: $text-color;
+  text-align: center;
+
+  font-family: $font-stack;
+  font-weight: map-get($font-weights, light);
 }

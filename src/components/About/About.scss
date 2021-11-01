@@ -27,19 +27,48 @@
 }
 
 .About__heading {
-  font-weight: map-get($font-weights , medium );
-  margin: 0;
-  font-size: 35px;
+ @include heading;
 
   @include tablet {
     display: none;
   }
+
+  line-height: 1;
+  padding: 5px 0 10px 0;
+  cursor: pointer;
+  text-align: right;
+  white-space: nowrap; /* не переносить текст на другую строку */
+  overflow: hidden; /* скрываем переполнение контентом */
+  
+  &::after {
+    content: "About";
+    letter-spacing: 0;
+  }
+  &:hover {
+    @include typingText;
+    @include blinkCursor;
+    animation: 
+    typingText 3.5s steps(20, end),
+    blinkCursor .5s step-end infinite;
+    animation-fill-mode: forwards;
+    &::before {
+      content: "Hi, I'm Kseniya";
+      letter-spacing: 0.07em;
+      border-right: .1em solid rgb(255, 255, 255);
+    }
+    &::after {
+      content: "";
+    }
+  }
+
+  
 }
 
 .About__paragraph {
   margin: 0;
   padding: 10px 0;
   font-weight: map-get($font-weights , light );
+  line-height: 1.5;
 
   &:nth-of-type(2n) {
     padding: 3px 0;
@@ -151,6 +180,7 @@
 .Details__item {
   color: $text-color; 
   font-weight: map-get($font-weights, light );
+  line-height: 1.5;
 
   &:nth-of-type(2) {
     padding-left: 13px;
