@@ -34,7 +34,7 @@
   }
 
   line-height: 1;
-  padding: 5px 0 10px 0;
+  margin: 5px 0 10px 0;
   cursor: pointer;
   text-align: right;
   white-space: nowrap; /* не переносить текст на другую строку */
@@ -44,25 +44,24 @@
     content: "About";
     letter-spacing: 0;
   }
-  &:hover {
-    @include typingText;
+}
+
+.About__heading_animation {
+     @include typingText;
     @include blinkCursor;
-    animation: 
-    typingText 3.5s steps(20, end),
-    blinkCursor .5s step-end infinite;
+    animation: typingText 3.5s steps(20, end),
+    blinkCursor .5s step-end 10;
     animation-fill-mode: forwards;
+    border-right: .07em solid rgb(255, 255, 255);
     &::before {
-      content: "Hi, I'm Kseniya";
+      font-style: italic;
+      content: "{`Hi, I'm Kseniya`}";
       letter-spacing: 0.07em;
-      border-right: .1em solid rgb(255, 255, 255);
     }
     &::after {
       content: "";
     }
   }
-
-  
-}
 
 .About__paragraph {
   margin: 0;

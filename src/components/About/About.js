@@ -8,8 +8,13 @@ function About() {
   const [photo, setPhoto] = useState(photoBlock.current);
   const [photoX, setPhotoX] = useState();
   const [photoY, setPhotoY] = useState();
+  const [isHeadingHover, setIsHeadingHover] = useState(false);
 
   const photoWidth = 200;
+
+  function handleHoverHeading() {
+    setIsHeadingHover(!isHeadingHover);
+  }
 
   function getCoordinate(axis, indent, mouseCoordinate) {
     const factor = (indent * 2) / photoWidth;
@@ -95,7 +100,7 @@ function About() {
           </div>
         </div>
         <div className="About__block">
-          <h2 className="About__heading">&nbsp;</h2>
+          <h2 className={`About__heading ${isHeadingHover ? 'About__heading_animation' : ''}`} onClick={handleHoverHeading} onKeyDown={handleHoverHeading}>{}</h2>
           <p className="About__paragraph">
             I am a junior front-end developer with 1 year
             training hands-on experience. I am a graduate of the Yandex.Praktikum
