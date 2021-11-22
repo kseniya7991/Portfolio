@@ -39,18 +39,24 @@
   text-align: right;
   white-space: nowrap; /* не переносить текст на другую строку */
   overflow: hidden; /* скрываем переполнение контентом */
+  transition: .3s;
   
   &::after {
     content: "About";
     letter-spacing: 0;
   }
+
+  &:hover {
+    color:rgba(224, 224, 224, 0.7);
+    transition: .5s;
+  }
 }
 
 .About__heading_animation {
-     @include typingText;
+    @include typingText;
     @include blinkCursor;
-    animation: typingText 3.5s steps(20, end),
-    blinkCursor .5s step-end 10;
+    animation: typingText 4s steps(20, end),
+    blinkCursor .5s step-end 30;
     animation-fill-mode: forwards;
     border-right: .07em solid rgb(255, 255, 255);
     &::before {
@@ -203,9 +209,34 @@
 .Details__name {
   font-weight: map-get($font-weights, semi-bold );
   margin-right: 10px;
-
-  
 }
+
+// Блок социальных сетей
+.Details__social-networks {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0px 0px 0px;
+}
+
+.Details__social-item {
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+
+  &:hover {
+    transition: .5s;
+    transform: scale(2);
+  }
+}
+
+.Social-item_inst {
+  background-image: url('../../../src/images/instagram.png')
+}
+
+
 
 
 

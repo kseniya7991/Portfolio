@@ -1,19 +1,62 @@
-@import '../../vendor/scss/variables';
-@import '../../vendor/scss/mixin';
+@import "../../vendor/scss/variables";
+@import "../../vendor/scss/mixin";
 
+.Projects {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 
 .Projects__heading {
   @include heading;
+
+  align-self: flex-end;
   text-align: right;
+  line-height: 1;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  white-space: nowrap;
+  /* не переносить текст на другую строку */
+  overflow: hidden;
+  /* скрываем переполнение контентом */
+
+  &::after {
+    content: "Projects";
+    letter-spacing: 0;
+  }
+
+  &:hover {
+    color: rgba(224, 224, 224, 0.7);
+    transition: 0.5s;
+  }
 }
 
-/* .img {
-  background-image: url('../../images/profile-photo.jpg');
-} */
-.splide__arrow{
+.Projects__heading_animation {
+  @include typingText;
+  @include blinkCursor;
+  animation: typingText 5s steps(30, end), blinkCursor 0.5s step-end 30;
+  animation-fill-mode: forwards;
+  border-right: 0.07em solid rgb(255, 255, 255);
+
+  &::before {
+    content: "{`Non-commercial projects`}";
+    letter-spacing: 0.07em;
+    font-style: italic;
+  }
+
+  &::after {
+    content: "";
+  }
+}
+
+// Управление слайдером
+
+/* Стрелки слайдера */
+.splide__arrow {
   width: 30px;
   height: 30px;
-/*   width: 0px; */
   background-size: contain;
 }
 
@@ -22,13 +65,14 @@
 }
 
 .splide__arrow--next {
-  background-image: url('../../images/next-arrow.png');
+  background-image: url("../../images/next-arrow.png");
 }
 
 .splide__arrow--prev {
-  background-image: url('../../images/prev-arrow.png');
+  background-image: url("../../images/prev-arrow.png");
 }
 
+/* Навигация слайдера */
 .splide__pagination__page.is-active {
   background: #0099d7;
 }
@@ -38,12 +82,11 @@
   height: 8px;
 }
 
-
-
 .splide__pagination {
   bottom: -20px;
 }
 
+/* Изображения-слайды */
 .splide__img {
   height: 100%;
   width: 100%;
@@ -54,10 +97,114 @@
   height: 90%;
 }
 
-.splide__description{
+/* Описания под слайдами */
+.splide__description {
   color: $text-color;
   text-align: center;
+  font-size: 18px;
 
   font-family: $font-stack;
   font-weight: map-get($font-weights, light);
+}
+
+.splide__button_site {
+  /*     background-color: transparent;
+    color: rgb(41, 194, 255);
+    width: auto;
+    font-size: 16px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 153, 215, .5);
+    margin: 20px;
+    cursor: pointer;
+    position: relative; */
+
+  position: relative;
+  z-index: 0;
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: "Roboto Condensed", sans-serif;
+
+  &:hover {
+    @keyframes anim-ramka-5 {
+      0% {
+        left: 0%;
+        top: -90%;
+      }
+       25% {
+        left: -95%;
+        top: 0%;
+      }
+      50% {
+        left: 0%;
+        top: 90%;
+      }
+      75% {
+        left: 95%;
+        top: 0%;
+      }
+      100% {
+        left: 0%;
+        top: -90%;
+      }
+/*       36% {
+        left: 0%;
+        top: 90%;
+      }
+      48% {
+        left: 50%;
+        top: 50%;
+      }
+      60% {
+        left: 95%;
+        top: 0%;
+      }
+      72% {
+        left: 50%;
+        top: -50%;
+      }
+      84% {
+        left: 0%;
+        top: -90%;
+      }
+      100% {
+        left: -50%;
+        top: -50%;
+      } */
+    }
+    &::before {
+      animation: anim-ramka-5 20s linear infinite;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#337ab7, #337ab7);
+    transform: translate(0%, 0%);
+  }
+   &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 4px;
+      top: 4px;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      background: white;
+      border-radius: 5px;
+  }
 }

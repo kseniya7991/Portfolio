@@ -9,22 +9,42 @@
   font-size: 17px;
   margin: 0;
   list-style-type: none;
-  color: $text-color;
+  color: #aaa;
 }
 
 .Navigation__item {
   margin: 0px 15px 0px 15px;
   cursor: pointer;
   border-bottom: 1px solid transparent;
+  position: relative;
 
   &:last-child {
     margin-right: 0;
   }
 
   &:hover {
-    @include activeItem;
-    animation: activeItem .3s forwards;
+    transition: .2s;
+    color: $text-color;
+    &::after {
+      @include activeItem;
+      animation: activeItem .3s forwards;
+    }
   }
+
+    &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+    
+  }
+
 
 }
 

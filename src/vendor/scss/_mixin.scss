@@ -1,4 +1,4 @@
-@import './_variables.scss';
+@import "./_variables.scss";
 
 //Выравнивание флекса по центру
 @mixin flexCenter {
@@ -9,7 +9,7 @@
 
 //Заголовки
 @mixin heading {
-  font-weight: map-get($font-weights , medium );
+  font-weight: map-get($font-weights, medium);
   margin: 0;
   font-size: 35px;
   color: $text-color;
@@ -30,55 +30,67 @@
 
 //Попап
 @mixin popup {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: #202020;
-    z-index: 2;
-    min-width: 320px;
-    opacity: 0;
-    display: block;
-    visibility: hidden;
-    transition: .3s;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #202020;
+  z-index: 2;
+  min-width: 320px;
+  opacity: 0;
+  display: block;
+  visibility: hidden;
+  transition: 0.3s;
 }
 
 //Открытие попапа
 @mixin popupOpened {
   visibility: visible;
   opacity: 0.8;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 //Анимация для выделения стандартных текстовых элементов
 @mixin activeItem() {
   @keyframes #{activeItem} {
     from {
-      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0);
+      width: 0;
     }
+
     to {
-      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 1);
+      width: 100%;
     }
   }
-};
+}
 
 //Анимация набора текста
-@mixin typingText () {
+@mixin typingText() {
   @keyframes #{typingText} {
-    from {width: 0}
-    to {width: 100%}
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
   }
 }
 
 //Эффект мерцающего курсора
-@mixin blinkCursor () {
+@mixin blinkCursor() {
   @keyframes #{blinkCursor} {
-    from, to { border-color: transparent;}
-    50% {border-color: white;}
+
+    from,
+    to {
+      border-color: transparent;
+    }
+
+    50% {
+      border-color: white;
+    }
   }
 }
-
 
 //Для адаптивной вёрстки
 @mixin tablet {

@@ -12,15 +12,15 @@
   min-width: 320px;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding:20px 50px;
 
   @include tablet {
     animation: padding .5s forwards;
   }
 
   @keyframes padding {
-    from { padding: 0 50px}
-    to { padding: 0 20px}
+    from { padding:20px 50px}
+    to { padding: 20px 20px}
   }
 }
 

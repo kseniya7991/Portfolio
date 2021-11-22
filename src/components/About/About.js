@@ -8,12 +8,12 @@ function About() {
   const [photo, setPhoto] = useState(photoBlock.current);
   const [photoX, setPhotoX] = useState();
   const [photoY, setPhotoY] = useState();
-  const [isHeadingHover, setIsHeadingHover] = useState(false);
+  const [isClickedHeading, setIsClickedHeading] = useState(false);
 
   const photoWidth = 200;
 
-  function handleHoverHeading() {
-    setIsHeadingHover(!isHeadingHover);
+  function handleClickHeading() {
+    setIsClickedHeading(!isClickedHeading);
   }
 
   function getCoordinate(axis, indent, mouseCoordinate) {
@@ -97,10 +97,16 @@ function About() {
                 B1
               </li>
             </ul>
+            <ul className="Details__social-networks">
+              <li className="Details__social-item Social-item_inst">{}</li>
+              <li className="Details__social-item">ddd</li>
+              <li className="Details__social-item">dff</li>
+              <li className="Details__social-item">fff</li>
+            </ul>
           </div>
         </div>
         <div className="About__block">
-          <h2 className={`About__heading ${isHeadingHover ? 'About__heading_animation' : ''}`} onClick={handleHoverHeading} onKeyDown={handleHoverHeading}>{}</h2>
+          <h2 className={`About__heading ${isClickedHeading ? 'About__heading_animation' : ''}`} onClick={handleClickHeading} onKeyDown={handleClickHeading}>{}</h2>
           <p className="About__paragraph">
             I am a junior front-end developer with 1 year
             training hands-on experience. I am a graduate of the Yandex.Praktikum
