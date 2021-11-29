@@ -63,16 +63,14 @@ function Projects() {
               css, styles wrote on scss. I would like to do it more designed,
               but i need more practice. It&apos;s not diminution of my ability, it&apos;s
               a fact.
+
             </p>
-            <div className="button-wrap">
+            <div className="splide__button-wrap">
               <button type="button" className="splide__button_site">
-                {/*  <svg className="border">
-                <polyline points="176,1 176,52 1,52 1,1 176,1" className="bg-line" />
-                <polyline points="176,1 176,52 1,52 1,1 176,1" className="hl-line" />
-              </svg> */}
-                GO TO SITE
+                {}
               </button>
             </div>
+
           </SplideSlide>
           <SplideSlide>
             <div className="splide__slide__container">
