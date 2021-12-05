@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
+import CV from '../../files/Kseniya_Stoichykova_CV.pdf';
 
 import './About.scss';
+/* import { Cover } from '@splidejs/splide/dist/types/components'; */
 
 function About() {
   const photoBlock = useRef();
@@ -98,9 +100,11 @@ function About() {
               </li>
             </ul>
             <ul className="Details__social-networks">
-              <li className="Details__social-item Social-item_inst">{}</li>
-              <li className="Details__social-item">ddd</li>
-              <li className="Details__social-item">dff</li>
+              <a href="https://www.instagram.com/ksunya_st_/" target="_blank" rel="noreferrer" label="inst: ksunya_st_"><li className="Details__social-item Social-item_inst">{}</li></a>
+              <a href="https://www.linkedin.com/in/kseniya-stoychikova-907594201/" target="_blank" rel="noreferrer" label="linked in: Kseniya Stoichykova"><li className="Details__social-item Social-item_link-in">{}</li></a>
+              <a href="https://t.me/knghgi" target="_blank" rel="noreferrer" label="telegram: knghgi"><li className="Details__social-item Social-item_telegram">{}</li></a>
+              <a href="mailto: kseniya7991@gmail.com" target="_blank" rel="noreferrer" label="email: kseniya7991@gmail.com"><li className="Details__social-item Social-item_email">{}</li></a>
+              <a href={CV} download target="_blank" rel="noreferrer" label="download the CV" className="Social-item_link"><li className="Details__social-item Social-item_cv">CV</li></a>
               <li className="Details__social-item">fff</li>
             </ul>
           </div>

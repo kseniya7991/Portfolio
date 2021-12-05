@@ -222,20 +222,41 @@
 
 .Details__social-item {
   background-size: contain;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
+  padding: 0 5px 0 5px;
+  background-repeat: no-repeat;
 
   &:hover {
     transition: .5s;
-    transform: scale(2);
+    transform: scale(1.2);
   }
+
 }
+
 
 .Social-item_inst {
   background-image: url('../../../src/images/instagram.png')
 }
-
+.Social-item_link-in {
+  background-image: url('../../../src/images/linkedin.png')
+}
+.Social-item_telegram {
+  background-image: url('../../../src/images/telegram.png')
+}
+.Social-item_email {
+  background-image: url('../../../src/images/mail.png')
+}
+.Social-item_cv {
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right top, #00b3f2, #00abee, #00a3ea, #009be6, #0093e1);
+}
+.Social-item_link{
+  text-decoration: none;
+}
 
 
 
