@@ -40,35 +40,36 @@ function Projects() {
             heightRatio: 1,
           }}
         >
-          <div className="splide__arrows">
-            <button
-              className="splide__arrow splide__arrow--prev"
-              type="button"
-              label="next"
-            />
-            <button
-              className="splide__arrow splide__arrow--next"
-              type="button"
-              label="prev"
-            />
-          </div>
 
           <SplideSlide>
+            <div className="splide__arrows">
+              <button
+                className="splide__arrow splide__arrow--prev"
+                type="button"
+                label="next"
+              />
+              <button
+                className="splide__arrow splide__arrow--next"
+                type="button"
+                label="prev"
+              />
+            </div>
             <div className="splide__slide__container">
               <img src={photo} alt="Image2" className="splide__img" />
             </div>
-            <p className="splide__description">
-              My first project-portfolio as an cv. It builded on React and
-              native JS. I used the Slidejs library for slider, animations on
-              css, styles wrote on scss. I would like to do it more designed,
-              but i need more practice. It&apos;s not diminution of my ability, it&apos;s
-              a fact.
-
-            </p>
-            <div className="splide__button-wrap">
-              <button type="button" className="splide__button_site">
-                {}
-              </button>
+            <div className="splide__description">
+              <p className="splide__description_text">
+                My first project-portfolio as an cv. It builded on React and
+                native JS. I used the Slidejs library for slider, animations on
+                css, styles wrote on scss. I would like to do it more designed,
+                but i need more practice. It&apos;s not diminution of my ability, it&apos;s
+                a fact.
+              </p>
+              <div className="splide__button-wrap">
+                <button type="button" className="splide__button_site">
+                  {}
+                </button>
+              </div>
             </div>
 
           </SplideSlide>

@@ -86,6 +86,11 @@
   bottom: -20px;
 }
 
+/* Слайды */
+.splide__slide {
+  height: max-content;
+}
+
 /* Изображения-слайды */
 .splide__img {
   height: 100%;
@@ -94,15 +99,22 @@
 }
 
 .splide__slide__container {
-  height: 90%;
+  position: relative;
+  height: auto !important;
 }
 
 /* Описания под слайдами */
 .splide__description {
-  color: $text-color;
-  text-align: center;
-  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.splide__description_text {
+  max-width: 65%;
+  text-align: center;
+  font-size: 16px;
+  color: $text-color;
   font-family: $font-stack;
   font-weight: map-get($font-weights, light);
 }
@@ -123,42 +135,21 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  width: max-content;
+  width: 200px;
   margin: 15px auto;
 
-  &:hover {
-    .splide__button_site {
-      transition: 0.3s ease-in-out;
-      width: 200px;
-      height: 50px;
-      border: 1px solid cornflowerblue;
-      border-radius: 0;
-      background: transparent;
-      animation: none;
-
-      &::after {
-        content: "GO TO SITE";
-        color: transparent;
-        transition: 1s;
-        @keyframes appear {
-          from {
-            color: transparent;
-          }
-          to {
-            color: cornflowerblue;
-          }
-        }
-        animation: 0.2s appear 0.2s forwards;
-      }
-    }
-  }
 }
+
 .splide__button_site {
   position: relative;
-  z-index: 0;
+  background-color: transparent;
   width: 200px;
-  height: 1px;
-  background: cornflowerblue;
+  height: 50px;
+  border: 1px solid cornflowerblue;
+
+  position: relative;
+  z-index: 0;
+
   overflow: hidden;
   margin: 30px auto;
   display: flex;
@@ -168,12 +159,42 @@
   font-family: "Roboto Condensed", sans-serif;
   outline: none;
   transition: 0.3s ease-in-out;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   transform: scale(1);
   box-shadow: 0 0 0 0 rgba(#5a99d4, 0.1);
   cursor: pointer;
+  transition: .5s;
 
-  @keyframes pulse {
+  &::before {
+    content: "GO TO SITE";
+    color: cornflowerblue;
+    transition: .5s;
+  }
+  
+  &::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    transition: .5s;
+  }
+  
+  &:hover {
+    &::before {
+      color: #383838;
+      transition: .5s;
+    }
+    &::after {
+      width: 210px;
+      height: 210px;
+      transition: .5s;
+      background: cornflowerblue;
+    }
+  }
+  /* @keyframes pulse {
     0% {
       transform: scale(0.9);
       box-shadow: 0 0 0 0 transparent;
@@ -188,30 +209,7 @@
     }
   }
 
-  animation: pulse 1.5s ease-out infinite;
+  animation: pulse 1.5s ease-out infinite; */
 
-  &:hover {
-    transition: 0.3s ease-in-out;
-    width: 200px;
-    height: 50px;
-    border: 1px solid cornflowerblue;
-    border-radius: 0;
-    background: transparent;
-    animation: none;
 
-    &::after {
-      content: "GO TO SITE";
-      color: transparent;
-      transition: 1s;
-      @keyframes appear {
-        from {
-          color: transparent;
-        }
-        to {
-          color: cornflowerblue;
-        }
-      }
-      animation: 0.2s appear 0.2s forwards;
-    }
-  }
 }
