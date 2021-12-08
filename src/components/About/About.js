@@ -105,7 +105,6 @@ function About() {
               <a href="https://t.me/knghgi" target="_blank" rel="noreferrer" label="telegram: knghgi"><li className="Details__social-item Social-item_telegram">{}</li></a>
               <a href="mailto: kseniya7991@gmail.com" target="_blank" rel="noreferrer" label="email: kseniya7991@gmail.com"><li className="Details__social-item Social-item_email">{}</li></a>
               <a href={CV} download target="_blank" rel="noreferrer" label="download the CV" className="Social-item_link"><li className="Details__social-item Social-item_cv">CV</li></a>
-              <li className="Details__social-item">fff</li>
             </ul>
           </div>
         </div>
