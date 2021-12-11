@@ -4,11 +4,36 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 import './Projects.scss';
-import photo from '../../images/pr1.png';
+import projectOne from '../../images/pr1.png';
+import projectTwo from '../../images/pr2.png';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
 
 function Projects() {
   const [isClickedHeading, setIsClickedHeading] = useState(false);
+  const [buttonText, setButtonText] = useState('GO TO SITE');
+  const [btnIsOver, setBtnIsOver] = useState(false);
+
+  function setBtnText() {
+    setButtonText('KSENIYA.com');
+  }
+
+  function handleHover() {
+    setTimeout(setBtnText, 200);
+    setButtonText('KSENIYA.com');
+    setBtnIsOver(true);
+    /*     if (buttonSite) {
+      buttonSite.style.color = '#383838';
+    } */
+    /*  btn.style.color = '#383838'; */
+  }
+
+  function handleLeave() {
+    setButtonText('GO TO SITE');
+    setBtnIsOver(false);
+    /*     if (buttonSite) {
+      buttonSite.style.color = '#0099d7';
+    } */
+  }
 
   function handleClickHeading() {
     setIsClickedHeading(!isClickedHeading);
@@ -55,7 +80,7 @@ function Projects() {
               />
             </div>
             <div className="splide__slide__container">
-              <img src={photo} alt="Image2" className="splide__img" />
+              <img src={projectOne} alt="Image2" className="splide__img" />
             </div>
             <div className="splide__description">
               <p className="splide__description_text">
@@ -66,16 +91,15 @@ function Projects() {
                 a fact.
               </p>
               <div className="splide__button-wrap">
-                <button type="button" className="splide__button_site">
-                  {}
+                <button onMouseEnter={handleHover} onMouseLeave={handleLeave} type="button" className={`splide__button_site ${btnIsOver ? 'splide__button_over' : 'splide__button_leave'}`}>
+                  {buttonText}
                 </button>
               </div>
             </div>
-
           </SplideSlide>
           <SplideSlide>
             <div className="splide__slide__container">
-              <img src={photo} alt="Image2" className="splide__img" />
+              <img src={projectTwo} alt="Image2" className="splide__img" />
             </div>
             <p className="splide__description">
               Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet
@@ -83,7 +107,7 @@ function Projects() {
           </SplideSlide>
           <SplideSlide>
             <div className="splide__slide__container">
-              <img src={photo} alt="Image2" className="splide__img" />
+              <img src={projectOne} alt="Image2" className="splide__img" />
             </div>
             <p className="splide__description">
               Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet
@@ -91,7 +115,7 @@ function Projects() {
           </SplideSlide>
           <SplideSlide>
             <div className="splide__slide__container">
-              <img src={photo} alt="Image2" className="splide__img" />
+              <img src={projectOne} alt="Image2" className="splide__img" />
             </div>
             <p className="splide__description">
               Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet
@@ -99,7 +123,7 @@ function Projects() {
           </SplideSlide>
           <SplideSlide>
             <div className="splide__slide__container">
-              <img src={photo} alt="Image2" className="splide__img" />
+              <img src={projectOne} alt="Image2" className="splide__img" />
             </div>
             <p className="splide__description">
               Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet
