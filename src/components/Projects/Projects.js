@@ -4,36 +4,13 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 import './Projects.scss';
+import ButtonSite from '../ButtonSite/ButtonSite';
 import projectOne from '../../images/pr1.png';
 import projectTwo from '../../images/pr2.png';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
 
 function Projects() {
   const [isClickedHeading, setIsClickedHeading] = useState(false);
-  const [buttonText, setButtonText] = useState('GO TO SITE');
-  const [btnIsOver, setBtnIsOver] = useState(false);
-
-  function setBtnText() {
-    setButtonText('KSENIYA.com');
-  }
-
-  function handleHover() {
-    setTimeout(setBtnText, 200);
-    setButtonText('KSENIYA.com');
-    setBtnIsOver(true);
-    /*     if (buttonSite) {
-      buttonSite.style.color = '#383838';
-    } */
-    /*  btn.style.color = '#383838'; */
-  }
-
-  function handleLeave() {
-    setButtonText('GO TO SITE');
-    setBtnIsOver(false);
-    /*     if (buttonSite) {
-      buttonSite.style.color = '#0099d7';
-    } */
-  }
 
   function handleClickHeading() {
     setIsClickedHeading(!isClickedHeading);
@@ -65,7 +42,6 @@ function Projects() {
             heightRatio: 1,
           }}
         >
-
           <SplideSlide>
             <div className="splide__arrows">
               <button
@@ -83,27 +59,31 @@ function Projects() {
               <img src={projectOne} alt="Image2" className="splide__img" />
             </div>
             <div className="splide__description">
-              <p className="splide__description_text">
-                My first project-portfolio as an cv. It builded on React and
-                native JS. I used the Slidejs library for slider, animations on
-                css, styles wrote on scss. I would like to do it more designed,
-                but i need more practice. It&apos;s not diminution of my ability, it&apos;s
-                a fact.
-              </p>
-              <div className="splide__button-wrap">
-                <button onMouseEnter={handleHover} onMouseLeave={handleLeave} type="button" className={`splide__button_site ${btnIsOver ? 'splide__button_over' : 'splide__button_leave'}`}>
-                  {buttonText}
-                </button>
+              <div>
+                <h3 className="splide__description_header">Portfolio</h3>
+                <p className="splide__description_text">
+                  My first project-portfolio as an cv. It builded on React and
+                  native JS. I used the Slidejs library for slider, animations on
+                  css, styles wrote on scss. I would like to do it more designed,
+                  but i need more practice. It&apos;s not diminution of my
+                  ability, it&apos;s a fact.
+                </p>
               </div>
+              <ButtonSite address="kseniya.com" />
             </div>
           </SplideSlide>
           <SplideSlide>
             <div className="splide__slide__container">
               <img src={projectTwo} alt="Image2" className="splide__img" />
             </div>
-            <p className="splide__description">
-              Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet
-            </p>
+            <div className="splide__description">
+              <p className="splide__description_text">
+                One-page non-adaptive site. This was the first project in Y.P.
+                Only CSS + HTML. There are videos from YouTube, CSS animations,
+                flex.
+              </p>
+              <ButtonSite address="/how-to-learn/" link="https://kseniya7991.github.io/how-to-learn/" />
+            </div>
           </SplideSlide>
           <SplideSlide>
             <div className="splide__slide__container">
