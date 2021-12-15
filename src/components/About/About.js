@@ -83,10 +83,10 @@ function About() {
             <p className="Deatils__title">Details</p>
             <ul className="Details__list">
               <li className="Details__item">
-                <li className="Details__item">
-                  <span className="Details__name">Name:</span>
-                  Stoichykova Kseniya
-                </li>
+                <span className="Details__name">Name:</span>
+                Stoichykova Kseniya
+              </li>
+              <li className="Details__item">
                 <span className="Details__name">Age:</span>
                 24
               </li>

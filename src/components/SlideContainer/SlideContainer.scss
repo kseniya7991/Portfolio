@@ -1,0 +1,37 @@
+@import '../../vendor/scss/variables';
+@import '../../vendor/scss/mixin';
+
+.slideContainer__wrap {
+  position: relative;
+  height: auto !important;
+  margin-right: 50px;
+}
+
+.slideContainer__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slideContainer__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.slideContainer__text {
+  text-align: center;
+  font-size: 16px;
+  color: $text-color;
+  font-family: $font-stack;
+  font-weight: map-get($font-weights, light);
+}
+
+.slideContainer__title {
+  color: #fff;
+  text-align: center;
+  font-family: $font-stack;
+  font-weight: map-get($font-weights, regular);
+}
