@@ -60,7 +60,7 @@ function Projects() {
               img={projectTwo}
               address="/how-to-learn/"
               link="https://kseniya7991.github.io/how-to-learn/"
-              title="Научиться учиться"
+              title="How to learn"
               description="One-page non-adaptive site. This was the first project in Y.P.
           Only CSS + HTML. There are videos from YouTube, CSS animations,
           flex."
