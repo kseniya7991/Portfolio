@@ -5,8 +5,10 @@ import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 import './Projects.scss';
 import SlideContainer from '../SlideContainer/SlideContainer';
-import projectOne from '../../images/pr1.png';
-import projectTwo from '../../images/pr2.png';
+import projectPortfolio from '../../images/pr1.png';
+import projectHowToLearn from '../../images/pr2.png';
+import projectRussianTravel from '../../images/russian_travel.png';
+import projectMesto from '../../images/mesto_project.png';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
 
 function Projects() {
@@ -44,7 +46,7 @@ function Projects() {
         >
           <SplideSlide>
             <SlideContainer
-              img={projectOne}
+              img={projectPortfolio}
               address="kseniya.com"
               link="http://localhost:3000/"
               title="Portfolio"
@@ -57,7 +59,7 @@ function Projects() {
           </SplideSlide>
           <SplideSlide>
             <SlideContainer
-              img={projectTwo}
+              img={projectHowToLearn}
               address="/how-to-learn/"
               link="https://kseniya7991.github.io/how-to-learn/"
               title="How to learn"
@@ -67,28 +69,22 @@ function Projects() {
             />
           </SplideSlide>
           <SplideSlide>
-            <div className="splide__slide__container">
-              <img src={projectOne} alt="Image2" className="splide__img" />
-            </div>
-            <p className="splide__description">
-              Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet
-            </p>
+            <SlideContainer
+              img={projectRussianTravel}
+              address="/russian-travel/"
+              link="https://kseniya7991.github.io/russian-travel/index.html"
+              title="Russian Travel"
+              description="The one-page adaptive website about travels in a large country called Russia. Grid and Flex systems, overlaying of elements, BEM methodology were used."
+            />
           </SplideSlide>
           <SplideSlide>
-            <div className="splide__slide__container">
-              <img src={projectOne} alt="Image2" className="splide__img" />
-            </div>
-            <p className="splide__description">
-              Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet
-            </p>
-          </SplideSlide>
-          <SplideSlide>
-            <div className="splide__slide__container">
-              <img src={projectOne} alt="Image2" className="splide__img" />
-            </div>
-            <p className="splide__description">
-              Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet
-            </p>
+            <SlideContainer
+              img={projectMesto}
+              address="/mesto/"
+              link="https://kst.mesto.nomoredomains.club/"
+              title="Mesto"
+              description="The one-page adaptive website about travels in a large country called Russia. Grid and Flex systems, overlaying of elements, BEM methodology were used."
+            />
           </SplideSlide>
         </Splide>
       </div>
