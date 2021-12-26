@@ -9,6 +9,8 @@ import projectPortfolio from '../../images/pr1.png';
 import projectHowToLearn from '../../images/pr2.png';
 import projectRussianTravel from '../../images/russian_travel.png';
 import projectMesto from '../../images/mesto_project.png';
+import projectMovies from '../../images/movies_diploma.png';
+import projectIrvas from '../../images/irvas_udemy.png';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
 
 function Projects() {
@@ -79,11 +81,29 @@ function Projects() {
           </SplideSlide>
           <SplideSlide>
             <SlideContainer
-              img={projectMesto}
+              img={projectMovies}
               address="/mesto/"
               link="https://kst.mesto.nomoredomains.club/"
               title="Mesto"
-              description="The one-page adaptive website about travels in a large country called Russia. Grid and Flex systems, overlaying of elements, BEM methodology were used."
+              description="The one-page adaptive website about travels in a large country called Russia. Grid and Flex systems, overlaying of elements, BEM methodology were used. The project includes 2 parts: front-end and back-end."
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <SlideContainer
+              img={projectMesto}
+              address="/movies/"
+              link="https://movies.kst.nomoredomains.monster/"
+              title="Movies"
+              description="This is a graduation project on React. The service allows you to search movies by keywords from a third-party API, save movies, create new users on the site. The project includes 2 parts: front-end and back-end."
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <SlideContainer
+              img={projectIrvas}
+              address="/movies/"
+              link="https://github.com/kseniya7991/irvas-js"
+              title="Irvas"
+              description="Udemy's project. A specifications provided by the customer. The tasks of the project: creating functionality on the page, switching tabs, opening popups, sending forms to the server. Working with gulp, MAMP server."
             />
           </SplideSlide>
         </Splide>
