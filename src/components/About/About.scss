@@ -87,7 +87,7 @@
   }
 
   .About__paragraph_high {
-    color: #56b8df;
+    color: $main-color;
     font-size: 18px;
 
     @include mobile {

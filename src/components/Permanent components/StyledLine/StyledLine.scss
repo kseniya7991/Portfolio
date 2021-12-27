@@ -1,3 +1,5 @@
+@import "../../../vendor/scss/variables";
+
 .line-wrapper {
   margin: 30px 0 0 0;
   display: flex;
@@ -12,7 +14,7 @@
       90deg,
       rgba(0, 153, 215, 0) 0%,
       rgba(0, 153, 215, 0.6755077030812324) 46%,
-      rgba(0, 153, 215, 1) 93%
+      $main-color 93%
     );
   }
 
@@ -20,6 +22,6 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: rgba(0, 153, 215, 1);
+    background-color: $main-color;
   }
 }
