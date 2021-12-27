@@ -2,21 +2,17 @@ import React, { useState } from 'react';
 
 import './ButtonSite.scss';
 
-function ButtonSite({ address, link }) {
-  const [buttonText, setButtonText] = useState('GO TO SITE');
+function ButtonSite({ address, link, github }) {
+  const [buttonText, setButtonText] = useState('go to site');
   const [btnIsOver, setBtnIsOver] = useState(false);
 
-  /*  function setBtnText() {
-    setButtonText(address);
-  } */
   function handleHover() {
-    /* setTimeout(setBtnText, 200); */
     setButtonText(address);
     setBtnIsOver(true);
   }
 
   function handleLeave() {
-    setButtonText('GO TO SITE');
+    setButtonText('go to site');
     setBtnIsOver(false);
   }
 
@@ -33,6 +29,9 @@ function ButtonSite({ address, link }) {
         >
           {buttonText}
         </button>
+      </a>
+      <a href={github} className="buttonSite__link" target="_blank" rel="noreferrer">
+        <button type="button" className="buttonSite__github">github</button>
       </a>
     </div>
   );

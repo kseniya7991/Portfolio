@@ -51,6 +51,7 @@ function Projects() {
               img={projectPortfolio}
               address="kseniya.com"
               link="http://localhost:3000/"
+              github="https://github.com/kseniya7991/Portfolio"
               title="Portfolio"
               description="My first project-portfolio as an cv. It builded on React and
             native JS. I used the Slidejs library for slider, animations on
@@ -64,6 +65,7 @@ function Projects() {
               img={projectHowToLearn}
               address="/how-to-learn/"
               link="https://kseniya7991.github.io/how-to-learn/"
+              github="https://github.com/kseniya7991/how-to-learn"
               title="How to learn"
               description="One-page non-adaptive site. This was the first project in Y.P.
           Only CSS + HTML. There are videos from YouTube, CSS animations,
@@ -75,6 +77,7 @@ function Projects() {
               img={projectRussianTravel}
               address="/russian-travel/"
               link="https://kseniya7991.github.io/russian-travel/index.html"
+              github="https://github.com/kseniya7991/russian-travel"
               title="Russian Travel"
               description="The one-page adaptive website about travels in a large country called Russia. Grid and Flex systems, overlaying of elements, BEM methodology were used."
             />
@@ -84,6 +87,7 @@ function Projects() {
               img={projectMovies}
               address="/mesto/"
               link="https://kst.mesto.nomoredomains.club/"
+              github="https://github.com/kseniya7991/react-mesto-api-full"
               title="Mesto"
               description="The one-page adaptive website about travels in a large country called Russia. Grid and Flex systems, overlaying of elements, BEM methodology were used. The project includes 2 parts: front-end and back-end."
             />
@@ -93,6 +97,7 @@ function Projects() {
               img={projectMesto}
               address="/movies/"
               link="https://movies.kst.nomoredomains.monster/"
+              github="https://github.com/kseniya7991/movies-explorer-frontend"
               title="Movies"
               description="This is a graduation project on React. The service allows you to search movies by keywords from a third-party API, save movies, create new users on the site. The project includes 2 parts: front-end and back-end."
             />
@@ -100,8 +105,9 @@ function Projects() {
           <SplideSlide>
             <SlideContainer
               img={projectIrvas}
-              address="/movies/"
+              address="/irvas-js/"
               link="https://github.com/kseniya7991/irvas-js"
+              github="https://github.com/kseniya7991/irvas-js"
               title="Irvas"
               description="Udemy's project. A specifications provided by the customer. The tasks of the project: creating functionality on the page, switching tabs, opening popups, sending forms to the server. Working with gulp, MAMP server."
             />
