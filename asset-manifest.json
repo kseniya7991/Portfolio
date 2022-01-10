@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.37a50e19.chunk.css",
+    "main.js": "/portfolio/static/js/main.f2dc627d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f2dc627d.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.c1340bca.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.c1340bca.js.map",
+    "static/css/2.64e72a7a.chunk.css": "/portfolio/static/css/2.64e72a7a.chunk.css",
+    "static/js/2.9f8db088.chunk.js": "/portfolio/static/js/2.9f8db088.chunk.js",
+    "static/js/2.9f8db088.chunk.js.map": "/portfolio/static/js/2.9f8db088.chunk.js.map",
+    "static/js/3.6ecf046b.chunk.js": "/portfolio/static/js/3.6ecf046b.chunk.js",
+    "static/js/3.6ecf046b.chunk.js.map": "/portfolio/static/js/3.6ecf046b.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/2.64e72a7a.chunk.css.map": "/portfolio/static/css/2.64e72a7a.chunk.css.map",
+    "static/css/main.37a50e19.chunk.css.map": "/portfolio/static/css/main.37a50e19.chunk.css.map",
+    "static/js/2.9f8db088.chunk.js.LICENSE.txt": "/portfolio/static/js/2.9f8db088.chunk.js.LICENSE.txt",
+    "static/media/Kseniya_Stoichykova_CV.b6a3d073.pdf": "/portfolio/static/media/Kseniya_Stoichykova_CV.b6a3d073.pdf",
+    "static/media/github.038e128b.svg": "/portfolio/static/media/github.038e128b.svg",
+    "static/media/github_hover.55b171d4.svg": "/portfolio/static/media/github_hover.55b171d4.svg",
+    "static/media/About.scss": "/portfolio/static/media/telegram.53cdba5d.png",
+    "static/media/irvas_udemy.5a3d747e.png": "/portfolio/static/media/irvas_udemy.5a3d747e.png",
+    "static/media/mesto_project.11978e4e.png": "/portfolio/static/media/mesto_project.11978e4e.png",
+    "static/media/movies_diploma.c253dc10.png": "/portfolio/static/media/movies_diploma.c253dc10.png",
+    "static/media/pr1.ec1e4c3d.png": "/portfolio/static/media/pr1.ec1e4c3d.png",
+    "static/media/pr2.a1466482.png": "/portfolio/static/media/pr2.a1466482.png",
+    "static/media/russian_travel.63fa1d80.png": "/portfolio/static/media/russian_travel.63fa1d80.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c1340bca.js",
+    "static/css/2.64e72a7a.chunk.css",
+    "static/js/2.9f8db088.chunk.js",
+    "static/css/main.37a50e19.chunk.css",
+    "static/js/main.f2dc627d.chunk.js"
+  ]
+}
