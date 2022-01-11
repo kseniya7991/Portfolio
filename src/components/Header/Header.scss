@@ -3,14 +3,35 @@
 @import '../../vendor/scss/mixin';
 @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600&display=swap');
 
+.Section{
+  @include Section;
+}
+
+.Header__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  transition: .3s;
+}
+
+.Header__container_scroll {
+    background-color: #363636;
+    box-shadow: 0px 5px 5px black;
+    transition: .2s;
+}
 
 .Header {
-  padding: 10px 0;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 10px 50px;
+  height: 50px;
   @include flexCenter;
   flex-direction: row;
   justify-content: space-between;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 .Header__name {

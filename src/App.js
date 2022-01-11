@@ -10,6 +10,16 @@ function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    // clean up code
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const handleMenuPopup = () => {
     setIsMenuPopupOpened(!isMenuPopupOpened);
     setIsMobileMenuOpened(!isMobileMenuOpened);
@@ -41,6 +51,7 @@ function App() {
           handleMenuPopup={handleMenuPopup}
           isMobile={isMobile}
           isOpened={isMobileMenuOpened}
+          isScrolled={offset}
         />
         <Main />
         <Footer />

@@ -1,5 +1,9 @@
 @import "./_variables.scss";
 
+//Секции
+@mixin Section {
+  max-width: 1280px;
+}
 //Выравнивание флекса по центру
 @mixin flexCenter {
   display: flex;
