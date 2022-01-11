@@ -1,74 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
 import CV from '../../files/Kseniya_Stoichykova_CV.pdf';
 
 import './About.scss';
-/* import { Cover } from '@splidejs/splide/dist/types/components'; */
 
 function About() {
   const photoBlock = useRef();
-  const [photo, setPhoto] = useState(photoBlock.current);
-  const [photoX, setPhotoX] = useState();
-  const [photoY, setPhotoY] = useState();
   const [isClickedHeading, setIsClickedHeading] = useState(false);
-
-  const photoWidth = 200;
 
   function handleClickHeading() {
     setIsClickedHeading(!isClickedHeading);
   }
-
-  function getCoordinate(axis, indent, mouseCoordinate) {
-    const factor = (indent * 2) / photoWidth;
-    let difference = 0;
-    if (axis === 'X') {
-      difference = (mouseCoordinate - photoX) * (-1) * factor + indent;
-    } else {
-      difference = (mouseCoordinate - photoY) * (-1) * factor + indent;
-    }
-
-    let coordinate = 0;
-
-    if (difference > indent) {
-      coordinate = indent;
-    } else if (difference < -indent) {
-      coordinate = -indent;
-    } else {
-      coordinate = difference;
-    }
-
-    return coordinate;
-  }
-
-  function countTranslate(mouseX, mouseY) {
-    const coordinateX = getCoordinate('X', 7, mouseX);
-    const coordinateY = getCoordinate('Y', 9, mouseY);
-
-    return `translate(${coordinateX}px, ${coordinateY}px)`;
-  }
-
-  function mouseMove(event) {
-    const mouseX = event.screenX;
-    const mouseY = event.screenY;
-
-    document.querySelector('.Photo__circle').style.transform = countTranslate(mouseX, mouseY);
-  }
-
-  useEffect(() => {
-    if (photo) {
-      setPhotoX(photo.getBoundingClientRect().x);
-      setPhotoY(photo.getBoundingClientRect().y);
-    }
-  }, [photo]);
-
-  useEffect(() => {
-    setPhoto(photoBlock.current);
-    window.addEventListener('mousemove', mouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', mouseMove);
-    };
-  }, [photoX, photoY]);
 
   return (
     <>
@@ -77,7 +19,6 @@ function About() {
         <div className="About__details">
           <div className="About__wrap">
             <div className="About__photo" ref={photoBlock} />
-            <div className="Photo__circle" />
           </div>
           <div className="Details__wrap">
             <p className="Deatils__title">Details</p>

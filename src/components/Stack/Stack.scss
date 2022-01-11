@@ -1,0 +1,33 @@
+@import "../../vendor/scss/variables";
+@import "../../vendor/scss/mixin";
+
+.Stack {
+  padding: 30px 0;
+}
+
+.Stack__heading {
+  @include heading;
+  align-self: flex-end;
+  text-align: right;
+  line-height: 1;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.Stack__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Stack__item {
+  list-style-type: none;
+}
+
+.fa-github::before {
+  content: "\f09b";
+}

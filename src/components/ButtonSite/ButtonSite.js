@@ -1,32 +1,34 @@
 import React, { useState } from 'react';
 
 import './ButtonSite.scss';
-import githubImg from '../../images/github.svg';
-import githubImgHover from '../../images/github_hover.svg';
+/* import githubImg from '../../images/github.svg';
+import githubImgHover from '../../images/github_hover.svg'; */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function ButtonSite({ address, link, github }) {
   const [buttonText, setButtonText] = useState('go to site');
   const [btnIsOver, setBtnIsOver] = useState(false);
-  const [btnGitIsOver, setBtnGitIsOver] = useState(false);
+  /*   const [btnGitIsOver, setBtnGitIsOver] = useState(false); */
 
   function handleHover() {
     setButtonText(address);
     setBtnIsOver(true);
   }
 
-  function handleHoverGit() {
+  /*   function handleHoverGit() {
     setBtnGitIsOver(true);
-  }
+  } */
 
   function handleLeave() {
     setButtonText('go to site');
     setBtnIsOver(false);
   }
 
-  function handleLeaveGit() {
+  /*   function handleLeaveGit() {
     setBtnGitIsOver(false);
   }
-
+ */
   return (
     <div className="buttonSite__wrap">
       <a href={link} className="buttonSite__link" target="_blank" rel="noreferrer">
@@ -45,15 +47,16 @@ function ButtonSite({ address, link, github }) {
         <button
           type="button"
           className="buttonSite__github"
-          onMouseEnter={handleHoverGit}
-          onMouseLeave={handleLeaveGit}
+/*           onMouseEnter={handleHoverGit}
+          onMouseLeave={handleLeaveGit} */
         >
           github
-          <img
+          <FontAwesomeIcon icon={faGithub} className="svgIcon" />
+          {/* <img
             src={`${btnGitIsOver ? githubImgHover : githubImg}`}
             className="buttonSite__github_img"
             alt="github"
-          />
+          /> */}
         </button>
       </a>
     </div>
