@@ -84,7 +84,7 @@ function Projects() {
           </SplideSlide>
           <SplideSlide>
             <SlideContainer
-              img={projectMovies}
+              img={projectMesto}
               address="/mesto/"
               link="https://kst.mesto.nomoredomains.club/"
               github="https://github.com/kseniya7991/react-mesto-api-full"
@@ -94,7 +94,7 @@ function Projects() {
           </SplideSlide>
           <SplideSlide>
             <SlideContainer
-              img={projectMesto}
+              img={projectMovies}
               address="/movies/"
               link="https://movies.kst.nomoredomains.monster/"
               github="https://github.com/kseniya7991/movies-explorer-frontend"
