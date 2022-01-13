@@ -1,6 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { useEffect } from 'react/cjs/react.development';
 import './Contact.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegramPlane, faViber, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
   const ContactBlock = useRef();
@@ -33,13 +36,36 @@ function Contact() {
       <div className="Contact">
         <h2 className="Contact__heading">Contact</h2>
         <div className="Contact__wrap">
-          <ul className="Contact__list">
-            <li className="Contact__item"> sdada</li>
-            <li className="Contact__item"> sdada</li>
-            <li className="Contact__item"> sdada</li>
-            <li className="Contact__item"> sdada</li>
-            <li className="Contact__item"> sdada</li>
-          </ul>
+          <div className="Contact__list_wrap">
+            <ul className="Contact__list">
+              <a href="mailto:kseniya7991@gmail.com" target="_blank" rel="noreferrer" label="email: kseniya7991@gmail.com" className="Contact__link">
+                <li className="Contact__item">
+                  <FontAwesomeIcon icon={faEnvelope} className="Contact__icon" />
+                  <span className="Contact__text">Email</span>
+                </li>
+              </a>
+              <a href="https://www.linkedin.com/in/kseniya-stoychikova-907594201/" target="_blank" rel="noreferrer" label="linked in: Kseniya Stoichykova" className="Contact__link">
+                <li className="Contact__item">
+                  <FontAwesomeIcon icon={faLinkedinIn} className="Contact__icon" />
+                  <span className="Contact__text">Linkedin</span>
+                </li>
+              </a>
+            </ul>
+            <ul className="Contact__list">
+              <a href="https://t.me/knghgi" target="_blank" rel="noreferrer" label="telegram: knghgi" className="Contact__link">
+                <li className="Contact__item">
+                  <FontAwesomeIcon icon={faTelegramPlane} className="Contact__icon" />
+                  <span className="Contact__text">Telegram</span>
+                </li>
+              </a>
+              <a href="viber://chat?number=%2B375291715185" target="_blank" rel="noreferrer" label="viber" className="Contact__link">
+                <li className="Contact__item">
+                  <FontAwesomeIcon icon={faViber} className="Contact__icon" />
+                  <span className="Contact__text">Viber</span>
+                </li>
+              </a>
+            </ul>
+          </div>
           <p className="Contact__info">I&apos;m available for work</p>
         </div>
       </div>
