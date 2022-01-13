@@ -15,7 +15,7 @@ function About() {
   return (
     <>
       <StyledLine />
-      <div className="About">
+      <section className="About">
         <div className="About__details">
           <div className="About__wrap">
             <div className="About__photo" ref={photoBlock} />
@@ -75,7 +75,7 @@ function About() {
             </em>
           </p>
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -13,7 +13,7 @@ function Stack() {
   return (
     <>
       <StyledLine />
-      <div className="Stack">
+      <section className="Stack">
         <h2 className="Stack__heading">Stack</h2>
         <ul className="Stack__list">
           <li className="Stack__item">
@@ -47,7 +47,7 @@ function Stack() {
             <p className="Item__description">Used to store user data</p>
           </li>
         </ul>
-      </div>
+      </section>
     </>
   );
 }

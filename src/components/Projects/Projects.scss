@@ -2,7 +2,8 @@
 @import "../../vendor/scss/mixin";
 
 .Projects {
-  padding: 30px 0;
+  @include Section;
+
   display: flex;
   flex-direction: column;
   align-items: stretch;

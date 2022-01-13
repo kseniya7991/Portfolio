@@ -23,7 +23,7 @@ function Projects() {
   return (
     <>
       <StyledLine />
-      <div className="Projects">
+      <section className="Projects">
         <h2
           className={`Projects__heading ${
             isClickedHeading ? 'Projects__heading_animation' : ''
@@ -113,7 +113,7 @@ function Projects() {
             />
           </SplideSlide>
         </Splide>
-      </div>
+      </section>
     </>
   );
 }

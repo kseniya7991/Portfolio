@@ -12,15 +12,13 @@ function Header({
   };
 
   return (
-    <section id="Header" className="Section">
-      <div className={`Header__container ${isScrolled ? 'Header__container_scroll' : ''}`}>
-        <header className="Header">
-          <h1 className="Header__name">Portfolio</h1>
-          <Navigation isMobile={isMobile} />
-          <BurgerMenu isMobile={isMobile} handleMenu={handleMenu} isOpened={isOpened} />
-          <BurgerNavigation isOpened={isOpened} isMobile={isMobile} />
-        </header>
-      </div>
+    <section className={`Header__container ${isScrolled ? 'Header__container_scroll' : ''}`}>
+      <header className="Header">
+        <h1 className="Header__name">Portfolio</h1>
+        <Navigation isMobile={isMobile} />
+        <BurgerMenu isMobile={isMobile} handleMenu={handleMenu} isOpened={isOpened} />
+        <BurgerNavigation isOpened={isOpened} isMobile={isMobile} />
+      </header>
     </section>
   );
 }

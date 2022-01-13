@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
+import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
 import MenuPopup from './components/MenuPopup/MenuPopup';
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
           isScrolled={offset}
         />
         <Main />
-        <Footer />
+        <Contact />
         <MenuPopup isOpened={isMenuPopupOpened} />
       </div>
     </>

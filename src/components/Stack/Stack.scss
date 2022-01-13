@@ -2,7 +2,7 @@
 @import "../../vendor/scss/mixin";
 
 .Stack {
-  padding: 30px 0;
+  @include Section;
 }
 
 .Stack__heading {

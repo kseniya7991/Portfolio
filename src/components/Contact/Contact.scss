@@ -1,0 +1,35 @@
+@import "../../vendor/scss/variables";
+@import "../../vendor/scss/mixin";
+
+.Footer {
+  width: 100%;
+  transition: .3s;
+}
+
+.Footer_visible {
+  background-color: #3e4248;
+  transition: .3s;
+}
+
+.Contact {
+  @include Section;
+  padding: 30px 50px 20px 50px;
+}
+
+.Contact__heading {
+  @include heading;
+}
+
+.Contact__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Contact__list {
+  padding: 0;
+}
+
+.Contact__item {
+  list-style-type: none;
+}
