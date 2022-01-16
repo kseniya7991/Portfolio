@@ -46,7 +46,7 @@
 
 .Contact__text {
   position: relative;
-  color: #aaa;
+  color: $text-color-second;
 
 }
 
@@ -96,7 +96,7 @@
 }
 
 .Contact__icon {
-  color: #aaa;
+  color: $icon-color;
   width: 30px !important;
   height: 30px;
   margin-right: 10px;

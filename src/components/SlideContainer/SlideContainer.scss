@@ -1,6 +1,11 @@
 @import '../../vendor/scss/variables';
 @import '../../vendor/scss/mixin';
 
+.slideContainer__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .slideContainer__wrap {
   position: relative;
   height: auto !important;

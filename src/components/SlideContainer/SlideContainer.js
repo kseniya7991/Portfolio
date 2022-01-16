@@ -7,7 +7,7 @@ function SlideContainer({
   img, address, link, title, description, github,
 }) {
   return (
-    <>
+    <div className="slideContainer__wrapper">
       <div className="slideContainer__wrap">
         <img src={img} alt="Image2" className="slideContainer__img" />
       </div>
@@ -20,7 +20,7 @@ function SlideContainer({
         </div>
         <ButtonSite address={address} link={link} github={github} />
       </div>
-    </>
+    </div>
   );
 }
 

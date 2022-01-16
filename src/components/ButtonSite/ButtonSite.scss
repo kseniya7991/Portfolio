@@ -52,7 +52,7 @@
       width: 210px;
       height: 210px;
       transition: .3s;
-      background: $main-color;
+      /* background: $main-color; */
     }
   }
 }
@@ -63,7 +63,7 @@
 
 .buttonSite_over {
   transition: 2s;
-  color: #383838;
+  color: $main-color;
 }
 
 .buttonSite_leave {

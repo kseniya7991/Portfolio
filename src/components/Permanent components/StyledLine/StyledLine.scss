@@ -1,7 +1,7 @@
 @import "../../../vendor/scss/variables";
 
 .line-wrapper {
-  max-width: 1280px;
+  max-width: $breakpoint-pc;
   margin: 0 auto;
   padding: 30px 0 0 0;
   display: flex;
@@ -10,17 +10,13 @@
   width: 100%;
 
   .line {
-    height: 2px;
-    width: 70%;
-    background: linear-gradient(
-      90deg,
-      rgba(0, 153, 215, 0) 0%,
-      rgba(0, 153, 215, 0.6755077030812324) 46%,
-      $main-color 93%
-    );
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 153, 215, 0) 0%,#6c6c6c99 46%,  rgba(0, 153, 215, 0)93%);
   }
 
   .circle {
+    visibility: hidden;
     width: 8px;
     height: 8px;
     border-radius: 50%;

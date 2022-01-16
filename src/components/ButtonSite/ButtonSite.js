@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
 import './ButtonSite.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 /* import githubImg from '../../images/github.svg';
 import githubImgHover from '../../images/github_hover.svg'; */
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function ButtonSite({ address, link, github }) {
