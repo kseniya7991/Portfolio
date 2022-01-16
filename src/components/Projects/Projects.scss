@@ -92,8 +92,17 @@
 .splide__slide {
   height: max-content;
   display: flex;
-  height: 70vh;
+  height: 50vh !important;
   justify-content: space-between;
+
+  @include tablet {
+    max-height: 60vh;
+    height: auto !important;
+  }
+
+  @include iphone5 {
+    max-height: 70vh;
+  }
 }
 
 /* Изображения-слайды */

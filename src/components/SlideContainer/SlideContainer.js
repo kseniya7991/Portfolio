@@ -12,7 +12,7 @@ function SlideContainer({
         <img src={img} alt="Image2" className="slideContainer__img" />
       </div>
       <div className="slideContainer__description">
-        <div>
+        <div className="slideContainer__article">
           <h3 className="slideContainer__title">{title}</h3>
           <p className="slideContainer__text">
             {description}

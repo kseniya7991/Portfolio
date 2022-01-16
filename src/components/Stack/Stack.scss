@@ -54,6 +54,14 @@
       justify-self: end;
     }
   }
+
+  @include minMobile {
+    &:nth-of-type(n) {
+      justify-self: stretch;
+    }
+  }
+
+
 }
 
 .Stack__icon {
