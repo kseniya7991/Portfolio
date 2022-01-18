@@ -58,6 +58,11 @@
   width: 30px;
   height: 30px;
   background-size: contain;
+
+  @include mobile {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .splide__arrow svg {
@@ -67,11 +72,19 @@
 .splide__arrow--next {
   background-image: url("../../images/next-arrow.png");
   right: -35px;
+
+  @include tablet {
+    right: -25px;
+  }
 }
 
 .splide__arrow--prev {
   background-image: url("../../images/prev-arrow.png");
   left: -35px;
+
+  @include tablet {
+    left: -25px;
+  }
 }
 
 /* Навигация слайдера */

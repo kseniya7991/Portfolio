@@ -66,7 +66,7 @@ function Contact() {
               </a>
             </ul>
           </div>
-          <p className="Contact__info">I&apos;m available for work</p>
+          <p className="Contact__info">I&apos;m&nbsp;available for work</p>
         </div>
       </div>
     </footer>

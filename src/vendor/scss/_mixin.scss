@@ -48,8 +48,8 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #202020;
-  z-index: 2;
+  background-color: #202020b0;
+  z-index: 1;
   min-width: 320px;
   opacity: 0;
   display: block;
@@ -60,7 +60,7 @@
 //Открытие попапа
 @mixin popupOpened {
   visibility: visible;
-  opacity: 0.8;
+  opacity: 1;
   transition: 0.5s;
 }
 
@@ -133,5 +133,21 @@
 @mixin iphone5 {
   @media (max-width: #{$breakpoint-i5}) {
     @content;
+  }
+}
+
+// Отступы при адаптации
+@mixin responsivePadding{
+  @media (max-width: #{$breakpoint-tablet}) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (max-width: #{$breakpoint-mobile}) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (max-width: #{$breakpoint-min}) {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }

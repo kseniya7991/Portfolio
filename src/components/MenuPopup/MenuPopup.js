@@ -1,9 +1,11 @@
 import './MenuPopup.scss';
 import React from 'react';
 
-function MenuPopup({ isOpened }) {
+function MenuPopup({ isOpened, isMobile, children }) {
   return (
-    <div className={`MenuPopup ${isOpened ? 'MenuPopup_opened' : ''}`} />
+    <div className={`MenuPopup ${isOpened && isMobile ? 'MenuPopup_opened' : ''}`}>
+      {children}
+    </div>
   );
 }
 

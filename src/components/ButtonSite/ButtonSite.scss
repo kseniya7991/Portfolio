@@ -12,7 +12,7 @@
 
   @include tablet {
     flex-direction: column;
-    margin: 10% 5% 30px 5%;
+    margin: 10% 0 30px 5%;
   }
 
   @include iphone5 {
