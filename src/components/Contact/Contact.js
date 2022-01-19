@@ -1,5 +1,4 @@
-import React, { useRef, useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import React, { useRef, useState, useEffect } from 'react';
 import './Contact.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegramPlane, faViber, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
