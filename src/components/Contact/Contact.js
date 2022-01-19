@@ -12,7 +12,6 @@ function Contact() {
   function showAnimation() {
     const fromTop = window.innerHeight + window.pageYOffset;
     const pageHeight = document.documentElement.scrollHeight;
-    console.log(fromTop, document.documentElement.scrollHeight);
     if (fromTop > pageHeight - 150) {
       setIsVisible(true);
     } else {
@@ -28,8 +27,6 @@ function Contact() {
       window.removeEventListener('scroll', showAnimation);
     };
   }, []);
-
-  console.log(window.pageYOffset, document.documentElement.clientHeight);
 
   return (
     <footer className={`Footer ${isVisible ? 'Footer_visible' : ''}`} ref={ContactBlock}>
