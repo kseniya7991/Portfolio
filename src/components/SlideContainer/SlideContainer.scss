@@ -42,6 +42,7 @@
   align-items: center;
   max-width: min-content;
   overflow: hidden;
+  flex-shrink: 0;
 
   @include tablet {
     max-width: 100%;
@@ -50,10 +51,10 @@
     max-height: 100%;
   }
 
-  @include iphone5 {
+  @include miniTablet {
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 50%;
   }
 
   @include mobile {
@@ -62,17 +63,21 @@
 }
 
 .slideContainer__article {
-  overflow: hidden;
   margin-bottom: 11px;
+  
 
   @include tablet {
     align-self: flex-start;
   }
-  @include iphone5 {
+  @include miniTablet {
     margin-bottom: 0;
-    overflow: scroll;
+    height: 60%;
+/*     overflow: scroll;
+    overflow-x: hidden; */
   }
+
 }
+
 
 .slideContainer__text {
   text-align: center;
@@ -80,10 +85,26 @@
   color: $text-color;
   font-family: $font-stack;
   font-weight: map-get($font-weights, light);
-
+  
+  @include miniTablet {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 80%;
+  }
+  
   @include mobile {
     font-size: 15px;
   }
+}
+
+.slideContainer__text::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+
+.slideContainer__text::-webkit-scrollbar-thumb {
+  background-color: #999a9b5d;
+  border-radius: 2px;
 }
 
 .slideContainer__title {
@@ -91,4 +112,5 @@
   text-align: center;
   font-family: $font-stack;
   font-weight: map-get($font-weights, regular);
+  margin: 5px 0 15px 0;
 }

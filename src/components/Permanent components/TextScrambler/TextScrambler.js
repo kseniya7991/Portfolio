@@ -10,7 +10,7 @@ function textScrambler({ text, isHover }) {
         speed="medium"
         steps={[
           {
-            roll: 10,
+            roll: 2,
             action: '+',
             type: 'random',
           },

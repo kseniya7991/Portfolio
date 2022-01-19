@@ -103,18 +103,20 @@
 
 /* Слайды */
 .splide__slide {
-  height: max-content;
   display: flex;
-  height: 50vh !important;
+  height: min-content !important;
   justify-content: space-between;
 
   @include tablet {
-    max-height: 60vh;
+    /* max-height: 60vh; */
     height: auto !important;
   }
 
-  @include iphone5 {
-    max-height: 70vh;
+  @include miniTablet {
+   /*  max-height: 70vh; */
+  }
+  @include mobile {
+    max-height: fit-content;
   }
 }
 

@@ -4,21 +4,22 @@ import './ButtonSite.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import TextScrambler from '../Permanent components/TextScrambler/TextScrambler';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
+/* import TextScrambler from '../Permanent components/TextScrambler/TextScrambler';
+ */
 function ButtonSite({ address, link, github }) {
-  const [buttonText, setButtonText] = useState('go to site');
-  const [btnIsOver, setBtnIsOver] = useState(false);
+  const [buttonText, setButtonText] = useState('Portfolio');
 
   function handleHover() {
-    setButtonText(address);
-    setBtnIsOver(true);
+    setButtonText('Portfolio');
   }
 
   function handleLeave() {
-    setButtonText('go to site');
-    setBtnIsOver(false);
+    setButtonText('Portfolio');
   }
+
+  console.log(address);
 
   return (
     <div className="buttonSite__wrap">
@@ -27,20 +28,19 @@ function ButtonSite({ address, link, github }) {
           onMouseEnter={handleHover}
           onMouseLeave={handleLeave}
           type="button"
-          className={`buttonSite ${
-            btnIsOver ? 'buttonSite_over' : 'buttonSite_leave'
-          }`}
+          className="buttonSite"
         >
-          <TextScrambler text={buttonText} isHover={btnIsOver} />
+          {buttonText}
+          <FontAwesomeIcon icon={faCaretRight} className="buttonSite__icon" />
         </button>
       </a>
       <a href={github} className="buttonSite__link" target="_blank" rel="noreferrer">
         <button
           type="button"
-          className="buttonSite__github"
+          className="buttonSite buttonSite_github"
         >
-          github
-          <FontAwesomeIcon icon={faGithub} className="svgIcon" />
+          GitHub
+          <FontAwesomeIcon icon={faGithub} className="buttonSite__icon buttonSite__icon_github" />
         </button>
       </a>
     </div>

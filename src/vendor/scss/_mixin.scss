@@ -130,7 +130,7 @@
   }
 }
 
-@mixin iphone5 {
+@mixin miniTablet {
   @media (max-width: #{$breakpoint-i5}) {
     @content;
   }

@@ -14,9 +14,9 @@ function SlideContainer({
       <div className="slideContainer__description">
         <div className="slideContainer__article">
           <h3 className="slideContainer__title">{title}</h3>
-          <p className="slideContainer__text">
+          <div className="slideContainer__text">
             {description}
-          </p>
+          </div>
         </div>
         <ButtonSite address={address} link={link} github={github} />
       </div>
