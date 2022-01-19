@@ -4,6 +4,8 @@
 .slideContainer__wrapper {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
 
   @include tablet {
     width: 100%;
@@ -68,6 +70,7 @@
   }
   @include iphone5 {
     margin-bottom: 0;
+    overflow: scroll;
   }
 }
 
