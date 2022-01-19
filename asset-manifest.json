@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.93dc5842.chunk.css",
-    "main.js": "/portfolio/static/js/main.e2d87d90.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.e2d87d90.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.2e249619.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.2e249619.js.map",
+    "main.js": "/portfolio/static/js/main.03086827.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.03086827.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.b9b6a88d.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.b9b6a88d.js.map",
     "static/css/2.64e72a7a.chunk.css": "/portfolio/static/css/2.64e72a7a.chunk.css",
-    "static/js/2.8a1fdafa.chunk.js": "/portfolio/static/js/2.8a1fdafa.chunk.js",
-    "static/js/2.8a1fdafa.chunk.js.map": "/portfolio/static/js/2.8a1fdafa.chunk.js.map",
-    "static/js/3.b9261511.chunk.js": "/portfolio/static/js/3.b9261511.chunk.js",
-    "static/js/3.b9261511.chunk.js.map": "/portfolio/static/js/3.b9261511.chunk.js.map",
+    "static/js/2.2bff0dac.chunk.js": "/portfolio/static/js/2.2bff0dac.chunk.js",
+    "static/js/2.2bff0dac.chunk.js.map": "/portfolio/static/js/2.2bff0dac.chunk.js.map",
+    "static/js/3.5099aed5.chunk.js": "/portfolio/static/js/3.5099aed5.chunk.js",
+    "static/js/3.5099aed5.chunk.js.map": "/portfolio/static/js/3.5099aed5.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.64e72a7a.chunk.css.map": "/portfolio/static/css/2.64e72a7a.chunk.css.map",
     "static/css/main.93dc5842.chunk.css.map": "/portfolio/static/css/main.93dc5842.chunk.css.map",
-    "static/js/2.8a1fdafa.chunk.js.LICENSE.txt": "/portfolio/static/js/2.8a1fdafa.chunk.js.LICENSE.txt",
+    "static/js/2.2bff0dac.chunk.js.LICENSE.txt": "/portfolio/static/js/2.2bff0dac.chunk.js.LICENSE.txt",
     "static/media/Kseniya_Stoichykova_CV.b6a3d073.pdf": "/portfolio/static/media/Kseniya_Stoichykova_CV.b6a3d073.pdf",
     "static/media/irvas_udemy.5a3d747e.png": "/portfolio/static/media/irvas_udemy.5a3d747e.png",
     "static/media/mesto_project.11978e4e.png": "/portfolio/static/media/mesto_project.11978e4e.png",
@@ -24,10 +24,10 @@
     "static/media/russian_travel.63fa1d80.png": "/portfolio/static/media/russian_travel.63fa1d80.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2e249619.js",
+    "static/js/runtime-main.b9b6a88d.js",
     "static/css/2.64e72a7a.chunk.css",
-    "static/js/2.8a1fdafa.chunk.js",
+    "static/js/2.2bff0dac.chunk.js",
     "static/css/main.93dc5842.chunk.css",
-    "static/js/main.e2d87d90.chunk.js"
+    "static/js/main.03086827.chunk.js"
   ]
 }
