@@ -37,7 +37,7 @@ html {
   transition: .2s;
   cursor: pointer;
 
-  &:hover {
+  &:hover &:active {
     transition: .2s;
     color: rgba($color: $main-color, $alpha: 1);
   }
