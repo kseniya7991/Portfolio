@@ -1,9 +1,9 @@
 @import '../../vendor/scss/mixin';
 
-.MenuPopup {
+.Popup {
 @include popup;
 }
 
-.MenuPopup_opened {
+.Popup_opened {
 @include popupOpened;
 }

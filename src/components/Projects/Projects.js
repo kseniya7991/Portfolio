@@ -50,7 +50,6 @@ function Projects() {
           <SplideSlide>
             <SlideContainer
               img={projectPortfolio}
-              address="kseniya.com"
               link="http://localhost:3000/"
               github="https://github.com/kseniya7991/Portfolio"
               title="Portfolio"
@@ -64,7 +63,6 @@ function Projects() {
           <SplideSlide>
             <SlideContainer
               img={projectHowToLearn}
-              address="/how-to-learn/"
               link="https://kseniya7991.github.io/how-to-learn/"
               github="https://github.com/kseniya7991/how-to-learn"
               title="How to learn"
@@ -76,7 +74,6 @@ function Projects() {
           <SplideSlide>
             <SlideContainer
               img={projectRussianTravel}
-              address="/russian-travel/"
               link="https://kseniya7991.github.io/russian-travel/index.html"
               github="https://github.com/kseniya7991/russian-travel"
               title="Russian Travel"
@@ -86,7 +83,6 @@ function Projects() {
           <SplideSlide>
             <SlideContainer
               img={projectMesto}
-              address="/mesto/"
               link="https://kst.mesto.nomoredomains.club/"
               github="https://github.com/kseniya7991/react-mesto-api-full"
               title="Mesto"
@@ -96,7 +92,6 @@ function Projects() {
           <SplideSlide>
             <SlideContainer
               img={projectMovies}
-              address="/movies/"
               link="https://movies.kst.nomoredomains.monster/"
               github="https://github.com/kseniya7991/movies-explorer-frontend"
               title="Movies"
@@ -106,7 +101,6 @@ function Projects() {
           <SplideSlide>
             <SlideContainer
               img={projectIrvas}
-              address="/irvas-js/"
               link="https://github.com/kseniya7991/irvas-js"
               github="https://github.com/kseniya7991/irvas-js"
               title="Irvas"

@@ -6,9 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
-/* import TextScrambler from '../Permanent components/TextScrambler/TextScrambler';
- */
-function ButtonSite({ address, link, github }) {
+function ButtonSite({ link, github }) {
   const [buttonText, setButtonText] = useState('Portfolio');
 
   function handleHover() {
@@ -18,8 +16,6 @@ function ButtonSite({ address, link, github }) {
   function handleLeave() {
     setButtonText('Portfolio');
   }
-
-  console.log(address);
 
   return (
     <div className="buttonSite__wrap">

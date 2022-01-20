@@ -4,7 +4,7 @@ import './SlideContainer.scss';
 import ButtonSite from '../ButtonSite/ButtonSite';
 
 function SlideContainer({
-  img, address, link, title, description, github,
+  img, link, title, description, github,
 }) {
   return (
     <div className="slideContainer__wrapper">
@@ -18,7 +18,7 @@ function SlideContainer({
             {description}
           </div>
         </div>
-        <ButtonSite address={address} link={link} github={github} />
+        <ButtonSite link={link} github={github} />
       </div>
     </div>
   );
