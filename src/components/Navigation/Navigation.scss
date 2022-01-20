@@ -12,6 +12,11 @@
   color: $text-color-second;
 }
 
+.Navigation__link {
+  color: $text-color-second;
+  text-decoration: none;
+}
+
 .Navigation__item {
   margin: 0px 15px 0px 15px;
   cursor: pointer;

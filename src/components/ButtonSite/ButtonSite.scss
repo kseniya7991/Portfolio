@@ -12,7 +12,7 @@
 
   @include tablet {
     flex-direction: column;
-    margin: 10% 0 30px 5%;
+    margin: 10% 2px 30px 5%;
   }
 
   @include miniTablet {
@@ -21,7 +21,7 @@
   }
 
   @include mobile {
-    margin: 15px 20px 0px 20px;
+    margin: 15px 20px 2px 20px;
   }
 }
 

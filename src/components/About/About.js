@@ -19,6 +19,7 @@ function About() {
     <>
       <StyledLine />
       <section className="About">
+        <span className="anchor" id="about" />
         <h2 className={`About__heading ${isClickedHeading ? 'About__heading_animation' : ''}`} onClick={handleClickHeading} onKeyDown={handleClickHeading}>{}</h2>
         <div className="About__wrap">
           <div className="About__details">

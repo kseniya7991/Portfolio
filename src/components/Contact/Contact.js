@@ -30,6 +30,7 @@ function Contact() {
   return (
     <footer className={`Footer ${isVisible ? 'Footer_visible' : ''}`} ref={ContactBlock}>
       <div className="Contact">
+        <span className="anchor" id="contact" />
         <h2 className="Contact__heading">Contact</h2>
         <div className="Contact__wrap">
           <div className="Contact__list_wrap">

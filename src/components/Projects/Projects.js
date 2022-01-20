@@ -24,6 +24,7 @@ function Projects() {
     <>
       <StyledLine />
       <section className="Projects">
+        <span className="anchor" id="projects" />
         <h2
           className={`Projects__heading ${
             isClickedHeading ? 'Projects__heading_animation' : ''

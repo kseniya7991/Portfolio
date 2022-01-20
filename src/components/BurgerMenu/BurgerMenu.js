@@ -1,4 +1,5 @@
 import './BurgerMenu.scss';
+import '../Navigation/Navigation.scss';
 import React from 'react';
 
 function BurgerMenu({ isMobile, handleMenu, isOpened }) {

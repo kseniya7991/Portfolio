@@ -13,9 +13,19 @@
   max-width: 100%;
   margin-top: 70px;
 
+
 }
 
 body {
   background-color: $primary-color;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+.anchor {
+  visibility: hidden;
+  position: relative;
+  top: -85px;
 }

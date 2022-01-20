@@ -7,11 +7,11 @@ function Navigation({ isMobile }) {
   }
   return (
     <ul className="Navigation">
-      <li className="Navigation__item">About</li>
-      <li className="Navigation__item">Projects</li>
-      <li className="Navigation__item">Stack</li>
-      <li className="Navigation__item">CV</li>
-      <li className="Navigation__item">Contact</li>
+      <a href="#about" className="Navigation__link"><li className="Navigation__item">About</li></a>
+      <a href="#projects" className="Navigation__link"><li className="Navigation__item">Projects</li></a>
+      <a href="#stack" className="Navigation__link"><li className="Navigation__item">Stack</li></a>
+      <a href="#s" className="Navigation__link"><li className="Navigation__item">CV</li></a>
+      <a href="#contact" className="Navigation__link"><li className="Navigation__item">Contact</li></a>
     </ul>
   );
 }

@@ -101,23 +101,27 @@
   bottom: -20px;
 }
 
+
+.splide__list {
+  height: max-content;
+}
+
 /* Слайды */
 .splide__slide {
   display: flex;
-  height: min-content !important;
+  height: 450px !important;
   justify-content: space-between;
 
-  @include tablet {
-    /* max-height: 60vh; */
-    height: auto !important;
+/*   @include tablet {
+    min-height: min-content;
   }
 
   @include miniTablet {
-   /*  max-height: 70vh; */
+   /*  max-height: 70vh;
   }
   @include mobile {
     max-height: fit-content;
-  }
+  } */
 }
 
 /* Изображения-слайды */

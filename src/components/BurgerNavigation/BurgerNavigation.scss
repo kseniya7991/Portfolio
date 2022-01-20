@@ -40,11 +40,26 @@
   padding: 3px 10px;
   text-align: center;
   border-bottom: 1px solid transparent;
+  position: relative;
 
   &:hover {
-    @include activeItem;
-    animation: activeItem 0.3s forwards;
+    &::after{
+      @include activeItem;
+      animation: activeItem 0.3s forwards;
+    }
   }
 
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+  }
 
 }
