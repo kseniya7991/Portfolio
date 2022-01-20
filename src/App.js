@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
 import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
@@ -8,6 +10,8 @@ function App() {
   const [offset, setOffset] = useState(0);
   const [isPopupOpened, setIsPopupOpened] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isPageUpVisible, setIsPageUpVisible] = useState(false);
+  const [pageHeight, setPageHeight] = useState(0);
 
   const handlePopup = (e) => {
     if (e.target === e.currentTarget) {
@@ -23,7 +27,17 @@ function App() {
     setIsPopupOpened(false);
   };
 
+  const setPageUpVisibility = () => {
+    const halfPage = (pageHeight - document.documentElement.clientHeight) / 2;
+    if (window.pageYOffset > halfPage) {
+      setIsPageUpVisible(true);
+    } else {
+      setIsPageUpVisible(false);
+    }
+  };
+
   const handleWindowResize = () => {
+    console.log('a');
     if (window.innerWidth > 640) {
       setIsMobile(false);
       setIsPopupOpened(false);
@@ -33,6 +47,9 @@ function App() {
   };
 
   useEffect(() => {
+    setPageHeight(document.body.scrollHeight);
+    setPageUpVisibility();
+
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
 
@@ -42,7 +59,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
+    const onScroll = () => {
+      setOffset(window.pageYOffset);
+      setPageUpVisibility();
+    };
     // clean up code
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -52,6 +72,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <span className="anchor" id="top" />
         <Header
           isScrolled={offset}
           isMobile={isMobile}
@@ -62,6 +83,7 @@ function App() {
         />
         <Main />
         <Contact />
+        <a href="#top" className={`PageUpIcon_link ${isPageUpVisible ? 'PageUpIcon_link_visible' : ''}`} aria-label="page up"><FontAwesomeIcon icon={faArrowAltCircleUp} className="PageUpIcon" /></a>
       </div>
     </>
   );

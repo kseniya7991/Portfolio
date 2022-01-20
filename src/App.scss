@@ -29,3 +29,35 @@ html {
   position: relative;
   top: -85px;
 }
+
+.PageUpIcon {
+  width: 100% !important;
+  height: 100%;
+  color: rgba($color: $main-color, $alpha: 0.3);
+  transition: .2s;
+  cursor: pointer;
+
+  &:hover {
+    transition: .2s;
+    color: rgba($color: $main-color, $alpha: 1);
+  }
+}
+
+.PageUpIcon_link {
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin:20px;
+  width: 35px;
+  height: 35px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s;
+}
+
+.PageUpIcon_link_visible {
+  visibility: visible;
+  opacity: 1;
+  transition: .2s;
+}
