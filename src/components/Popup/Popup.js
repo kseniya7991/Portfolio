@@ -2,7 +2,7 @@ import './Popup.scss';
 import React from 'react';
 
 function Popup({
-  isOpened, isMobile, children, handlePopup,
+  isOpened, isMobile, children, handlePopup, isActivePreloader,
 }) {
   const handlePopupClick = (e) => {
     handlePopup(e);
@@ -10,7 +10,7 @@ function Popup({
 
   return (
     <div
-      className={`Popup ${isOpened && isMobile ? 'Popup_opened' : ''}`}
+      className={`Popup ${isOpened && isMobile ? 'Popup_opened' : ''} ${isActivePreloader ? 'Popup_opened Popup_preloader' : ''}`}
       onClick={handlePopupClick}
       onKeyDown={handlePopupClick}
       role="button"

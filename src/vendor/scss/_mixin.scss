@@ -54,7 +54,7 @@
   opacity: 0;
   display: block;
   visibility: hidden;
-  transition: 0.3s;
+  transition: .5s;
 }
 
 //Открытие попапа
@@ -62,6 +62,7 @@
   visibility: visible;
   opacity: 1;
   transition: 0.5s;
+  z-index: 3;
 }
 
 //Анимация для выделения стандартных текстовых элементов

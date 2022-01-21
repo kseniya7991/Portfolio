@@ -7,3 +7,7 @@
 .Popup_opened {
 @include popupOpened;
 }
+
+.Popup_preloader {
+  background-color: #202020f2;
+}

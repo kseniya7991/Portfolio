@@ -58,6 +58,7 @@
   width: 30px;
   height: 30px;
   background-size: contain;
+  z-index: 0;
 
   @include mobile {
     width: 25px;
@@ -99,6 +100,7 @@
 
 .splide__pagination {
   bottom: -20px;
+  z-index: 0;
 }
 
 

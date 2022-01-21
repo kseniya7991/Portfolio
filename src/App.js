@@ -1,16 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState, useEffect,
+} from 'react';
 import './App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
 import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
+import Preloader from './components/Preloader/Preloader';
 
 function App() {
   const [offset, setOffset] = useState(0);
   const [isPopupOpened, setIsPopupOpened] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isPageUpVisible, setIsPageUpVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handlePopup = (e) => {
     if (e.target === e.currentTarget) {
@@ -66,8 +70,17 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    const onLoad = () => {
+      setIsLoading(false);
+    };
+    window.removeEventListener('load', onLoad);
+    window.addEventListener('load', onLoad);
+  });
+
   return (
     <>
+      <Preloader isLoading={isLoading} />
       <div className="App">
         <span className="anchor" id="top" />
         <Header
