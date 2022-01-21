@@ -11,7 +11,6 @@ function App() {
   const [isPopupOpened, setIsPopupOpened] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isPageUpVisible, setIsPageUpVisible] = useState(false);
-  const [pageHeight, setPageHeight] = useState(0);
 
   const handlePopup = (e) => {
     if (e.target === e.currentTarget) {
@@ -28,7 +27,7 @@ function App() {
   };
 
   const setPageUpVisibility = () => {
-    const halfPage = (pageHeight - document.documentElement.clientHeight) / 2;
+    const halfPage = (document.body.scrollHeight - document.documentElement.clientHeight) / 2;
     if (window.pageYOffset > halfPage) {
       setIsPageUpVisible(true);
     } else {
@@ -37,7 +36,6 @@ function App() {
   };
 
   const handleWindowResize = () => {
-    console.log('a');
     if (window.innerWidth > 640) {
       setIsMobile(false);
       setIsPopupOpened(false);
@@ -47,7 +45,6 @@ function App() {
   };
 
   useEffect(() => {
-    setPageHeight(document.body.scrollHeight);
     setPageUpVisibility();
 
     handleWindowResize();
