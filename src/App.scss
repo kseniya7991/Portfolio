@@ -13,7 +13,9 @@
   max-width: 100%;
   margin-top: 70px;
 
-
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+ 
 }
 
 body {
@@ -36,12 +38,8 @@ html {
   color: rgba($color: $main-color, $alpha: 0.3);
   transition: .2s;
   cursor: pointer;
-
-  &:hover, &:active {
-    transition: .2s;
-    color: rgba($color: $main-color, $alpha: 1);
-  }
 }
+
 
 .PageUpIcon_link {
   text-decoration: none;
@@ -54,6 +52,27 @@ html {
   visibility: hidden;
   opacity: 0;
   transition: .2s;
+
+
+@media (pointer: coarse) {
+  &:active {
+    .PageUpIcon {
+      transition: .2s;
+      color: rgba($color: $main-color, $alpha: 1);
+    }
+  }
+
+}
+
+@media (hover: hover) {
+  &:hover {
+    .PageUpIcon {
+      transition: .2s;
+      color: rgba($color: $main-color, $alpha: 1);
+    }
+  }
+}
+
 }
 
 .PageUpIcon_link_visible {
