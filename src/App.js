@@ -4,12 +4,11 @@ import React, {
 import './App.scss';
 import './vendor/scss/_variables.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Preloader from './components/Preloader/Preloader';
-import SwitchTheme from './components/SwitchTheme/SwitchTheme';
 
 function App() {
   const [offset, setOffset] = useState(0);
@@ -99,9 +98,8 @@ function App() {
           handleNav={handleNav}
         />
         <Main />
-        <Contact />
-        <a href="#top" className={`PageUpIcon_link ${isPageUpVisible ? 'PageUpIcon_link_visible' : ''}`} aria-label="page up"><FontAwesomeIcon icon={faArrowAltCircleUp} className="PageUpIcon" /></a>
-        <SwitchTheme handleTheme={handleCheckboxTheme} />
+        <Contact handleTheme={handleCheckboxTheme} />
+        <a href="#top" className={`PageUpIcon_link ${isPageUpVisible ? 'PageUpIcon_link_visible' : ''}`} aria-label="page up"><FontAwesomeIcon icon={faChevronCircleUp} className="PageUpIcon" /></a>
       </div>
     </div>
   );

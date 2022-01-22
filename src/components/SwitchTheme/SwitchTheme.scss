@@ -1,12 +1,30 @@
 @import "../../vendor/scss/variables";
 @import "../../vendor/scss/mixin";
 
+.SwitchTheme__block {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.SwitchTheme__text {
+  margin: 0;
+  margin-right: 20px;
+  color: var(--text-color-second);
+  font-family: $font-stack;
+  font-weight: var(--font-weight-light);
+  padding-top: 4px;
+}
 
 .SwitchTheme {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 47px;
+  height: 20px;
 }
 
 /* Hide default HTML checkbox */
@@ -22,7 +40,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--switch-color);
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
@@ -30,14 +48,13 @@
   &::before {
     position: absolute;
     content: "";
-    padding: 4px 8px 7px 8px;
     line-height: 1.4;
     box-sizing: border-box;
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--primary-color);
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
@@ -45,15 +62,16 @@
 }
 
 .SwitchTheme__checkbox:checked + .SwitchTheme__slider{
-  background-color: rgb(43, 43, 43);
+  background-color: $text-color;
 }
 
 .SwitchTheme__checkbox:focus + .SwitchTheme__slider {
-  box-shadow: 0 0 1px rgb(43, 43, 43);
+  box-shadow: 0 0 1px $text-color;
 }
 
 .SwitchTheme__checkbox:checked + .SwitchTheme__slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  background-color: var(--primary-color);
 }

@@ -72,7 +72,7 @@
 }
 
 .splide__arrow--next {
-  background-image: url("../../images/next-arrow.png");
+  background-image: var(--next-arrow-slider);
   right: -35px;
 
   @include tablet {
@@ -81,7 +81,7 @@
 }
 
 .splide__arrow--prev {
-  background-image: url("../../images/prev-arrow.png");
+  background-image: var(--prev-arrow-slider);
   left: -35px;
 
   @include tablet {
@@ -92,11 +92,16 @@
 /* Навигация слайдера */
 .splide__pagination__page.is-active {
   background: var(--main-color);
+
 }
 
 .splide__pagination__page {
   width: 8px;
   height: 8px;
+  &:hover {
+    background: var(--main-color);
+    opacity: .7;
+  }
 }
 
 .splide__pagination {

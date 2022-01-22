@@ -3,8 +3,9 @@ import './Contact.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegramPlane, faViber, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import SwitchTheme from '../SwitchTheme/SwitchTheme';
 
-function Contact() {
+function Contact({ handleTheme }) {
   const ContactBlock = useRef();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -65,7 +66,7 @@ function Contact() {
           </div>
           <p className="Contact__info">I&apos;m&nbsp;available for work</p>
         </div>
-
+        <SwitchTheme handleTheme={handleTheme} />
       </div>
     </footer>
   );

@@ -25,24 +25,35 @@ $breakpoint-min: 320px;
 --main-color: #00abee;
 --primary-color: #383838;
 --nav-color: #3e4248;
+--switch-color: #d3d3d3;
 --text-color: #c3c3c3;
 --text-color-second: #aaa;
 --icon-color: #aaa;
 --heading-color: #fff;
+--font-weight-light: 300;
 --font-weight-text: 300;
 --font-weight-highlight: 400;
 --font-weight-heading: 500;
 --font-weight-bold: 600;
+--prev-arrow-slider: url("../../images/prev-arrow.png");
+--next-arrow-slider: url("../../images/next-arrow.png");
 
 }
 
 .Theme_light {
   --heading-color: #fff;
-  --main-color: #5c408f;
+  --main-color: #661dc5;
   --primary-color: #fff;
   --nav-color: #d3d3d3;
-  --text-color: #8d6b6b;
-  --text-color-second: #9c8a8a;
-  --icon-color: #9c8a8a;
-  --heading-color: #785b5b;
+  --switch-color: #3e4248;
+  --text-color: #616161;
+  --text-color-second: #797979;
+  --icon-color: #616161;
+  --heading-color: #5f5f5f;
+  --font-weight-text: 500;
+  --font-weight-highlight: 400;
+  --font-weight-heading: 600;
+  --font-weight-bold: 600;
+  --prev-arrow-slider: url("../../images/prev-arrow_light.png");
+  --next-arrow-slider: url("../../images/next-arrow_light.png");
 }

@@ -47,12 +47,16 @@ html {
   bottom: 0;
   right: 0;
   margin:20px;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   visibility: hidden;
   opacity: 0;
   transition: .2s;
   color: var(--main-color);
+
+  @include miniTablet {
+    margin: 20px 30px 240px 30px;
+  }
 
 
 @media (pointer: coarse) {
@@ -60,6 +64,9 @@ html {
     .PageUpIcon {
       transition: .2s;
       color: var(--main-color);
+      opacity: 1;
+    }
+    .PageUpIcon_link_visible {
       opacity: 1;
     }
   }
@@ -72,6 +79,9 @@ html {
       color: var(--main-color);
       opacity: 1;
     }
+    .PageUpIcon_link_visible {
+      opacity: 1;
+    }
   }
 }
 
@@ -79,6 +89,6 @@ html {
 
 .PageUpIcon_link_visible {
   visibility: visible;
-  opacity: 1;
+  opacity: .5;
   transition: .2s;
 }
