@@ -15,10 +15,11 @@
   z-index: 2;
   width: 100%;
   transition: .3s;
+  background-color: var(--primary-color);
 }
 
 .Header__container_scroll {
-    background-color: #3e4248;
+    background-color: var(--nav-color);
     box-shadow: 0px .5px 5px black;
     transition: .2s;
 }
@@ -39,6 +40,6 @@
 .Header__name {
   font-family: 'Saira Condensed', Arial, sans-serif;
   font-weight: map-get($font-weights, bold);
-  color: $text-color;
+  color: var(--text-color);
   margin: 0;
 }

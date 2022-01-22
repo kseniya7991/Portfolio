@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
 
 import CV from '../../files/Kseniya_Stoichykova_CV.pdf';
@@ -36,6 +37,7 @@ function About() {
                   24
                 </li>
                 <li className="Details__item">
+                  <FontAwesomeIcon icon={faMapMarkerAlt} className="Details__icon" />
                   <span className="Details__name">Place:</span>
                   Minsk
                 </li>
@@ -76,23 +78,31 @@ function About() {
             <p className="About__paragraph">
               I am a junior front-end developer with 1 year
               training hands-on experience. I am a graduate of the Yandex.Praktikum
-              platform as a
-              <span className="About__paragraph_high"> front-end developer</span>
-              . And a graduate of the Belarusian
-              State Academy of Communications as a marketer.
+              platform as a&nbsp;
+              <span className="About__paragraph_high">
+                <a href="https://disk.yandex.by/d/69Q1IfByLv1DpQ" className="About__link" target="_blank" label="YP sertificate" rel="noreferrer">front-end developer</a>
+              </span>
+              . Also I am a graduate of the Belarusian
+              State Academy of Communications as a marketer-economist.
             </p>
             <p className="About__paragraph">
               <em>But, I am keen on the code.</em>
             </p>
             <p className="About__paragraph">
-              I am also experienced in back-end development. I prefer working in
-              a team where you can learn and share experience.
+              I have hands-on experienced in back-end development. I prefer working in
+              a big or small team where everyone can learn and share experience.
+              I like to work on projects that have a specific goal and plan.
             </p>
             <p className="About__paragraph">
               <em>
-                Also I&apos;m a
-                <span className="About__paragraph_high"> runner </span>
-                from
+                What about my hobby&#63;
+                I&apos;m a&nbsp;
+                <span className="About__paragraph_high">
+                  <a href="https://probeg.org/user/4148/" className="About__link" target="_blank" label="PRObeg profile" rel="noreferrer">
+                    runner
+                  </a>
+                </span>
+                &nbsp;from
                 &lt;header&gt; to &lt;footer&gt;.
               </em>
             </p>

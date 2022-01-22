@@ -42,7 +42,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $text-color;
+  color: var(--text-color);
   font-family: $font-stack;
   margin: 0 20px 0 20px;
 
@@ -56,20 +56,20 @@
 .Stack__icon {
   width: 50px !important;
   height: 50px;
-  color: $main-color;
+  color: var(--main-color);
   margin: 10px 10px 20px 10px;
 }
 
 .Item__heading {
   margin: 0;
-  font-weight: map-get($font-weights, light );
+  font-weight: var(--font-weight-highlight);
   margin-bottom: 10px;
   line-height: 1;
 }
 
 .Item__description {
-  font-weight: map-get($font-weights, light );
-  color: $text-color-second;
+  font-weight: --font-weight-text;
+  color: var(--text-color-second);
   margin: 0;
   text-align: center;
 }

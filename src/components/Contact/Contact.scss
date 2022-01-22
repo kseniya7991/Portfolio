@@ -7,7 +7,7 @@
 }
 
 .Footer_visible {
-  background-color: #3e4248;
+  background-color: var(--nav-color);
   transition: .7s;
 }
 
@@ -28,7 +28,7 @@
   align-items: center;
 
   font-family: $font-stack;
-  color: $text-color;
+  color: var(--text-color);
 
   @include mobile {
     flex-direction: column;
@@ -66,7 +66,8 @@
 
 .Contact__text {
   position: relative;
-  color: $text-color-second;
+  color: var(--text-color-second);
+  font-weight: var(--font-weight-highlight);
 
   @include minMobile {
     font-size: 15px;
@@ -94,17 +95,17 @@
     width: 0;
     content: '.';
     color: transparent;
-    background: #fff;
+    background: var(--text-color);
     height: 1px;
   }
 
   &:hover {
     .Contact__text {
-      color: $text-color;
+      color: var(--text-color);
       transition: .2s;
     }
     .Contact__icon {
-      color: #fff;
+      color: var(--text-color);
       transition: .2s;
     }
     &::after {
@@ -119,7 +120,7 @@
 }
 
 .Contact__icon {
-  color: $icon-color;
+  color: var(--icon-color);
   width: 30px !important;
   height: 30px;
   margin-right: 10px;
@@ -128,7 +129,7 @@
 
 .Contact__info {
     font-size: 22px;
-    font-weight: 300;
+    font-weight: var(--font-weight-highlight);
     letter-spacing: 2px;
 
     @include tablet {
@@ -149,3 +150,5 @@
       font-size: 19px;
     }
 }
+
+

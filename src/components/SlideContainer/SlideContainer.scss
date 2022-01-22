@@ -82,9 +82,9 @@
 .slideContainer__text {
   text-align: center;
   font-size: 16px;
-  color: $text-color;
+  color: var(--text-color);
   font-family: $font-stack;
-  font-weight: map-get($font-weights, light);
+  font-weight: --font-weight-text;
   
   @include miniTablet {
     overflow: scroll;

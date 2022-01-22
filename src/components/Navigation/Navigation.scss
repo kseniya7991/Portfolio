@@ -9,11 +9,11 @@
   font-size: 17px;
   margin: 0;
   list-style-type: none;
-  color: $text-color-second;
+  color: var(--text-color-second);
 }
 
 .Navigation__link {
-  color: $text-color-second;
+  color: var(--text-color-second);
   text-decoration: none;
 }
 
@@ -22,6 +22,7 @@
   cursor: pointer;
   border-bottom: 1px solid transparent;
   position: relative;
+  font-weight: var(--font-weight-highlight);
 
   &:last-child {
     margin-right: 0;
@@ -29,7 +30,7 @@
 
   &:hover {
     transition: .2s;
-    color: $text-color;
+    color: var(--text-color);
     &::after {
       @include activeItem;
       animation: activeItem .3s forwards;
@@ -45,7 +46,7 @@
     width: 0;
     content: '.';
     color: transparent;
-    background: #aaa;
+    background: var(--text-color);
     height: 1px;
     
   }

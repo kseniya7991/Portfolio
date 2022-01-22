@@ -65,6 +65,7 @@ function Contact() {
           </div>
           <p className="Contact__info">I&apos;m&nbsp;available for work</p>
         </div>
+
       </div>
     </footer>
   );

@@ -18,7 +18,7 @@
   padding: 15px;
   max-height: fit-content;
 
-  background-color: rgba($color: #424242, $alpha: 1.0);
+  background-color: var(--nav-color);
   background-clip: content-box;
 
   animation: shadow 1s forwards;
@@ -36,14 +36,16 @@
 }
 
 .BurgerNavigation__item {
-  color: $text-color;
+  color: var(--text-color-second);
   margin: 4px 0;
   padding: 3px 10px;
   text-align: center;
   border-bottom: 1px solid transparent;
   position: relative;
+  font-weight: var(--font-weight-highlight);
 
   &:hover {
+    color: var(--text-color);
     &::after{
       @include activeItem;
       animation: activeItem 0.3s forwards;
@@ -59,7 +61,7 @@
     width: 0;
     content: '.';
     color: transparent;
-    background: #aaa;
+    background: var(--text-color);
     height: 1px;
   }
 

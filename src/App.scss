@@ -3,7 +3,7 @@
 @import './vendor/scss/mixin';
 
 .App {
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   font-family: $font-stack;
   font-weight: map-get($font-weights, $key: regular);
   @include flexCenter;
@@ -19,7 +19,7 @@
 }
 
 body {
-  background-color: $primary-color;
+  background-color: var(--primary-color);
 }
 
 html {
@@ -35,9 +35,9 @@ html {
 .PageUpIcon {
   width: 100% !important;
   height: 100%;
-  color: rgba($color: $main-color, $alpha: 0.3);
   transition: .2s;
   cursor: pointer;
+  opacity: .7;
 }
 
 
@@ -52,13 +52,15 @@ html {
   visibility: hidden;
   opacity: 0;
   transition: .2s;
+  color: var(--main-color);
 
 
 @media (pointer: coarse) {
   &:active {
     .PageUpIcon {
       transition: .2s;
-      color: rgba($color: $main-color, $alpha: 1);
+      color: var(--main-color);
+      opacity: 1;
     }
   }
 }
@@ -67,7 +69,8 @@ html {
   &:hover {
     .PageUpIcon {
       transition: .2s;
-      color: rgba($color: $main-color, $alpha: 1);
+      color: var(--main-color);
+      opacity: 1;
     }
   }
 }

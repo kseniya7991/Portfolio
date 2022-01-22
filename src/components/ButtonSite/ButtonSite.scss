@@ -8,7 +8,7 @@
   justify-content: center;
   cursor: pointer;
   width: max-content;
-  margin: 15px auto;
+  margin: 15px 3px;
 
   @include tablet {
     flex-direction: column;
@@ -31,13 +31,13 @@
   overflow: hidden;
 
   background-color: transparent;
-  color: $main-color;
+  color: var(--main-color);
   outline: none;
 
   width: 110px;
   height: 30px;
   border: 0;
-  border: 1px solid $main-color;
+  border: 1px solid var(--main-color);
 
   display: flex;
   align-items: center;
@@ -54,9 +54,9 @@
   
   // Анимация при наведении на кнопку
 /*   &:hover {
-    color: $main-color;
+    color: var(--main-color);
     transition: .3s;
-    box-shadow: 0px 0px 0px 1px $main-color;
+    box-shadow: 0px 0px 0px 1px var(--main-color);
     text-indent: 0px;
 
     .buttonSite__icon {
@@ -75,16 +75,16 @@
   height: 20px;
   position: absolute;
   z-index: -1;
-  background-color: $main-color;
+  background-color: var(--main-color);
   border-radius: 50%;
   visibility: hidden;
 }
 
  @media (hover: hover) {
   &:hover {
-    color: $main-color;
+    color: var(--main-color);
     transition: .3s;
-    box-shadow: 0px 0px 0px 1px $main-color;
+    box-shadow: 0px 0px 0px 1px var(--main-color);
     text-indent: 0px;
 
     .buttonSite__icon {
@@ -99,7 +99,7 @@
 
  @media (pointer: coarse) {
   &:active {
-    color: $primary-color;
+    color: var(--primary-color);
     &::before{
       visibility: visible;
       transition: .5s;
@@ -163,5 +163,5 @@
 
 @keyframes icon {
   from { color: transparent}
-  to {color: $main-color;}
+  to {color: var(--main-color);}
 }

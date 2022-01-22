@@ -18,7 +18,7 @@
 
 .About__block {
   font-family: $font-stack;
-  color: $text-color;
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -33,6 +33,7 @@
 
 .About__heading {
  @include heading;
+
 
   line-height: 1;
   margin: 5px 0 10px 0;
@@ -73,7 +74,7 @@
 .About__paragraph {
   margin: 0;
   padding: 10px 0;
-  font-weight: map-get($font-weights , light );
+  font-weight: var(--font-weight-text);
   line-height: 1.5;
 
   &:nth-of-type(2n) {
@@ -88,7 +89,7 @@
   }
 
   .About__paragraph_high {
-    color: $main-color;
+    color: var(--main-color);
     font-size: 18px;
 
     @include mobile {
@@ -102,6 +103,7 @@
   @include flexCenter;
   flex-direction: column;
   margin-right: 50px;
+  margin-left: 50px;
   position: relative;
   padding: 5px;
   border-radius: 50%;
@@ -113,12 +115,40 @@
     align-items: center;
     margin-right: 0;
     margin-bottom: 20px;
+    margin-left: 0;
   }
 
   @include mobile {
     flex-direction: column;
   }
   
+}
+
+.About__link {
+  color: inherit;
+  text-decoration: none;
+  transition: 1s;
+  position: relative;
+  
+  &:after {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '.';
+    color: transparent;
+    background: var(--main-color);
+    height: 1px;
+  }
+
+  &:hover {
+    &::after{
+      @include activeItem;
+      animation: activeItem .2s forwards;
+    }
+  }
 }
 
 .About__photo {
@@ -131,7 +161,6 @@
   border-radius: 50%;
   position: relative;
   z-index: 0;
-  box-shadow: 0px 0px 0px 7px #383838;
   margin: 0 auto;
   animation: photoSizeMax .3s forwards;
 
@@ -180,7 +209,7 @@
   font-size: 25px;
   font-weight: map-get($font-weights, regular );
   text-align: center;
-  color: $text-color;
+  color: var(--text-color);
 
   @include tablet {
     margin-top: 0;
@@ -202,24 +231,16 @@
 
 }
 
+.Details__icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 3px;
+}
+
 .Details__item {
-  color: $text-color; 
-  font-weight: map-get($font-weights, light );
+  color: var(--text-color); 
+  font-weight: var(--font-weight-text);
   line-height: 1.5;
-
-  &:nth-of-type(3) {
-    padding-left: 13px;
-    box-sizing: border-box;
-    position: relative;
-    &::before {
-      position: absolute;
-      content: url('../../images/place-localizer.png');
-      width: 24px;
-      height: 24px;
-      left: -3px;
-    }
-  }
-
   @include tablet {
     font-size: 15px;
   }
@@ -227,7 +248,7 @@
 }
 
 .Details__name {
-  font-weight: map-get($font-weights, semi-bold );
+  font-weight: var(--font-weight-bold);
   margin-right: 10px;
 }
 
@@ -254,19 +275,19 @@
   align-items: center;
   justify-content: center;
   animation: maxIcon .3s forwards;
-  color: $icon-color;
+  color: var(--icon-color);
   transition: .3s;
 
   &:hover {
     transition: .5s;
     transform: scale(1.2);
-    color: $main-color;
+    color: var(--main-color);
   }
 }
 
 .Social-item_cv {
   text-decoration: none;
-  border: 1.5px solid $icon-color;
+  border: 1.5px solid var(--icon-color);
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -275,7 +296,7 @@
   transition: .3s;
 
   &:hover {
-    border: 1.5px solid $main-color;
+    border: 1.5px solid var(--main-color);
   }
 }
 
@@ -289,7 +310,7 @@
 }
 
 .Social-item__icon {
-  /* color: $icon-color; */
+  /* color: var(--icon-color); */
   width: 28px !important;
   height: 28px;
 }

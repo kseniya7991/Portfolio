@@ -15,10 +15,10 @@
 
 //Заголовки
 @mixin heading {
-  font-weight: map-get($font-weights, medium);
+  font-weight: var(--font-weight-heading);
   margin: 0;
   font-size: 35px;
-  color: $heading-color;
+  color: var(--heading-color);
   text-align: right;
   letter-spacing: 4px;
   width: 100%;
@@ -56,6 +56,7 @@
   visibility: hidden;
   transition: .5s;
 }
+
 
 //Открытие попапа
 @mixin popupOpened {
