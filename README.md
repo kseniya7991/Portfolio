@@ -10,7 +10,7 @@
 <img src="https://img.shields.io/github/last-commit/kseniya7991/portfolio?style=for-the-badge">
 
 ## Интро
-![alt text](readmefiles/portfolio.png "Портфолио")
+![alt text](readmefiles/portfoliok.png "Портфолио")
 
 Проект Портфолио - одностраничный адаптивный сайт-портфолио на React.js. Сайт развернут на **github.pages**. В портфолио представлены основные проекты, разработанные в рамках обучения на платформе Яндекс.Практикум, включая само портфолио и 1 проект от платформы Udemy. Подробное CV можно найти на сайте. Проект создан на React.
 ## Технологии
