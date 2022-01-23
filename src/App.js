@@ -1,22 +1,21 @@
 import React, {
-  useState, useEffect,
+  useState, useEffect, lazy,
 } from 'react';
 import './App.scss';
 import './vendor/scss/_variables.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
-import Contact from './components/Contact/Contact';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import Preloader from './components/Preloader/Preloader';
+
+const Contact = lazy(() => import('./components/Contact/Contact'));
+const Header = lazy(() => import('./components/Header/Header'));
+const Main = lazy(() => import('./components/Main/Main'));
 
 function App() {
   const [offset, setOffset] = useState(0);
   const [isPopupOpened, setIsPopupOpened] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isPageUpVisible, setIsPageUpVisible] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   const handleCheckboxTheme = () => {
     setIsDarkTheme(!isDarkTheme);
@@ -76,17 +75,8 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    const onLoad = () => {
-      setIsLoading(false);
-    };
-    window.removeEventListener('load', onLoad);
-    window.addEventListener('load', onLoad);
-  });
-
   return (
     <div className={`Theme ${isDarkTheme ? '' : 'Theme_light'}`}>
-      <Preloader isLoading={isLoading} />
       <div className="App">
         <span className="anchor" id="top" />
         <Header

@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, lazy } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-/* import '@splidejs/splide/dist/css/splide-core.min.css'; */
 import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 import './Projects.scss';
-import SlideContainer from '../SlideContainer/SlideContainer';
-import projectPortfolio from '../../images/pr1.png';
-import projectHowToLearn from '../../images/pr2.png';
-import projectRussianTravel from '../../images/russian_travel.png';
-import projectMesto from '../../images/mesto_project.png';
-import projectMovies from '../../images/movies_diploma.png';
-import projectIrvas from '../../images/irvas_udemy.png';
+import projectPortfolio from '../../images/projects/portfolio.webp';
+import projectHowToLearn from '../../images/projects/how-to-learn.webp';
+import projectRussianTravel from '../../images/projects/travel.webp';
+import projectMesto from '../../images/projects/mesto.webp';
+import projectMovies from '../../images/projects/movies.webp';
+import projectIrvas from '../../images/projects/irvas.webp';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
+
+const SlideContainer = lazy(() => import('../SlideContainer/SlideContainer'));
 
 function Projects() {
   const [isClickedHeading, setIsClickedHeading] = useState(false);
@@ -49,7 +49,18 @@ function Projects() {
         >
           <SplideSlide>
             <SlideContainer
+              img={projectMovies}
+              alt="Проект Movies"
+              link="https://movies.kst.nomoredomains.monster/"
+              github="https://github.com/kseniya7991/movies-explorer-frontend"
+              title="Movies"
+              description="This is a graduation project on React. The service allows to search movies by keywords from a third-party API, to save movies, to create new users on the site. The project includes 2 parts: front-end and back-end."
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <SlideContainer
               img={projectPortfolio}
+              alt="Проект Портфолио"
               link="http://localhost:3000/"
               github="https://github.com/kseniya7991/Portfolio"
               title="Portfolio"
@@ -60,7 +71,18 @@ function Projects() {
           </SplideSlide>
           <SplideSlide>
             <SlideContainer
+              img={projectMesto}
+              alt="Проект Место"
+              link="https://kst.mesto.nomoredomains.club/"
+              github="https://github.com/kseniya7991/react-mesto-api-full"
+              title="Mesto"
+              description="The one-page adaptive website with possibility sharing photos and likes. Here you can change yourself profile information and delete yourself photos. The project includes 2 parts: front-end and back-end."
+            />
+          </SplideSlide>
+          <SplideSlide>
+            <SlideContainer
               img={projectHowToLearn}
+              alt="Проект How To Learn"
               link="https://kseniya7991.github.io/how-to-learn/"
               github="https://github.com/kseniya7991/how-to-learn"
               title="How to learn"
@@ -71,6 +93,7 @@ function Projects() {
           <SplideSlide>
             <SlideContainer
               img={projectRussianTravel}
+              alt="Проект Russian Travel"
               link="https://kseniya7991.github.io/russian-travel/index.html"
               github="https://github.com/kseniya7991/russian-travel"
               title="Russian Travel"
@@ -79,25 +102,8 @@ function Projects() {
           </SplideSlide>
           <SplideSlide>
             <SlideContainer
-              img={projectMesto}
-              link="https://kst.mesto.nomoredomains.club/"
-              github="https://github.com/kseniya7991/react-mesto-api-full"
-              title="Mesto"
-              description="The one-page adaptive website with possibility sharing photos and likes. Here you can change yourself profile information and delete yourself photos. The project includes 2 parts: front-end and back-end."
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <SlideContainer
-              img={projectMovies}
-              link="https://movies.kst.nomoredomains.monster/"
-              github="https://github.com/kseniya7991/movies-explorer-frontend"
-              title="Movies"
-              description="This is a graduation project on React. The service allows to search movies by keywords from a third-party API, to save movies, to create new users on the site. The project includes 2 parts: front-end and back-end."
-            />
-          </SplideSlide>
-          <SplideSlide>
-            <SlideContainer
               img={projectIrvas}
+              alt="Проект Ирвас"
               link="https://github.com/kseniya7991/irvas-js"
               github="https://github.com/kseniya7991/irvas-js"
               title="Irvas"

@@ -1,9 +1,10 @@
-import React from 'react';
-import About from '../About/About';
-import Projects from '../Projects/Projects';
-import Stack from '../Stack/Stack';
+import React, { lazy } from 'react';
 
 import './Main.scss';
+
+const About = lazy(() => import('../About/About'));
+const Projects = lazy(() => import('../Projects/Projects'));
+const Stack = lazy(() => import('../Stack/Stack'));
 
 function Main() {
   return (
