@@ -6,8 +6,7 @@
 * Текущий статус
 * Техническое описание
 
-<img src="https://img.shields.io/github/commit-activity/w/kseniya7991/portfolio?style=for-the-badge
-">
+<img src="https://img.shields.io/github/commit-activity/w/kseniya7991/portfolio?style=for-the-badge">
 <img src="https://img.shields.io/github/last-commit/kseniya7991/portfolio?style=for-the-badge">
 
 ## Интро
