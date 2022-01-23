@@ -1,0 +1,124 @@
+@import '../../vendor/scss/variables';
+@import '../../vendor/scss/mixin';
+
+.slideContainer__wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+
+  @include tablet {
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.slideContainer__wrap {
+  position: relative;
+  height: auto !important;
+  margin-right: 50px;
+
+  @include tablet {
+    height: 50% !important;
+    margin-right: 0;
+  }
+
+  @include mobile {
+    height: 45% !important;
+  }
+}
+
+.slideContainer__img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  color: var(--text-color);
+  &::before{
+    content: "Ой, мы потеряли изображение :(";
+    color: var(--text-color);
+    top: 40%;
+    position: absolute;
+    width: max-content;
+  }
+}
+
+.slideContainer__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: min-content;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @include tablet {
+    max-width: 100%;
+    flex-direction: row;
+    margin: 10px 30px;
+    max-height: 100%;
+  }
+
+  @include miniTablet {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
+
+  @include mobile {
+    margin: 10px 5px;
+  }
+}
+
+.slideContainer__article {
+  margin-bottom: 11px;
+  
+
+  @include tablet {
+    align-self: flex-start;
+  }
+  @include miniTablet {
+    margin-bottom: 0;
+    height: 60%;
+/*     overflow: scroll;
+    overflow-x: hidden; */
+  }
+
+}
+
+
+.slideContainer__text {
+  text-align: center;
+  font-size: 16px;
+  color: var(--text-color);
+  font-family: $font-stack;
+  font-weight: --font-weight-text;
+  
+  @include miniTablet {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 80%;
+  }
+  
+  @include mobile {
+    font-size: 15px;
+  }
+}
+
+.slideContainer__text::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+
+.slideContainer__text::-webkit-scrollbar-thumb {
+  background-color: #999a9b5d;
+  border-radius: 2px;
+}
+
+.slideContainer__title {
+  color: #fff;
+  text-align: center;
+  font-family: $font-stack;
+  font-weight: map-get($font-weights, regular);
+  margin: 5px 0 15px 0;
+}

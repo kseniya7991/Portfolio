@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+$font-stack: 'Hind', Arial, sans-serif;
+$font-underline: 'Archivo Black', sans-serif;
+$primary-color: #383838;
+$nav-color: #3e4248;
+$heading-color: #fff;
+$text-color: #c3c3c3;
+$text-color-second: #aaa;
+$main-color: #00abee;
+$preloader-color: #BFE2FF;
+$icon-color: #aaa;
+$svg-color: invert(42%) sepia(98%) saturate(2246%) hue-rotate(165deg) brightness(99%) contrast(102%);
+
+$font-weights: ("light": 300, "regular": 400, "medium": 500, "semi-bold": 600, "bold": 700);
+$breakpoint-pc: 1280px;
+$breakpoint-netbook: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-i5: 640px;
+$breakpoint-mobile: 468px;
+$breakpoint-min: 320px;
+
+.Theme {
+--main-color: #00abee;
+--primary-color: #383838;
+--nav-color: #3e4248;
+--switch-color: #d3d3d3;
+--text-color: #c3c3c3;
+--text-color-second: #aaa;
+--icon-color: #aaa;
+--heading-color: #fff;
+--font-weight-light: 300;
+--font-weight-text: 300;
+--font-weight-highlight: 400;
+--font-weight-heading: 500;
+--font-weight-bold: 600;
+--prev-arrow-slider: url("../../images/prev-arrow.png");
+--next-arrow-slider: url("../../images/next-arrow.png");
+
+}
+
+.Theme_light {
+  --heading-color: #fff;
+  --main-color: #661dc5;
+  --primary-color: #fff;
+  --nav-color: #d3d3d3;
+  --switch-color: #3e4248;
+  --text-color: #616161;
+  --text-color-second: #797979;
+  --icon-color: #616161;
+  --heading-color: #5f5f5f;
+  --font-weight-text: 500;
+  --font-weight-highlight: 400;
+  --font-weight-heading: 600;
+  --font-weight-bold: 600;
+  --prev-arrow-slider: url("../../images/prev-arrow_light.png");
+  --next-arrow-slider: url("../../images/next-arrow_light.png");
+}

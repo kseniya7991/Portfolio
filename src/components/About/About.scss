@@ -1,0 +1,333 @@
+@import '../../vendor/scss/variables';
+@import '../../vendor/scss/mixin';
+
+.About {
+  @include Section;
+}
+
+.About__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.About__block {
+  font-family: $font-stack;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: justify;
+  justify-content: space-around;
+  max-width: 60%;
+
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.About__heading {
+ @include heading;
+
+
+  line-height: 1;
+  margin: 5px 0 10px 0;
+  cursor: pointer;
+  text-align: right;
+  white-space: nowrap; /* не переносить текст на другую строку */
+  overflow: hidden; /* скрываем переполнение контентом */
+  transition: .3s;
+  
+  &::after {
+    content: "About";
+  }
+
+  &:hover {
+    color:rgba(224, 224, 224, 0.7);
+    transition: .5s;
+  }
+
+}
+
+.About__heading_animation {
+    @include typingText;
+    @include blinkCursor;
+    animation: typingText 4s steps(20, end),
+    blinkCursor .5s step-end 30;
+    animation-fill-mode: forwards;
+    border-right: .07em solid rgb(255, 255, 255);
+    &::before {
+      font-style: italic;
+      content: "{`Hi, I'm Kseniya`}";
+      letter-spacing: 0.07em;
+    }
+    &::after {
+      content: "";
+    }
+  }
+
+.About__paragraph {
+  margin: 0;
+  padding: 10px 0;
+  font-weight: var(--font-weight-text);
+  line-height: 1.5;
+
+  &:nth-of-type(2n) {
+    padding: 3px 0;
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
+
+  .About__paragraph_high {
+    color: var(--main-color);
+    font-size: 18px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  }
+
+.About__details {
+  width: max-content;
+  @include flexCenter;
+  flex-direction: column;
+  margin-right: 50px;
+  margin-left: 50px;
+  position: relative;
+  padding: 5px;
+  border-radius: 50%;
+
+  @include tablet {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+  
+}
+
+.About__link {
+  color: inherit;
+  text-decoration: none;
+  transition: 1s;
+  position: relative;
+  
+  &:after {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '.';
+    color: transparent;
+    background: var(--main-color);
+    height: 1px;
+  }
+
+  &:hover {
+    &::after{
+      @include activeItem;
+      animation: activeItem .2s forwards;
+    }
+  }
+}
+
+.About__photo {
+  background-image: url('../../images/profile-photo.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  animation: photoSizeMax .3s forwards;
+
+
+  @include mobile {
+    animation: photoSizeMin .3s forwards;
+    margin-bottom: 12px;
+  }
+
+  @keyframes photoSizeMin {
+    from { width: 170px; height: 170px;}
+    to { width: 150px; height: 150px;}
+  }
+  @keyframes photoSizeMax {
+    from { width: 150px; height: 150px;}
+    to { width: 170px; height: 170px;}
+  }
+
+}
+
+.Photo__circle {
+  width:170px;
+  height: 170px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  transition: .5s;
+
+
+}
+
+.Details__wrap {
+  position: relative;
+  @include flexCenter;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+//Details block
+.Deatils__title {
+  @include pStyle;
+  margin-top: 20px;
+
+  font-family: $font-stack;
+  font-size: 25px;
+  font-weight: map-get($font-weights, regular );
+  text-align: center;
+  color: var(--text-color);
+
+  @include tablet {
+    margin-top: 0;
+  }
+
+  @include mobile {
+    font-size: 22px;
+  }
+}
+
+.Details__list {
+  @include listStyle;
+  text-align: left;
+  width: max-content;
+
+  @include tablet {
+    width: 100%;
+  }
+
+}
+
+.Details__icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 3px;
+  top: 3px;
+  position: relative;
+}
+
+.Details__item {
+  color: var(--text-color); 
+  font-weight: var(--font-weight-text);
+  line-height: 1.5;
+  @include tablet {
+    font-size: 15px;
+  }
+
+}
+
+.Details__name {
+  font-weight: var(--font-weight-bold);
+  margin-right: 10px;
+}
+
+// Блок социальных сетей
+.Details__social-networks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0px 0px 0px;
+  width: 100%;
+
+  @include mobile {
+    margin: 12px 0px 0px 0px;
+  }
+}
+
+.Details__social-item {
+  background-size: contain;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: maxIcon .3s forwards;
+  color: var(--icon-color);
+  transition: .3s;
+
+  &:hover {
+    transition: .5s;
+    transform: scale(1.2);
+    color: var(--main-color);
+  }
+}
+
+.Social-item_cv {
+  text-decoration: none;
+  border: 1.5px solid var(--icon-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  box-sizing: border-box;
+  transition: .3s;
+
+  &:hover {
+    border: 1.5px solid var(--main-color);
+  }
+}
+
+.Social-item_link{
+  text-decoration: none;
+  margin-right: 10px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Social-item__icon {
+  /* color: var(--icon-color); */
+  width: 28px !important;
+  height: 28px;
+}
+
+.Social-item_cv_text {
+  font-family: $font-stack;
+  line-height: 100%;
+  font-size: 18px;
+  font-weight: 900;
+  position: absolute;
+  
+  top: 6px;
+  left: 1.8px;
+}
+
+
+
+

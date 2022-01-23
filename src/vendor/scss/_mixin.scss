@@ -1,0 +1,155 @@
+@import "./_variables.scss";
+
+//Секции
+@mixin Section {
+  max-width: $breakpoint-pc;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+//Выравнивание флекса по центру
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Заголовки
+@mixin heading {
+  font-weight: var(--font-weight-heading);
+  margin: 0;
+  font-size: 35px;
+  color: var(--heading-color);
+  text-align: right;
+  letter-spacing: 4px;
+  width: 100%;
+
+  @include tablet {
+    text-align: left;
+  }
+}
+
+//При использовании списков ul/ol
+@mixin listStyle {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+//При использовании параграфов <p>
+@mixin pStyle {
+  margin: 0;
+  padding: 0;
+}
+
+//Попап
+@mixin popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #202020b0;
+  z-index: 1;
+  min-width: 320px;
+  opacity: 0;
+  display: block;
+  visibility: hidden;
+  transition: .5s;
+}
+
+
+//Открытие попапа
+@mixin popupOpened {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+//Анимация для выделения стандартных текстовых элементов
+@mixin activeItem() {
+  @keyframes #{activeItem} {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+}
+
+//Анимация набора текста
+@mixin typingText() {
+  @keyframes #{typingText} {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+}
+
+//Эффект мерцающего курсора
+@mixin blinkCursor() {
+  @keyframes #{blinkCursor} {
+
+    from,
+    to {
+      border-color: transparent;
+    }
+
+    50% {
+      border-color: white;
+    }
+  }
+}
+
+//Для адаптивной вёрстки
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin netbook {
+  @media (max-width: #{$breakpoint-netbook}) {
+    @content;
+  }
+}
+
+@mixin minMobile {
+  @media (max-width: #{$breakpoint-min}) {
+    @content;
+  }
+}
+
+@mixin miniTablet {
+  @media (max-width: #{$breakpoint-i5}) {
+    @content;
+  }
+}
+
+// Отступы при адаптации
+@mixin responsivePadding{
+  @media (max-width: #{$breakpoint-tablet}) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (max-width: #{$breakpoint-mobile}) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (max-width: #{$breakpoint-min}) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

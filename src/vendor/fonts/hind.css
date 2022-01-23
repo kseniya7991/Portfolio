@@ -1,0 +1,47 @@
+@font-face {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Hind';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("Hind-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Hind';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("Hind-Bold.tff") format("tff");
+}
+
+@font-face {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Hind';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("Hind-Medium.tff") format("tff");
+}
+@font-face {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Hind';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("Hind-SemiBold.tff") format("tff");
+}
+@font-face {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Hind';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("Hind-Light.tff") format("tff");
+}

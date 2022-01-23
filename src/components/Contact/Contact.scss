@@ -1,0 +1,154 @@
+@import "../../vendor/scss/variables";
+@import "../../vendor/scss/mixin";
+
+.Footer {
+  width: 100%;
+  transition: .7s;
+}
+
+.Footer_visible {
+  background-color: var(--nav-color);
+  transition: .7s;
+}
+
+.Contact {
+  @include Section;
+  padding: 30px 50px 20px 50px;
+
+  @include responsivePadding;
+}
+
+.Contact__heading {
+  @include heading;
+}
+
+.Contact__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: $font-stack;
+  color: var(--text-color);
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.Contact__list {
+  padding: 0;
+  font-weight: map-get($font-weights, light);
+  margin: 0;
+
+  &:nth-of-type(1) {
+    margin-right: 10%;
+  }
+}
+
+.Contact__list_wrap {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  padding: 20px 15px;
+
+  @include tablet {
+    width: 60%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  @include minMobile {
+    padding: 20px 0;
+  }
+}
+
+.Contact__text {
+  position: relative;
+  color: var(--text-color-second);
+  font-weight: var(--font-weight-highlight);
+
+  @include minMobile {
+    font-size: 15px;
+  }
+}
+
+.Contact__link {
+  text-decoration: none;
+}
+
+.Contact__item {
+  position: relative;
+  list-style-type: none;
+  padding: 15px 0 5px 0;
+
+  display: flex;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '.';
+    color: transparent;
+    background: var(--text-color);
+    height: 1px;
+  }
+
+  &:hover {
+    .Contact__text {
+      color: var(--text-color);
+      transition: .2s;
+    }
+    .Contact__icon {
+      color: var(--text-color);
+      transition: .2s;
+    }
+    &::after {
+      width: 100%;
+      @include activeItem;
+      animation: activeItem .3s forwards;
+    }
+
+  }
+
+  cursor: pointer;
+}
+
+.Contact__icon {
+  color: var(--icon-color);
+  width: 30px !important;
+  height: 30px;
+  margin-right: 10px;
+  transition: .2s;
+}
+
+.Contact__info {
+    font-size: 22px;
+    font-weight: var(--font-weight-highlight);
+    letter-spacing: 2px;
+
+    @include tablet {
+      margin-left: 41px;
+      font-size: 18px;
+      max-width: min-content;
+      text-align: end;
+    }
+
+    @include mobile {
+      margin-left: 0;
+      font-size: 20px;
+      max-width: max-content;
+      margin-bottom: 0;
+    }
+
+    @include minMobile {
+      font-size: 19px;
+    }
+}
+
+

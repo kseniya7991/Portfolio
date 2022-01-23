@@ -1,0 +1,94 @@
+
+@import "./vendor/scss/variables";
+@import './vendor/scss/mixin';
+
+.App {
+  background-color: var(--primary-color);
+  font-family: $font-stack;
+  font-weight: map-get($font-weights, $key: regular);
+  @include flexCenter;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 320px;
+  max-width: 100%;
+  margin-top: 70px;
+
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+ 
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.anchor {
+  visibility: hidden;
+  position: relative;
+  top: -85px;
+}
+
+.PageUpIcon {
+  width: 100% !important;
+  height: 100%;
+  transition: .2s;
+  cursor: pointer;
+  opacity: .7;
+}
+
+
+.PageUpIcon_link {
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin:20px;
+  width: 40px;
+  height: 40px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s;
+  color: var(--main-color);
+
+  @include miniTablet {
+    margin: 20px 30px 240px 30px;
+  }
+
+
+@media (pointer: coarse) {
+  &:active {
+    .PageUpIcon {
+      transition: .2s;
+      color: var(--main-color);
+      opacity: 1;
+    }
+    .PageUpIcon_link_visible {
+      opacity: 1;
+    }
+  }
+}
+
+@media (hover: hover) {
+  &:hover {
+    .PageUpIcon {
+      transition: .2s;
+      color: var(--main-color);
+      opacity: 1;
+    }
+    .PageUpIcon_link_visible {
+      opacity: 1;
+    }
+  }
+}
+
+}
+
+.PageUpIcon_link_visible {
+  visibility: visible;
+  opacity: .5;
+  transition: .2s;
+}

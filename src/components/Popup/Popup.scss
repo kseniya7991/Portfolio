@@ -1,0 +1,13 @@
+@import '../../vendor/scss/mixin';
+
+.Popup {
+@include popup;
+}
+
+.Popup_opened {
+@include popupOpened;
+}
+
+.Popup_preloader {
+  background-color: var(--primary-color);
+}
