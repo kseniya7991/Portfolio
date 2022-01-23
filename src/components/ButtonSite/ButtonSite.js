@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './ButtonSite.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,26 +7,14 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 function ButtonSite({ link, github }) {
-  const [buttonText, setButtonText] = useState('Portfolio');
-
-  function handleHover() {
-    setButtonText('Portfolio');
-  }
-
-  function handleLeave() {
-    setButtonText('Portfolio');
-  }
-
   return (
     <div className="buttonSite__wrap">
       <a href={link} className="buttonSite__link" target="_blank" rel="noreferrer">
         <button
-          onMouseEnter={handleHover}
-          onMouseLeave={handleLeave}
           type="button"
           className="buttonSite"
         >
-          {buttonText}
+          Website
           <FontAwesomeIcon icon={faCaretRight} className="buttonSite__icon" />
         </button>
       </a>

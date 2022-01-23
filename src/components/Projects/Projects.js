@@ -61,7 +61,7 @@ function Projects() {
             <SlideContainer
               img={projectPortfolio}
               alt="Проект Портфолио"
-              link="http://localhost:3000/"
+              link="https://kseniya7991.github.io/portfolio/"
               github="https://github.com/kseniya7991/Portfolio"
               title="Portfolio"
               description="My first project-portfolio as an cv. It is on React and

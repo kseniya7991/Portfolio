@@ -4,9 +4,9 @@ import React from 'react';
 function Popup({
   isOpened, isMobile, children, handlePopup, isActivePreloader,
 }) {
-  function handlePopupClick(e) {
+  const handlePopupClick = (e) => {
     handlePopup(e);
-  }
+  };
 
   return (
     <div

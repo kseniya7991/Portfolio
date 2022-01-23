@@ -18,7 +18,7 @@ function SlideContainer({
             {description}
           </div>
         </div>
-        <ButtonSite link={link} github={github} />
+        <ButtonSite link={link} github={github} title={title} />
       </div>
     </div>
   );

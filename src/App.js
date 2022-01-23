@@ -54,8 +54,6 @@ function App() {
   };
 
   useEffect(() => {
-    setPageUpVisibility();
-
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
 
