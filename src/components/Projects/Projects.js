@@ -1,4 +1,4 @@
-import React, { useState, lazy } from 'react';
+import React, { lazy } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
@@ -14,25 +14,15 @@ import StyledLine from '../Permanent components/StyledLine/StyledLine';
 const SlideContainer = lazy(() => import('../SlideContainer/SlideContainer'));
 
 function Projects() {
-  const [isClickedHeading, setIsClickedHeading] = useState(false);
-
-  function handleClickHeading() {
-    setIsClickedHeading(!isClickedHeading);
-  }
-
   return (
     <>
       <StyledLine />
       <section className="Projects">
         <span className="anchor" id="projects" />
         <h2
-          className={`Projects__heading ${
-            isClickedHeading ? 'Projects__heading_animation' : ''
-          }`}
-          onClick={handleClickHeading}
-          onKeyDown={handleClickHeading}
+          className="Projects__heading"
         >
-          {}
+          Projects
         </h2>
         <Splide
           options={{

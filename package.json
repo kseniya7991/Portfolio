@@ -17,6 +17,7 @@
     "node-sass": "^6.0.1",
     "react": "next",
     "react-dom": "next",
+    "react-lazy-load-image-component": "^1.5.1",
     "react-scramble": "^0.5.1",
     "react-scripts": "4.0.3",
     "swiper": "^6.8.4",

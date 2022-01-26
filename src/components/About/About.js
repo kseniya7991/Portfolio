@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -10,18 +10,13 @@ import './About.scss';
 
 function About() {
   const photoBlock = useRef();
-  const [isClickedHeading, setIsClickedHeading] = useState(false);
-
-  function handleClickHeading() {
-    setIsClickedHeading(!isClickedHeading);
-  }
 
   return (
     <>
       <StyledLine />
       <section className="About">
         <span className="anchor" id="about" />
-        <h2 className={`About__heading ${isClickedHeading ? 'About__heading_animation' : ''}`} onClick={handleClickHeading} onKeyDown={handleClickHeading}>{}</h2>
+        <h2 className="About__heading">About</h2>
         <div className="About__wrap">
           <div className="About__details">
             <div className="About__photo" ref={photoBlock} />

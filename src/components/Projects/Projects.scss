@@ -23,33 +23,6 @@
   /* не переносить текст на другую строку */
   overflow: hidden;
   /* скрываем переполнение контентом */
-
-  &::after {
-    content: "Projects";
-  }
-
-  &:hover {
-    color: rgba(224, 224, 224, 0.7);
-    transition: 0.5s;
-  }
-}
-
-.Projects__heading_animation {
-  @include typingText;
-  @include blinkCursor;
-  animation: typingText 5s steps(30, end), blinkCursor 0.5s step-end 30;
-  animation-fill-mode: forwards;
-  border-right: 0.07em solid rgb(255, 255, 255);
-
-  &::before {
-    content: "{`Non-commercial projects`}";
-    letter-spacing: 0.07em;
-    font-style: italic;
-  }
-
-  &::after {
-    content: "";
-  }
 }
 
 // Управление слайдером

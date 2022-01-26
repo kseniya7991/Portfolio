@@ -34,42 +34,16 @@
 .About__heading {
  @include heading;
 
-
+  align-self: flex-end;
+  text-align: right;
   line-height: 1;
   margin: 5px 0 10px 0;
   cursor: pointer;
-  text-align: right;
   white-space: nowrap; /* не переносить текст на другую строку */
   overflow: hidden; /* скрываем переполнение контентом */
   transition: .3s;
   
-  &::after {
-    content: "About";
-  }
-
-  &:hover {
-    color:rgba(224, 224, 224, 0.7);
-    transition: .5s;
-  }
-
 }
-
-.About__heading_animation {
-    @include typingText;
-    @include blinkCursor;
-    animation: typingText 4s steps(20, end),
-    blinkCursor .5s step-end 30;
-    animation-fill-mode: forwards;
-    border-right: .07em solid rgb(255, 255, 255);
-    &::before {
-      font-style: italic;
-      content: "{`Hi, I'm Kseniya`}";
-      letter-spacing: 0.07em;
-    }
-    &::after {
-      content: "";
-    }
-  }
 
 .About__paragraph {
   margin: 0;
