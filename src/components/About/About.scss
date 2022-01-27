@@ -17,14 +17,16 @@
 }
 
 .About__block {
+  max-width: 60%;
+
   font-family: $font-stack;
   color: var(--text-color);
+  text-align: justify;
+
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  text-align: justify;
   justify-content: space-around;
-  max-width: 60%;
 
   @include tablet {
     max-width: 100%;
@@ -33,21 +35,24 @@
 
 .About__heading {
  @include heading;
+ margin: 5px 0 10px 0;
 
   align-self: flex-end;
+
   text-align: right;
   line-height: 1;
-  margin: 5px 0 10px 0;
+  white-space: nowrap; 
+  overflow: hidden;
+
   cursor: pointer;
-  white-space: nowrap; /* не переносить текст на другую строку */
-  overflow: hidden; /* скрываем переполнение контентом */
+
   transition: .3s;
-  
-}
+  }
 
 .About__paragraph {
   margin: 0;
   padding: 10px 0;
+
   font-weight: var(--font-weight-text);
   line-height: 1.5;
 
@@ -73,23 +78,28 @@
   }
 
 .About__details {
-  width: max-content;
   @include flexCenter;
-  flex-direction: column;
+
+  width: max-content;
   margin-right: 50px;
   margin-left: 50px;
   position: relative;
   padding: 5px;
+
   border-radius: 50%;
+
+  flex-direction: column;
 
   @include tablet {
     width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    
     margin-right: 0;
     margin-bottom: 20px;
     margin-left: 0;
+
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 
   @include mobile {
@@ -99,22 +109,26 @@
 }
 
 .About__link {
+  position: relative;
+
   color: inherit;
   text-decoration: none;
+
   transition: 1s;
-  position: relative;
   
   &:after {
     position: absolute;
+    width: 0;
+    height: 1px;
+
     bottom: 5px;
     left: 0;
     right: 0;
     margin: auto;
-    width: 0;
+
     content: '.';
     color: transparent;
     background: var(--main-color);
-    height: 1px;
   }
 
   &:hover {
@@ -126,18 +140,20 @@
 }
 
 .About__photo {
+  position: relative;
+
+  width: 170px;
+  height: 170px;
+  z-index: 0;
+  margin: 0 auto;
+  
   background-image: url('../../images/profile-photo.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  width: 170px;
-  height: 170px;
   border-radius: 50%;
-  position: relative;
-  z-index: 0;
-  margin: 0 auto;
-  animation: photoSizeMax .3s forwards;
 
+  animation: photoSizeMax .3s forwards;
 
   @include mobile {
     animation: photoSizeMin .3s forwards;
@@ -158,20 +174,21 @@
 .Photo__circle {
   width:170px;
   height: 170px;
-  background-color: rgba(255, 255, 255, 0.7);
   position: absolute;
   z-index: 0;
+
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
+
   transition: .5s;
-
-
 }
 
 .Details__wrap {
-  position: relative;
   @include flexCenter;
-  flex-direction: column;
+
+  position: relative;
   margin: 0 10px;
+  flex-direction: column;
 }
 
 //Details block
@@ -230,26 +247,29 @@
 
 // Блок социальных сетей
 .Details__social-networks {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  list-style-type: none;
   padding: 0;
   margin: 20px 0px 0px 0px;
   width: 100%;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  
   @include mobile {
     margin: 12px 0px 0px 0px;
   }
 }
 
 .Details__social-item {
-  background-size: contain;
-  cursor: pointer;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
   animation: maxIcon .3s forwards;
   color: var(--icon-color);
   transition: .3s;
@@ -262,13 +282,16 @@
 }
 
 .Social-item_cv {
-  text-decoration: none;
-  border: 1.5px solid var(--icon-color);
-  border-radius: 50%;
   width: 30px;
   height: 30px;
   position: relative;
+
+  text-decoration: none;
+
+  border: 1.5px solid var(--icon-color);
+  border-radius: 50%;
   box-sizing: border-box;
+
   transition: .3s;
 
   &:hover {
@@ -286,20 +309,19 @@
 }
 
 .Social-item__icon {
-  /* color: var(--icon-color); */
   width: 28px !important;
   height: 28px;
 }
 
 .Social-item_cv_text {
+  position: absolute;
+  top: 6px;
+  left: 1.8px;
+  
   font-family: $font-stack;
   line-height: 100%;
   font-size: 18px;
   font-weight: 900;
-  position: absolute;
-  
-  top: 6px;
-  left: 1.8px;
 }
 
 

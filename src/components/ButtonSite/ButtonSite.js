@@ -32,5 +32,3 @@ function ButtonSite({ link, github }) {
 }
 
 export default ButtonSite;
-
-/* <TextScrambler text={buttonText} isHover={btnIsOver} /> */

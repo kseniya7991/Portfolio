@@ -20,9 +20,7 @@
   margin-bottom: 20px;
   transition: 0.3s;
   white-space: nowrap;
-  /* не переносить текст на другую строку */
   overflow: hidden;
-  /* скрываем переполнение контентом */
 }
 
 // Управление слайдером
@@ -92,17 +90,6 @@
   display: flex;
   height: 450px !important;
   justify-content: space-between;
-
-/*   @include tablet {
-    min-height: min-content;
-  }
-
-  @include miniTablet {
-   /*  max-height: 70vh;
-  }
-  @include mobile {
-    max-height: fit-content;
-  } */
 }
 
 /* Изображения-слайды */
@@ -182,20 +169,11 @@
   font-family: "Roboto Condensed", sans-serif;
   outline: none;
   transition: 0.3s ease-in-out;
-  /* border: 1px solid transparent; */
   transform: scale(1);
   box-shadow: 0 0 0 0 rgba(var(--main-color), 0.1);
   cursor: pointer;
   transition: .5s;
   color: var(--main-color);
-
-
-
-  /* &::before {
-    content: "GO TO SITE";
-    color: var(--main-color);
-    transition: .5s;
-  } */
   
   &::after {
     content: '';

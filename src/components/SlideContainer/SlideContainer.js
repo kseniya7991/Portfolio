@@ -15,7 +15,6 @@ function SlideContainer({
           src={img}
           className="slideContainer__img"
         />
-        {/* <img src={img} alt={alt} className="slideContainer__img" /> */}
       </div>
       <div className="slideContainer__description">
         <div className="slideContainer__article">
