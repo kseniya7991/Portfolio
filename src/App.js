@@ -1,6 +1,4 @@
-import React, {
-  useState, useEffect, lazy,
-} from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import './App.scss';
 import './vendor/scss/_variables.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -87,7 +85,15 @@ function App() {
         />
         <Main />
         <Contact handleTheme={handleCheckboxTheme} />
-        <a href="#top" className={`PageUpIcon_link ${isPageUpVisible ? 'PageUpIcon_link_visible' : ''}`} aria-label="page up"><FontAwesomeIcon icon={faChevronCircleUp} className="PageUpIcon" /></a>
+        <a
+          href="#top"
+          className={`PageUpIcon_link ${
+            isPageUpVisible ? 'PageUpIcon_link_visible' : ''
+          }`}
+          aria-label="page up"
+        >
+          <FontAwesomeIcon icon={faChevronCircleUp} className="PageUpIcon" />
+        </a>
       </div>
     </div>
   );
