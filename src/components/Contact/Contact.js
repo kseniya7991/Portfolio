@@ -64,7 +64,7 @@ function Contact({ handleTheme }) {
               </a>
             </ul>
           </div>
-          <p className="Contact__info">I&apos;m&nbsp;available for work</p>
+          <p className="Contact__info">I&apos;m&nbsp;available to work</p>
         </div>
         <SwitchTheme handleTheme={handleTheme} />
       </div>
