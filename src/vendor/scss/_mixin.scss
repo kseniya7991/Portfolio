@@ -2,7 +2,7 @@
 
 //Секции
 @mixin Section {
-  max-width: $breakpoint-pc;
+  max-width: $breakpoint-max;
   margin: 0 auto;
   padding: 30px 0;
 }
