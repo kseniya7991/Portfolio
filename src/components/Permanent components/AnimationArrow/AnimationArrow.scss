@@ -1,0 +1,68 @@
+@import "../../../vendor/scss/variables";
+
+.AnimationArrow__straight {
+  height: 40px;
+  width: 2px;
+  background-color: var(--main-color);
+  opacity: .7;
+}
+
+.AnimationArrow {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+
+  &_active {
+    .AnimationArrow__line {
+      &_left {
+        animation: rotateLeftArrowHover .5s forwards;
+      }
+
+      &_right{
+        animation: rotateRightArrowHover .5s forwards;
+      }
+    }
+}
+}
+
+.AnimationArrow__line {
+  position: absolute;
+  height: 1px;
+  width: 60%;
+  background-color: var(--main-color);
+  bottom: 50%;
+
+  &_left {
+    left: 0;
+    transform: rotate(315deg);
+    animation: rotateLeftArrow .5s forwards;
+  }
+
+  &_right{
+    right: 0;
+    transform: rotate(45deg);
+    animation: rotateRightArrow .5s forwards;
+  }
+
+  
+}
+
+@keyframes rotateLeftArrowHover {
+  from {transform: rotate(315deg);}
+  to {transform: rotate(45deg);}
+}
+@keyframes rotateLeftArrow {
+  from {transform: rotate(45deg);}
+  to {transform: rotate(315deg);}
+}
+
+@keyframes rotateRightArrowHover {
+  from {transform: rotate(45deg);}
+  to {transform: rotate(315deg);}
+}
+@keyframes rotateRightArrow {
+  from {transform: rotate(315deg);}
+  to {transform: rotate(45deg);}
+}
+
