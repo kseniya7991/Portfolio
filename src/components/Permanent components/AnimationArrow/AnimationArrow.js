@@ -9,7 +9,7 @@ function AnimationArrow({ isClickedArrow, handleArrowClick }) {
 
   return (
     <>
-      <div className="AnimationArrow__straight" />
+      {/* <div className="AnimationArrow__straight" /> */}
       <div
         className={`AnimationArrow ${isClickedArrow ? 'AnimationArrow_active' : ''}`}
         onClick={handleClick}
