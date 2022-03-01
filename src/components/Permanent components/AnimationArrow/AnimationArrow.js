@@ -2,20 +2,11 @@ import React from 'react';
 
 import './AnimationArrow.scss';
 
-function AnimationArrow({ isClickedArrow, handleArrowClick }) {
-  const handleClick = () => {
-    handleArrowClick();
-  };
-
+function AnimationArrow() {
   return (
     <>
-      {/* <div className="AnimationArrow__straight" /> */}
       <div
-        className={`AnimationArrow ${isClickedArrow ? 'AnimationArrow_active' : ''}`}
-        onClick={handleClick}
-        onKeyDown={() => {}}
-        role="button"
-        tabIndex={0}
+        className="AnimationArrow"
       >
         <div className="AnimationArrow__line AnimationArrow__line_left" />
         <div className="AnimationArrow__line AnimationArrow__line_right" />
