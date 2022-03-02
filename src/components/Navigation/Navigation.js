@@ -10,6 +10,7 @@ function Navigation({ isMobile }) {
       <a href="#about" className="Navigation__link"><li className="Navigation__item">About</li></a>
       <a href="#projects" className="Navigation__link"><li className="Navigation__item">Projects</li></a>
       <a href="#stack" className="Navigation__link"><li className="Navigation__item">Stack</li></a>
+      <a href="#experience" className="Navigation__link"><li className="Navigation__item">Experience</li></a>
       <a href="#contact" className="Navigation__link"><li className="Navigation__item">Contact</li></a>
     </ul>
   );

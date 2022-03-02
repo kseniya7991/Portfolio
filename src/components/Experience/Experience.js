@@ -45,6 +45,7 @@ function Experience() {
     <>
       <StyledLine />
       <section className="Experience">
+        <span className="anchor" id="experience" />
         <h2 className="Experience__heading">Experience</h2>
         <div
           className="Experience__block"
