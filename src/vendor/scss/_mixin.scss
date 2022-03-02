@@ -79,6 +79,19 @@
   }
 }
 
+// Анимация выделения блока, вертикальная
+@mixin activeItemV() {
+  @keyframes #{activeItemV} {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: 100%;
+    }
+  }
+}
+
 //Анимация набора текста
 @mixin typingText() {
   @keyframes #{typingText} {
@@ -103,6 +116,22 @@
 
     50% {
       border-color: white;
+    }
+  }
+}
+
+// Анимация пульсации в блоке Experience
+@mixin pulse() {
+  @keyframes #{pulse} {
+    0% {
+      -moz-box-shadow: 0 0 0 0 var(--main-color);
+      box-shadow: 0 0 0 0 var(--main-color);
+      opacity: 0.4;
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 15px var(--main-color);
+      box-shadow: 0 0 0 15px var(--main-color);
+      opacity: 0;
     }
   }
 }

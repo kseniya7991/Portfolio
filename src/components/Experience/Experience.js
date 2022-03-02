@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import StyledLine from '../Permanent components/StyledLine/StyledLine';
 import AnimationArrow from '../Permanent components/AnimationArrow/AnimationArrow';
+import { monthsShort, monthsLong } from '../../files/months';
 
 import './Experience.scss';
 
@@ -12,12 +13,32 @@ function Experience() {
     setIsClicked(!isClicked);
   } */
 
+  const [months, setMonths] = useState(monthsLong);
+
+  const handleWindowResize = () => {
+    if (window.innerWidth < 468) {
+      setMonths(monthsShort);
+    } else {
+      setMonths(monthsLong);
+    }
+  };
+
+  useEffect(() => {
+    handleWindowResize();
+    window.addEventListener('resize', handleWindowResize);
+
+    return (() => {
+      window.removeEventListener('resize', handleWindowResize);
+    });
+  }, []);
+
   const [isClickedArrow, setIsClickedArrow] = useState(false);
 
   const handleClick = (e) => {
     setIsClickedArrow(!isClickedArrow);
     e.currentTarget.querySelector('.Experience__description').classList.toggle('Experience__description_active');
     e.currentTarget.querySelector('.AnimationArrow').classList.toggle('AnimationArrow_active');
+    e.currentTarget.querySelector('.Experience__information').classList.toggle('Experience__information_not-active');
   };
 
   return (
@@ -32,16 +53,24 @@ function Experience() {
           role="button"
           tabIndex={0}
         >
-          <div className="Experience__dates-block">
-            <p className="Experience__dates">november&nbsp;2020&nbsp;&nbsp;&mdash;</p>
-            <p className="Experience__dates">september&nbsp;2021</p>
-          </div>
-          <div className="Experience__icon-block ">
-            <AnimationArrow isClickedArrow={isClickedArrow} />
-          </div>
-          <div className="Experience__job">
-            <h3 className="Experience__company">Praktikum by Yandex</h3>
-            <p className="Experience__position">Frontend Developer Trainee</p>
+          <div className="Experience__information Experience__information_not-active">
+            <div className="Experience__dates-block">
+              <p className="Experience__dates">
+                {`${months.november}`}
+                2020&nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+              </p>
+              <p className="Experience__dates">
+                {`${months.september}`}
+                2021
+              </p>
+            </div>
+            <div className="Experience__icon-block ">
+              <AnimationArrow isClickedArrow={isClickedArrow} />
+            </div>
+            <div className="Experience__job">
+              <h3 className="Experience__company">Praktikum by Yandex</h3>
+              <p className="Experience__position">Frontend Developer Trainee</p>
+            </div>
           </div>
           <div className="Experience__description">
             <span className="Experience__list_name">Experience:</span>
@@ -70,16 +99,24 @@ function Experience() {
           role="button"
           tabIndex={0}
         >
-          <div className="Experience__dates-block">
-            <p className="Experience__dates">april&nbsp;2019&nbsp;&nbsp;&mdash;</p>
-            <p className="Experience__dates">august&nbsp;2021</p>
-          </div>
-          <div className="Experience__icon-block ">
-            <AnimationArrow isClickedArrow={isClickedArrow} />
-          </div>
-          <div className="Experience__job">
-            <h3 className="Experience__company">OMA LLC</h3>
-            <p className="Experience__position">Lead Digital Marketing Manager</p>
+          <div className="Experience__information Experience__information_not-active">
+            <div className="Experience__dates-block">
+              <p className="Experience__dates">
+                {`${months.april}`}
+                2019&nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+              </p>
+              <p className="Experience__dates">
+                {`${months.august}`}
+                2021
+              </p>
+            </div>
+            <div className="Experience__icon-block ">
+              <AnimationArrow isClickedArrow={isClickedArrow} />
+            </div>
+            <div className="Experience__job">
+              <h3 className="Experience__company">OMA LLC</h3>
+              <p className="Experience__position">Lead Digital Marketing Manager</p>
+            </div>
           </div>
           <div className="Experience__description">
             <span className="Experience__list_name">Experience:</span>
@@ -99,7 +136,6 @@ function Experience() {
             </ul>
           </div>
         </div>
-
       </section>
     </>
   );

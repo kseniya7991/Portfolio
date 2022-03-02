@@ -18,18 +18,17 @@
 
 .Experience__block {
   position: relative;
-  max-width: max-content;
+
+  width: 50%;
   margin: 0 auto;
   padding: 10px;
   cursor: pointer;
 
   color: var(--text-color);
   
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: max-content max-content;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &:nth-of-type(1) {
     .Experience__icon-block {
@@ -41,38 +40,67 @@
     margin-bottom: 0px;
   }
 
-  &:hover {
-    transition: 1s;
-    .Experience__information {
-    border-image: linear-gradient(to right, rgba(0, 153, 215, 0) 0%,#6c6c6c99 46%,  rgba(0, 153, 215, 0)93%);
-    border-image-slice: 1;
-    }
+  @include netbook {
+    width: 80%;
   }
+
+  @include tablet {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+}
+
+
+.Experience__information {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   &::before {
     content: "";
     position: absolute;
-    background-color: #be3c3c99;
-    border-radius: 50%;
-    height: 100%;
-    width: 100px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    height: 0%;
+    width: 1px;
+    left: -10px;
+    background-color: var(--text-color);
+    opacity: .5;
+    @include activeItemV;
+  }
 
+  &_not-active {
+    @media (hover: hover) { 
+      &:hover {
+        &::before {
+          animation: activeItemV .3s forwards;
+        }
+      }
+    }
   }
 }
 
 .Experience__dates-block {
   @include pStyle;
+  width: 130px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
   justify-self: flex-end;
  
-  max-width: max-content;
   font-size: 14px;
+
+  @include tablet {
+    align-items: flex-start;
+  }
+
+  @include mobile {
+    width: 80px;
+  }
 }
 
 .Experience__dates{
@@ -82,26 +110,34 @@
 .Experience__company {
   @include pStyle;
   color: var(--heading-color);
+
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .Experience__position {
   @include pStyle;
+
+  @include tablet {
+    font-size: 15px;
+  }
 }
 
 
 .Experience__description {
-  grid-column: 1 / 4;
+  position: relative;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+
   box-sizing: border-box;
 
   background-color: var(--background-text-block);
-  border-radius: 5px;
+  border-radius: 10px;
+
   font-size: 14px;
-  height: max-content;
-  overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
   transition: .3s;
-  height: 0;
 
   &_active {
     padding: 10px;
@@ -109,26 +145,24 @@
     opacity: 1;
     transition:.3s;
     height: 100%;
-  }
+  } 
 }
 
 .Experience__icon-block {
+  height: 100%;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  height: 100%;
-  margin: 0 auto;
-
- 
 }
 
 .Experience__icon {
-  transition: .2s;
   width: 25px !important;
   height: 25px;
   color: var(--main-color);
+  transition: .2s;
 }
 
 .Experience__list {
@@ -144,4 +178,14 @@
 
 .Experience__list_name {
   font-weight: map-get($font-weights, $key: semi-bold);
+}
+
+.Experience__job {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+
+  @include tablet {
+    width: 220px;
+  }
 }
