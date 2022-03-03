@@ -211,15 +211,15 @@
 }
 
 .About__cv {
-  margin: 20px 10px 0px 0px;
+  margin: 20px 0px 0px 0px;
   padding: 10px;
   background-color: transparent;
   position: relative;
 
-  border: 1px solid #00abee5c;
+  border: 1px solid var(--disabled-main-button);
   border-radius: 5px;
   
-  color: #00abee75;
+  color: var(--disabled-main-button);
   font-family: $font-stack;
   font-size: 14px;
   font-weight: 500;
@@ -237,11 +237,22 @@
     align-self: center;
   }
 
-  &:hover {
+  @media (hover: hover) {
+    &:hover {
+        background-position: 0%;
+        transition: .5s;
+      color: var(--primary-color);
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:hover {
       background-position: 0%;
       transition: .5s;
-    color: var(--primary-color);
+      color: var(--primary-color);
+    }
   }
+
 
   transition: .5s;
 }
@@ -376,10 +387,21 @@
   background-color: var(--primary-color);
   transition: .3s;
 
-  &:hover {
-    transition: .5s;
-    transform: scale(1.2);
-    color: var(--main-color);
+
+  @media (hover: hover) {
+    &:hover {
+      transition: .5s;
+      transform: scale(1.2);
+      color: var(--main-color);
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:hover {
+      transition: .5s;
+      transform: scale(1.2);
+      color: var(--main-color);
+    }
   }
 }
 
