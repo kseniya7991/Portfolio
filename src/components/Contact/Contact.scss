@@ -4,6 +4,8 @@
 .Footer {
   width: 100%;
   transition: .7s;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
 }
 
 .Footer_visible {
@@ -16,6 +18,8 @@
   padding: 30px 50px 20px 50px;
 
   @include responsivePadding;
+  display: flex;
+  flex-direction: column;
 }
 
 .Contact__heading {
@@ -149,6 +153,12 @@
     @include minMobile {
       font-size: 19px;
     }
+}
+
+.Contact__copyright {
+  align-self: center;
+  font-size: 0.8em;
+  color: var(--copyright-color);
 }
 
 

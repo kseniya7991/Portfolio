@@ -2,13 +2,15 @@
 @import "../../vendor/scss/mixin";
 
 .SwitchTheme__block {
-  padding-top: 10px;
   width: 100%;
+
+  padding-top: 10px;
+  margin-bottom: 15px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 100%;
 }
 
 .SwitchTheme__text {

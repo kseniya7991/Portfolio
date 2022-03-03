@@ -76,7 +76,7 @@ function Experience() {
           <div className="Experience__description">
             <span className="Experience__list_name">Experience:</span>
             <ul className="Experience__list">
-              <li className="Experience__item">сoding in HTML, CSS и JavaScript</li>
+              <li className="Experience__item">сoding in HTML, CSS and JavaScript</li>
               <li className="Experience__item">websites and web applications development</li>
               <li className="Experience__item">working with a team and code-rewievers</li>
               <li className="Experience__item">enjoyment of learning</li>

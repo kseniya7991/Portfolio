@@ -67,6 +67,7 @@ function Contact({ handleTheme }) {
           <p className="Contact__info">I&apos;m&nbsp;available to work</p>
         </div>
         <SwitchTheme handleTheme={handleTheme} />
+        <span className="Contact__copyright">&copy; 2022 Kseniya Stoichykava</span>
       </div>
     </footer>
   );

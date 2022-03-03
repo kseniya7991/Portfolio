@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedinIn,
@@ -13,8 +13,6 @@ import CV from '../../files/Kseniya_Stoichykova_CV.pdf';
 import './About.scss';
 
 function About() {
-  const photoBlock = useRef();
-
   return (
     <>
       <StyledLine />
@@ -23,87 +21,87 @@ function About() {
         <h2 className="About__heading">About</h2>
         <div className="About__wrap">
           <div className="About__details">
-            <div className="About__photo" ref={photoBlock} />
-            <div className="Details__wrap">
-              <p className="Deatils__title">Details</p>
-              <ul className="Details__list">
-                <li className="Details__item">
-                  <span className="Details__name">Name:</span>
-                  Stoichykova Kseniya
-                </li>
-                <li className="Details__item">
-                  <span className="Details__name">Age:</span>
-                  24
-                </li>
-                <li className="Details__item">
+            <ul className="Details__social-networks">
+              <a
+                href="https://www.instagram.com/ksunya_st_/"
+                target="_blank"
+                rel="noreferrer"
+                label="inst: ksunya_st_"
+                className="Social-item_link"
+              >
+                <li className="Details__social-item">
                   <FontAwesomeIcon
-                    icon={faMapMarkerAlt}
-                    className="Details__icon"
+                    icon={faInstagram}
+                    className="Social-item__icon"
                   />
-                  <span className="Details__name">Place:</span>
-                  Minsk
                 </li>
-                <li className="Details__item">
-                  <span className="Details__name">English Level:</span>
-                  B1
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kseniya-stoychikova-907594201/"
+                target="_blank"
+                rel="noreferrer"
+                label="linked in: Kseniya Stoichykova"
+                className="Social-item_link"
+              >
+                <li className="Details__social-item">
+                  <FontAwesomeIcon
+                    icon={faLinkedinIn}
+                    className="Social-item__icon"
+                  />
                 </li>
-              </ul>
-              <ul className="Details__social-networks">
-                <a
-                  href="https://www.instagram.com/ksunya_st_/"
-                  target="_blank"
-                  rel="noreferrer"
-                  label="inst: ksunya_st_"
-                  className="Social-item_link"
-                >
-                  <li className="Details__social-item">
-                    <FontAwesomeIcon
-                      icon={faInstagram}
-                      className="Social-item__icon"
-                    />
+              </a>
+              <a
+                href="https://github.com/kseniya7991"
+                target="_blank"
+                rel="noreferrer"
+                label="github: kseniya7991"
+                className="Social-item_link"
+              >
+                <li className="Details__social-item">
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className="Social-item__icon"
+                  />
+                </li>
+              </a>
+            </ul>
+            <div className="About__contact">
+              <div className="About__photo" />
+              <div className="Details__wrap">
+                <p className="Deatils__title">Details</p>
+                <ul className="Details__list">
+                  <li className="Details__item">
+                    <span className="Details__name">Name:</span>
+                    Stoichykova Kseniya
                   </li>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/kseniya-stoychikova-907594201/"
-                  target="_blank"
-                  rel="noreferrer"
-                  label="linked in: Kseniya Stoichykova"
-                  className="Social-item_link"
-                >
-                  <li className="Details__social-item">
-                    <FontAwesomeIcon
-                      icon={faLinkedinIn}
-                      className="Social-item__icon"
-                    />
+                  <li className="Details__item">
+                    <span className="Details__name">Age:</span>
+                    24
                   </li>
-                </a>
-                <a
-                  href="https://github.com/kseniya7991"
-                  target="_blank"
-                  rel="noreferrer"
-                  label="github: kseniya7991"
-                  className="Social-item_link"
-                >
-                  <li className="Details__social-item">
+                  <li className="Details__item">
                     <FontAwesomeIcon
-                      icon={faGithub}
-                      className="Social-item__icon"
+                      icon={faMapMarkerAlt}
+                      className="Details__icon"
                     />
+                    <span className="Details__name">Place:</span>
+                    Minsk
                   </li>
-                </a>
+                  <li className="Details__item">
+                    <span className="Details__name">English Level:</span>
+                    B1
+                  </li>
+                </ul>
                 <a
                   href={CV}
                   download
                   target="_blank"
                   rel="noreferrer"
                   label="download the CV"
-                  className="Social-item_link"
+                  className="About__cv_link"
                 >
-                  <li className="Details__social-item Social-item_cv">
-                    <span className="Social-item_cv_text">CV</span>
-                  </li>
+                  <button className="About__cv" type="button">Download CV</button>
                 </a>
-              </ul>
+              </div>
             </div>
           </div>
           <div className="About__block">
