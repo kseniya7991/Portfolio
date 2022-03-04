@@ -8,7 +8,7 @@
 
 .About__wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: stretch;
   flex-direction: row;
 
@@ -165,11 +165,6 @@
 
   animation: photoSizeMax .3s forwards;
 
-  @include mobile {
-    animation: photoSizeMin .3s forwards;
-    margin-bottom: 12px;
-  }
-
   @keyframes photoSizeMin {
     from { width: 170px; height: 170px;}
     to { width: 150px; height: 150px;}
@@ -179,14 +174,18 @@
     to { width: 170px; height: 170px;}
   }
 
-  &:hover {
-    transform: rotate(14deg);
-    box-shadow: 0px 0px 36px 3px transparent;
-    &::before {
-      z-index: 0;
-      transform: rotate(-14deg);
-      transition: .3s;
-      box-shadow: 0px 0px 36px 3px var(--primary-color);
+  @media (hover: hover) {
+    &:hover {
+      &:hover {
+        transform: rotate(14deg);
+        box-shadow: 0px 0px 36px 3px transparent;
+        &::before {
+          z-index: 0;
+          transform: rotate(-14deg);
+          transition: .3s;
+          box-shadow: 0px 0px 36px 3px var(--primary-color);
+        }
+      }
     }
   }
 
@@ -207,6 +206,16 @@
     transition: .3s;
     box-sizing: border-box;
   } 
+
+  @include mobile {
+    animation: photoSizeMin .3s forwards;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    &::before {
+      width: 0;
+      height: 0;
+    }
+  }
 
 }
 
@@ -328,7 +337,7 @@
   height: 100%;
 
   position: absolute;
-  left: -30%;
+  left: -45%;
   top: 40%;
   transform: translate(0,-50%);
   display: flex;
@@ -383,10 +392,9 @@
   cursor: pointer;
 
   animation: maxIcon .3s forwards;
-  color: var(--icon-color);
+  color: var(--icon-social-color);
   background-color: var(--primary-color);
   transition: .3s;
-
 
   @media (hover: hover) {
     &:hover {
@@ -412,7 +420,7 @@
 
   text-decoration: none;
 
-  border: 1.5px solid var(--icon-color);
+  border: 1.5px solid var(--icon-social-color);
   border-radius: 50%;
   box-sizing: border-box;
 
