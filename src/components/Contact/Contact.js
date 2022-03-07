@@ -42,7 +42,7 @@ function Contact({ handleTheme }) {
                   <span className="Contact__text">Email</span>
                 </li>
               </a>
-              <a href="https://www.linkedin.com/in/kseniya-stoichykava-907594201/" target="_blank" rel="noreferrer" label="linked in: Kseniya Stoichykova" className="Contact__link">
+              <a href="https://www.linkedin.com/in/kseniya-s-907594201/" target="_blank" rel="noreferrer" label="linked in: Kseniya Stoichykova" className="Contact__link">
                 <li className="Contact__item">
                   <FontAwesomeIcon icon={faLinkedinIn} className="Contact__icon" />
                   <span className="Contact__text">Linkedin</span>

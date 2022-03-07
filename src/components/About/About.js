@@ -37,7 +37,7 @@ function About() {
                 </li>
               </a>
               <a
-                href="https://www.linkedin.com/in/kseniya-stoychikova-907594201/"
+                href="https://www.linkedin.com/in/kseniya-s-907594201/"
                 target="_blank"
                 rel="noreferrer"
                 label="linked in: Kseniya Stoichykova"
